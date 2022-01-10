@@ -1,7 +1,19 @@
 export const ROUTES = [
   {
-    name: "Menus",
-    route: "/menus",
+    label: "Elements",
+    children: [
+      {
+        name: "Input",
+        route: "/elements/input",
+      },
+      {
+        name: "Button",
+        route: "/elements/button",
+      },
+    ],
+  },
+  {
+    label: "Menus",
     children: [
       {
         name: "Accordion",
@@ -10,6 +22,10 @@ export const ROUTES = [
       {
         name: "Tabs",
         route: "/menus/tabs",
+      },
+      {
+        name: "Breadcrumbs",
+        route: "/menus/breadcrumbs",
       },
     ],
   },

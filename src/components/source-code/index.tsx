@@ -1,9 +1,10 @@
-import axios from "axios";
-import CodeSvg from "assets/icons/code.svg";
 import { useCallback, useState } from "react";
+
+import CodeSvg from "assets/icons/code.svg";
 import { SOURCE_CODE_URL } from "utils/constant";
 import SyntaxHighlighter from "react-syntax-highlighter";
 import { atomOneDark } from "react-syntax-highlighter/dist/cjs/styles/hljs";
+import axios from "axios";
 
 interface IProps {
   path: string;

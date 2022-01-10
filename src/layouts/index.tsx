@@ -1,4 +1,7 @@
+import Navbar from "./components/navbar";
 import { ReactNode } from "react";
+import Sidebar from "./components/sidebar";
+import Styled from "./index.style";
 
 interface IProps {
   children: ReactNode | string;
@@ -7,9 +10,11 @@ interface IProps {
 const LayoutDefault = ({ children }: IProps) => {
   return (
     <>
-      <header />
-      <main>{children}</main>
-      <footer />
+      <Navbar />
+      <Styled.Main>
+        <Sidebar />
+        <Styled.Content>{children}</Styled.Content>
+      </Styled.Main>
     </>
   );
 };

@@ -1,7 +1,9 @@
-import Head from "next/head";
+import "assets/styles/reset.css";
 import "assets/styles/globals.css";
-import LayoutDefault from "layouts";
+
 import { AppPropsCustomized } from "utils/interfaces";
+import Head from "next/head";
+import LayoutDefault from "layouts";
 
 function MyApp({ Component, pageProps }: AppPropsCustomized) {
   // Use the layout defined at the page level, or else use default layout

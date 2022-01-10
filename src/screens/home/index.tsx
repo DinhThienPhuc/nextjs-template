@@ -1,10 +1,8 @@
 import Link from "next/link";
 import { useMemo } from "react";
 import { ROUTES } from "utils/constant";
-import { NextPageCustomized } from "utils/interfaces";
-import SourceCode from "modules/source-code";
 
-const PageHome: NextPageCustomized = () => {
+const ScreenHome = () => {
   const JSXContent = useMemo(() => {
     return ROUTES.map((parentRoute) => {
       if (!parentRoute.children) {
@@ -24,12 +22,7 @@ const PageHome: NextPageCustomized = () => {
     });
   }, []);
 
-  return (
-    <>
-      <ul>{JSXContent}</ul>
-      <SourceCode path="src/modules/source-code/index.tsx" />
-    </>
-  );
+  return <ul>{JSXContent}</ul>;
 };
 
-export default PageHome;
+export default ScreenHome;

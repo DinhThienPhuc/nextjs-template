@@ -2,10 +2,11 @@ import type { NextPage } from "next";
 import type { AppProps } from "next/app";
 import type { ReactElement, ReactNode } from "react";
 
-export type NextPageWithLayout = NextPage & {
+export type NextPageCustomized = NextPage & {
   getLayout?: (page: ReactElement) => ReactNode;
+  getHead?: () => ReactNode;
 };
 
-export type AppPropsWithLayout = AppProps & {
-  Component: NextPageWithLayout;
+export type AppPropsCustomized = AppProps & {
+  Component: NextPageCustomized;
 };

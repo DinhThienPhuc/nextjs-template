@@ -11,10 +11,9 @@ export const ROUTES = [
         name: "Tabs",
         route: "/menus/tabs",
       },
-      {
-        name: "Accordion",
-        route: "/menus/accordion",
-      },
     ],
   },
 ];
+
+export const SOURCE_CODE_URL =
+  "https://raw.githubusercontent.com/DinhThienPhuc/zoom/main/";

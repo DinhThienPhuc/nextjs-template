@@ -1,16 +1,30 @@
+import styled, { css } from "styled-components";
+
 import colors from "utils/colors";
-import styled from "styled-components";
 
 const Styled = {
   Sidebar: styled.aside`
-    width: 240px;
-    height: calc(100vh - 72px);
-    border-right: 1px solid ${colors["eaeaea"]};
-    padding: 12px 0 0 12px;
+    width: 16rem;
+    height: calc(100vh - 4.5rem);
+    border-right: 0.0625rem solid ${colors["eaeaea"]};
+    padding: 0.75rem 0 0 0.75rem;
   `,
-  SidebarItem: styled.li`
+  SidebarItem: styled.li<{ isActive: boolean }>`
+    transition: all 300ms ease-in-out;
     cursor: pointer;
-    margin: 10px 0;
+    ${({ isActive }) =>
+      isActive &&
+      css`
+        color: ${colors["98782b"]};
+      `};
+  `,
+  Label: styled.label<{ isActive: boolean }>`
+    transition: all 300ms ease-in-out;
+    ${({ isActive }) =>
+      isActive &&
+      css`
+        color: ${colors["98782b"]};
+      `};
   `,
 };
 

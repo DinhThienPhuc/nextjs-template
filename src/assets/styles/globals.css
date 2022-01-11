@@ -9,7 +9,7 @@ body {
 }
 
 a {
-  color: inherit;
+  color: #0074de;
   text-decoration: none;
 }
 
@@ -18,5 +18,19 @@ a {
 }
 
 .linenumber.react-syntax-highlighter-line-number {
-  margin-bottom: 5px;
+  margin-bottom: 0.5rem;
+}
+
+li {
+  margin: 0.5rem 0;
+}
+
+h1 {
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+h2 {
+  font-size: 1.3rem;
+  font-weight: 500;
 }

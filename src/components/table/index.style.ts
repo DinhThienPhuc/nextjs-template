@@ -22,10 +22,12 @@ const Styled = {
   Th: styled.th`
     border: ${BORDER_WIDTH} solid ${colors["000000"]};
     padding: 0.75rem;
+    text-align: left;
   `,
   Td: styled.td`
     border: ${BORDER_WIDTH} solid ${colors["000000"]};
     padding: 0.75rem;
+    text-align: left;
   `,
   SortWrap: styled.span`
     display: flex;

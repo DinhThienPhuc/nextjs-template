@@ -4,28 +4,22 @@ import {
   STYLED_COMPONENT_PKG_LINK,
 } from "utils/constant";
 import { IColumn, ISort } from "components/table/index.utils";
+import {
+  IDataProps,
+  IExampleData,
+  dataProps,
+  exampleData,
+} from "./index.utils";
 import { useCallback, useMemo, useState } from "react";
 
 import SourceCode from "components/source-code";
+import Styled from "./index.style";
 import Table from "components/table";
-
-const data = [
-  { name: "PCT", age: 24, school: "APOEW" },
-  { name: "AWE", age: 21, school: "AWQ" },
-  { name: "VCOIE", age: 42, school: "YUT" },
-  { name: "CSA", age: 32, school: "WWEEEEE" },
-];
-
-interface IData {
-  name: string;
-  age: number;
-  school: string;
-}
 
 const SectionTable = () => {
   const [sort, setSort] = useState<ISort>({} as ISort);
 
-  const columns = useMemo<IColumn<IData>[]>(() => {
+  const exampleColumns = useMemo<IColumn<IExampleData>[]>(() => {
     return [
       {
         field: "name",
@@ -42,6 +36,36 @@ const SectionTable = () => {
       {
         field: "school",
         headerName: "School",
+        renderCell: ({ value }) => <>{value}</>,
+      },
+    ];
+  }, []);
+
+  const columnProps = useMemo<IColumn<IDataProps>[]>(() => {
+    return [
+      {
+        field: "property",
+        headerName: "Property",
+        renderCell: ({ value }) => <Styled.Property>{value}</Styled.Property>,
+      },
+      {
+        field: "description",
+        headerName: "Description",
+        renderCell: ({ value }) => <>{value}</>,
+      },
+      {
+        field: "type",
+        headerName: "Type",
+        renderCell: ({ value }) => <code>{value}</code>,
+      },
+      {
+        field: "default",
+        headerName: "Default",
+        renderCell: ({ value }) => <>{value}</>,
+      },
+      {
+        field: "require",
+        headerName: "Require",
         renderCell: ({ value }) => <>{value}</>,
       },
     ];
@@ -79,7 +103,12 @@ const SectionTable = () => {
       </ul>
       <h2>Example</h2>
       <div>
-        <Table data={data} columns={columns} onSort={handleSort} sort={sort} />
+        <Table
+          data={exampleData}
+          columns={exampleColumns}
+          onSort={handleSort}
+          sort={sort}
+        />
       </div>
       <br />
       <SourceCode
@@ -91,6 +120,9 @@ const SectionTable = () => {
         ]}
       />
       <h2>Props</h2>
+      <div>
+        <Styled.TableProps data={dataProps} columns={columnProps} />
+      </div>
     </>
   );
 };

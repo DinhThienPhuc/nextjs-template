@@ -73,14 +73,14 @@ const Table = <Data extends unknown>({
           </Styled.Td>
         );
       });
-      return <Styled.Tr>{row}</Styled.Tr>;
+      return row;
     },
     [columns],
   );
 
   const renderTableBodyRows = useMemo(() => {
-    return data.map((obj: Data) => {
-      return renderRow(obj);
+    return data.map((obj: Data, index: number) => {
+      return <Styled.Tr key={index}>{renderRow(obj)}</Styled.Tr>;
     });
   }, [data, renderRow]);
 

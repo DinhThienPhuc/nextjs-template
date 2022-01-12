@@ -6,6 +6,7 @@ import {
 import { IColumn, ISort } from "components/table/index.utils";
 import { useCallback, useMemo, useState } from "react";
 
+import SourceCode from "components/source-code";
 import Table from "components/table";
 
 const data = [
@@ -96,6 +97,15 @@ const SectionTable = () => {
       <div>
         <Table data={data} columns={columns} onSort={handleSort} sort={sort} />
       </div>
+      <br />
+      <SourceCode
+        languages={["tsx", "typescript", "typescript"]}
+        paths={[
+          "src/components/table/index.tsx",
+          "src/components/table/index.style.ts",
+          "src/components/table/index.utils.ts",
+        ]}
+      />
       <h2>Props</h2>
     </>
   );

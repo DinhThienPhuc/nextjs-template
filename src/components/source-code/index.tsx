@@ -1,37 +1,116 @@
-import { useCallback, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 
-import CodeSvg from "assets/icons/code.svg";
 import { SOURCE_CODE_URL } from "utils/constant";
-import SyntaxHighlighter from "react-syntax-highlighter";
-import { atomOneDark } from "react-syntax-highlighter/dist/cjs/styles/hljs";
+import Styled from "./index.style";
+import { PrismAsyncLight as SyntaxHighlighter } from "react-syntax-highlighter";
 import axios from "axios";
+import useCopyToClipboard from "hooks/useCopyToClipboard";
+import { vscDarkPlus } from "react-syntax-highlighter/dist/cjs/styles/prism";
 
 interface IProps {
-  path: string;
+  paths: string[];
+  languages?: string[];
 }
 
-const SourceCode = ({ path }: IProps) => {
-  const [source, setSource] = useState<string>("");
+const SourceCode = ({
+  languages = ["javascript", "javascript", "javascript"],
+  paths,
+}: IProps) => {
+  const [sources, setSources] = useState<string[]>([]);
+  const [file, setFile] = useState<number>(0);
+  const [isShow, setShow] = useState<boolean>(false);
+  const [, copyToClipboard] = useCopyToClipboard();
 
-  const fetchSourceCode = useCallback(async () => {
-    try {
-      const response = await axios(`${SOURCE_CODE_URL}${path}`);
-      setSource(response.data);
-    } catch (error) {
-      setSource("File not found");
-    }
-  }, [path]);
+  useEffect(() => {
+    const fetchSourceCode = async () => {
+      const arr: Promise<any>[] = [];
+      paths.forEach((path) => {
+        arr.push(axios(`${SOURCE_CODE_URL}${path}`));
+      });
+      const responses = await Promise.allSettled(arr);
+
+      let result: string[] = [];
+      responses.forEach((response) => {
+        if (response.status === "fulfilled") {
+          result.push(response.value.data);
+        } else {
+          result.push("File not found!");
+        }
+      });
+      setSources(result);
+    };
+
+    fetchSourceCode();
+  }, [paths]);
+
+  const handleCopyToClipboard = useCallback(
+    (file: number) => {
+      return () => {
+        copyToClipboard(sources[file]);
+      };
+    },
+    [copyToClipboard, sources],
+  );
+
+  const handleShowSourceCode = useCallback(async () => {
+    setShow(!isShow);
+  }, [isShow]);
+
+  const handleSelectSourceFile = useCallback((index: number) => {
+    return () => {
+      setFile(index);
+    };
+  }, []);
 
   return (
     <>
-      <CodeSvg onClick={fetchSourceCode} width={24} height={24} />
-      {source && (
+      <Styled.Actions>
+        <div>
+          {isShow && (
+            <Styled.FilesGroup>
+              {paths[0] && (
+                <Styled.File
+                  onClick={handleSelectSourceFile(0)}
+                  $isSelected={file === 0}
+                >
+                  <Styled.FileInner>.tsx</Styled.FileInner>
+                </Styled.File>
+              )}
+              {paths[1] && (
+                <Styled.File
+                  onClick={handleSelectSourceFile(1)}
+                  $isSelected={file === 1}
+                >
+                  <Styled.FileInner>.style</Styled.FileInner>
+                </Styled.File>
+              )}
+              {paths[2] && (
+                <Styled.File
+                  onClick={handleSelectSourceFile(2)}
+                  $isSelected={file === 2}
+                >
+                  <Styled.FileInner>.utils</Styled.FileInner>
+                </Styled.File>
+              )}
+            </Styled.FilesGroup>
+          )}
+        </div>
+        <div>
+          <Styled.Code onClick={handleShowSourceCode} width={18} height={18} />
+          <Styled.Copy
+            onClick={handleCopyToClipboard(file)}
+            width={18}
+            height={18}
+          />
+        </div>
+      </Styled.Actions>
+      {isShow && (
         <SyntaxHighlighter
-          language="javascript"
-          style={atomOneDark}
+          language={languages[file]}
+          style={vscDarkPlus}
           showLineNumbers
         >
-          {source}
+          {sources[file]}
         </SyntaxHighlighter>
       )}
     </>

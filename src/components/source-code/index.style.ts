@@ -1,0 +1,63 @@
+import styled, { css } from "styled-components";
+
+import { BORDER_WIDTH } from "utils/styles";
+import CodeSvg from "assets/icons/code.svg";
+import CopySvg from "assets/icons/copy.svg";
+import colors from "utils/colors";
+
+const Styled = {
+  Actions: styled.div`
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  `,
+  FilesGroup: styled.div`
+    display: flex;
+  `,
+  File: styled.div<{ $isSelected: boolean }>`
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 2.5rem;
+    height: 2rem;
+    border: ${BORDER_WIDTH} solid
+      ${({ $isSelected }) =>
+        $isSelected ? colors["98782b"] : colors["eaeaea"]};
+    font-size: 0.6rem;
+    ${({ $isSelected }) =>
+      $isSelected &&
+      css`
+        background: colors[ "98782b" ];
+      `};
+
+    &:first-of-type {
+      border-top-left-radius: 0.25rem;
+      border-bottom-left-radius: 0.25rem;
+    }
+
+    &:last-of-type {
+      border-top-right-radius: 0.25rem;
+      border-bottom-right-radius: 0.25rem;
+    }
+  `,
+  FileInner: styled.div`
+    width: 1.6rem;
+    height: 1.4rem;
+    background: ${colors["eaeaea"]};
+    border-radius: 0.1rem;
+    display: flex;
+    align-items: end;
+    justify-content: end;
+  `,
+  Copy: styled(CopySvg)`
+    width: 1rem;
+    height: 1rem;
+    margin-left: 0.75rem;
+  `,
+  Code: styled(CodeSvg)`
+    width: 1rem;
+    height: 1rem;
+  `,
+};
+
+export default Styled;

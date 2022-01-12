@@ -17,10 +17,6 @@ a {
   box-sizing: border-box;
 }
 
-.linenumber.react-syntax-highlighter-line-number {
-  margin-bottom: 0.5rem;
-}
-
 li {
   margin: 0.5rem 0;
 }
@@ -33,4 +29,14 @@ h1 {
 h2 {
   font-size: 1.3rem;
   font-weight: 500;
+}
+
+pre {
+  border-radius: 5px;
+  font-size: 13px;
+  padding: 0.75rem !important;
+}
+
+.linenumber {
+  color: #98782b !important;
 }

@@ -1,5 +1,6 @@
 import styled, { css } from "styled-components";
 
+import { BORDER_WIDTH } from "utils/styles";
 import ChevronDownSvg from "assets/icons/chevron-down.svg";
 import ChevronUpSvg from "assets/icons/chevron-up.svg";
 import colors from "utils/colors";
@@ -12,18 +13,18 @@ const Styled = {
     display: table;
     border-collapse: collapse;
     width: 100%;
-    border: 0.0625rem solid ${colors["000000"]};
+    border: ${BORDER_WIDTH} solid ${colors["000000"]};
   `,
   Caption: styled.caption``,
   THead: styled.thead``,
   TBody: styled.tbody``,
   Tr: styled.tr``,
   Th: styled.th`
-    border: 0.0625rem solid ${colors["000000"]};
+    border: ${BORDER_WIDTH} solid ${colors["000000"]};
     padding: 0.75rem;
   `,
   Td: styled.td`
-    border: 0.0625rem solid ${colors["000000"]};
+    border: ${BORDER_WIDTH} solid ${colors["000000"]};
     padding: 0.75rem;
   `,
   SortWrap: styled.span`

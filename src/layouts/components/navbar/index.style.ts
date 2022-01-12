@@ -1,3 +1,5 @@
+import { BORDER_WIDTH, NAVBAR_HEIGHT } from "utils/styles";
+
 import colors from "utils/colors";
 import styled from "styled-components";
 
@@ -6,8 +8,8 @@ const Styled = {
     display: flex;
     align-items: center;
     padding: 0 10rem;
-    height: 4.5rem;
-    border-bottom: 0.0625rem solid ${colors["eaeaea"]};
+    height: ${NAVBAR_HEIGHT};
+    border-bottom: ${BORDER_WIDTH} solid ${colors["eaeaea"]};
   `,
 };
 

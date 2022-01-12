@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { ROUTES } from "utils/constant";
+import { ROUTES } from "utils/routes";
 import Styled from "./index.style";
 import { useMemo } from "react";
 import { useRouter } from "next/router";

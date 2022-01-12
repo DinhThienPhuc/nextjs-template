@@ -10,26 +10,10 @@ import SourceCode from "components/source-code";
 import Table from "components/table";
 
 const data = [
-  {
-    name: "PCT",
-    age: 24,
-    school: "APOEW",
-  },
-  {
-    name: "AWE",
-    age: 21,
-    school: "AWQ",
-  },
-  {
-    name: "VCOIE",
-    age: 42,
-    school: "YUT",
-  },
-  {
-    name: "CSA",
-    age: 32,
-    school: "WWEEEEE",
-  },
+  { name: "PCT", age: 24, school: "APOEW" },
+  { name: "AWE", age: 21, school: "AWQ" },
+  { name: "VCOIE", age: 42, school: "YUT" },
+  { name: "CSA", age: 32, school: "WWEEEEE" },
 ];
 
 interface IData {

@@ -10,6 +10,7 @@ const Styled = {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    height: 2rem;
   `,
   FilesGroup: styled.div`
     display: flex;

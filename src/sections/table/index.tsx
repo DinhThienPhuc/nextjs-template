@@ -12,9 +12,11 @@ import {
 } from "./index.utils";
 import { useCallback, useMemo, useState } from "react";
 
+import Img from "components/img";
 import SourceCode from "components/source-code";
 import Styled from "./index.style";
 import Table from "components/table";
+import TitleIconPng from "assets/title-icon.png";
 
 const SectionTable = () => {
   const [sort, setSort] = useState<ISort>({} as ISort);
@@ -78,7 +80,10 @@ const SectionTable = () => {
   return (
     <>
       <h1>Table</h1>
-      <h2>System Requirements</h2>
+      <h2>
+        <Img src={TitleIconPng} alt="title-icon" />
+        System Requirements
+      </h2>
       <ul>
         <li>
           Icons:{" "}

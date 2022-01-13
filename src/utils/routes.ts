@@ -1,14 +1,14 @@
-export const ROUTES = [
+export const SIDEBAR_ROUTES = [
   {
     label: "Elements",
     children: [
       {
         name: "Input",
-        route: "/elements/input",
+        route: "/components/elements/input",
       },
       {
         name: "Button",
-        route: "/elements/button",
+        route: "/components/elements/button",
       },
     ],
   },
@@ -17,15 +17,15 @@ export const ROUTES = [
     children: [
       {
         name: "Accordion",
-        route: "/menus/accordion",
+        route: "/components/menus/accordion",
       },
       {
         name: "Tabs",
-        route: "/menus/tabs",
+        route: "/components/menus/tabs",
       },
       {
         name: "Breadcrumbs",
-        route: "/menus/breadcrumbs",
+        route: "/components/menus/breadcrumbs",
       },
     ],
   },
@@ -34,7 +34,7 @@ export const ROUTES = [
     children: [
       {
         name: "Table",
-        route: "/table",
+        route: "/components/table",
       },
     ],
   },
@@ -43,12 +43,19 @@ export const ROUTES = [
     children: [
       {
         name: "Tooltip",
-        route: "/more/tooltip",
+        route: "/components/more/tooltip",
       },
       {
         name: "Timeline",
-        route: "/more/timeline",
+        route: "/components/more/timeline",
       },
     ],
+  },
+];
+
+export const NAVBAR_ROUTES = [
+  {
+    label: "Components",
+    route: "/components",
   },
 ];

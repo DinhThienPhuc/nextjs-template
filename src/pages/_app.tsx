@@ -3,7 +3,7 @@ import "assets/styles/globals.css";
 
 import { AppPropsCustomized } from "utils/interfaces";
 import Head from "next/head";
-import LayoutDefault from "layouts";
+import LayoutDefault from "layouts/default";
 
 function MyApp({ Component, pageProps }: AppPropsCustomized) {
   // Use the layout defined at the page level, or else use default layout

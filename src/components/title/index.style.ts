@@ -8,7 +8,7 @@ const Styled = {
     align-items: center;
     font-size: 2rem;
     font-weight: 600;
-    color: #937341;
+    color: ${colors["937341"]};
   `,
   CustomSquare: styled.span`
     position: relative;

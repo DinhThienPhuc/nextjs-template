@@ -13,7 +13,6 @@ const Styled = {
     position: fixed;
     width: ${SIDEBAR_WIDTH};
     min-height: calc(100vh - ${NAVBAR_HEIGHT});
-    border-right: ${BORDER_WIDTH} solid ${colors["927345"]};
     padding: 1.5rem;
   `,
   SidebarItemGroup: styled.ul`

@@ -1,3 +1,11 @@
+:root {
+  --gold: #f0e6d2;
+  --mud: #31271e;
+  --dark: #131415;
+  --ocean: #0bc4e2;
+  --old-gold: #98782b;
+}
+
 html,
 body {
   padding: 0;
@@ -6,18 +14,22 @@ body {
     Helvetica Neue, Arial, Noto Sans, sans-serif, Apple Color Emoji,
     Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
   font-size: 16px;
-  color: #f0e6d2;
-  background-color: #0a0a0c;
+  color: var(--gold);
+  background-color: var(--dark);
   font-weight: 300;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 a {
-  color: #0bc4e2;
+  color: var(--ocean);
   text-decoration: none;
 }
 
 a.no-hightlight {
-  color: #f0e6d2;
+  color: var(--gold);
 }
 
 * {
@@ -45,7 +57,7 @@ ul {
 }
 
 .linenumber {
-  color: #98782b !important;
+  color: var(--old-gold) !important;
 }
 
 ::-webkit-scrollbar {
@@ -54,18 +66,18 @@ ul {
 }
 
 ::-webkit-scrollbar-track {
-  background: #0a0a0c;
+  background: var(--dark);
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #31271e;
+  background: var(--mud);
   border-radius: 64px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #31271e;
+  background: var(--mud);
 }
 
 ::-webkit-scrollbar-corner {
-  background: #0a0a0c;
+  background: var(--dark);
 }

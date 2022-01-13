@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { ROUTES } from "utils/routes";
+import { SIDEBAR_ROUTES } from "utils/routes";
 import Styled from "./index.style";
 import { useMemo } from "react";
 import { useRouter } from "next/router";
@@ -8,7 +8,7 @@ const Sidebar = () => {
   const router = useRouter();
 
   const JSXContent = useMemo(() => {
-    return ROUTES.map((route) => {
+    return SIDEBAR_ROUTES.map((route) => {
       const childRoutes = route.children.map((childRoute) => {
         return (
           <Link key={`${childRoute.route}`} href={childRoute.route} passHref>

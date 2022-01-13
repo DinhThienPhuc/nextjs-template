@@ -21,7 +21,6 @@ const Styled = {
   `,
   SidebarItem: styled.li<{ isActive: boolean }>`
     cursor: pointer;
-
     padding-left: 2rem;
     margin-left: ${BORDER_WIDTH_NEGATIVE};
     ${({ isActive }) =>
@@ -29,7 +28,13 @@ const Styled = {
       css`
         color: ${colors["0bc4e2"]};
         border-left: ${BORDER_WIDTH} solid ${colors["0bc4e2"]};
+        font-weight: 500;
       `};
+
+    &:hover {
+      color: ${colors["0bc4e2"]};
+      border-left: ${BORDER_WIDTH} solid ${colors["0bc4e2"]};
+    }
   `,
   Label: styled.label<{ isActive: boolean }>`
     ${({ isActive }) =>

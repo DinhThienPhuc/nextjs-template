@@ -3,6 +3,9 @@ import styled from "styled-components";
 
 const Styled = {
   TableProps: styled(Table)`
+    &.table {
+      border: none;
+    }
     .table-head,
     .table-cell {
       border-left: none;
@@ -10,7 +13,7 @@ const Styled = {
     }
   ` as typeof Table,
   Property: styled.span`
-    font-weight: 600;
+    font-weight: 400;
   `,
 };
 

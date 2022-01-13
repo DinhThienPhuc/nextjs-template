@@ -13,19 +13,19 @@ const Styled = {
     display: table;
     border-collapse: collapse;
     width: 100%;
-    border: ${BORDER_WIDTH} solid ${colors["000000"]};
+    border: ${BORDER_WIDTH} solid ${colors["31271e"]};
   `,
   Caption: styled.caption``,
   THead: styled.thead``,
   TBody: styled.tbody``,
   Tr: styled.tr``,
   Th: styled.th`
-    border: ${BORDER_WIDTH} solid ${colors["000000"]};
+    border: ${BORDER_WIDTH} solid ${colors["31271e"]};
     padding: 0.75rem;
     text-align: left;
   `,
   Td: styled.td`
-    border: ${BORDER_WIDTH} solid ${colors["000000"]};
+    border: ${BORDER_WIDTH} solid ${colors["31271e"]};
     padding: 0.75rem;
     text-align: left;
   `,

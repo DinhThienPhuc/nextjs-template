@@ -1,6 +1,6 @@
+import { GITHUB_CODE_URL, SOURCE_CODE_URL } from "utils/constant";
 import { useCallback, useEffect, useState } from "react";
 
-import { SOURCE_CODE_URL } from "utils/constant";
 import Styled from "./index.style";
 import { PrismAsyncLight as SyntaxHighlighter } from "react-syntax-highlighter";
 import axios from "axios";
@@ -10,11 +10,13 @@ import { vscDarkPlus } from "react-syntax-highlighter/dist/cjs/styles/prism";
 interface IProps {
   paths: string[];
   languages?: string[];
+  githubSource?: string;
 }
 
 const SourceCode = ({
   languages = ["javascript", "javascript", "javascript"],
   paths,
+  githubSource,
 }: IProps) => {
   const [sources, setSources] = useState<string[]>([]);
   const [file, setFile] = useState<number>(0);
@@ -102,12 +104,25 @@ const SourceCode = ({
           )}
         </div>
         <div>
-          <Styled.Code onClick={handleShowSourceCode} width={18} height={18} />
+          <Styled.Code
+            onClick={handleShowSourceCode}
+            $isActive={isShow}
+            width={18}
+            height={18}
+          />
           <Styled.Copy
             onClick={handleCopyToClipboard(file)}
             width={18}
             height={18}
           />
+          <a
+            href={`${GITHUB_CODE_URL}${githubSource}`}
+            target={"_blank"}
+            rel={"noreferrer"}
+            className={"no-hightlight"}
+          >
+            <Styled.Github width={18} height={18} />
+          </a>
         </div>
       </Styled.Actions>
       {isShow && (

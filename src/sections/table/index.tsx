@@ -12,11 +12,9 @@ import {
 } from "./index.utils";
 import { useCallback, useMemo, useState } from "react";
 
-import Img from "components/img";
 import SourceCode from "components/source-code";
 import Styled from "./index.style";
 import Table from "components/table";
-import TitleIconPng from "assets/title-icon.png";
 
 const SectionTable = () => {
   const [sort, setSort] = useState<ISort>({} as ISort);
@@ -103,6 +101,8 @@ const SectionTable = () => {
           </a>
         </li>
       </ul>
+      <br />
+      <br />
       <h2>Example</h2>
       <div>
         <Table
@@ -113,6 +113,7 @@ const SectionTable = () => {
         />
       </div>
       <br />
+      <br />
       <SourceCode
         languages={["tsx", "typescript", "typescript"]}
         paths={[
@@ -120,7 +121,10 @@ const SectionTable = () => {
           "src/components/table/index.style.ts",
           "src/components/table/index.utils.ts",
         ]}
+        githubSource={"src/components/table"}
       />
+      <br />
+      <br />
       <h2>Props</h2>
       <div>
         <Styled.TableProps data={dataProps} columns={columnProps} />

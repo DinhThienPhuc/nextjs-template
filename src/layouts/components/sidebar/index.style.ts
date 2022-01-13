@@ -10,6 +10,7 @@ import colors from "utils/colors";
 
 const Styled = {
   Sidebar: styled.aside`
+    position: fixed;
     width: ${SIDEBAR_WIDTH};
     min-height: calc(100vh - ${NAVBAR_HEIGHT});
     border-right: ${BORDER_WIDTH} solid ${colors["927345"]};

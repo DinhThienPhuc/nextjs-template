@@ -1,7 +1,8 @@
-import { GITHUB_CODE_URL, SOURCE_CODE_URL } from "utils/constant";
 import { useCallback, useEffect, useState } from "react";
 
+import { GITHUB_LINKS } from "utils/constant";
 import Styled from "./index.style";
+import SubTitle from "components/sub-title";
 import { PrismAsyncLight as SyntaxHighlighter } from "react-syntax-highlighter";
 import axios from "axios";
 import useCopyToClipboard from "hooks/useCopyToClipboard";
@@ -27,7 +28,7 @@ const SourceCode = ({
     const fetchSourceCode = async () => {
       const arr: Promise<any>[] = [];
       paths.forEach((path) => {
-        arr.push(axios(`${SOURCE_CODE_URL}${path}`));
+        arr.push(axios(`${GITHUB_LINKS.SOURCES}${path}`));
       });
       const responses = await Promise.allSettled(arr);
 
@@ -67,7 +68,8 @@ const SourceCode = ({
   return (
     <>
       <Styled.Actions>
-        <div>
+        <Styled.HeaderLeft>
+          <SubTitle>Source code</SubTitle>
           {isShow && (
             <Styled.FilesGroup>
               {paths[0] && (
@@ -102,7 +104,7 @@ const SourceCode = ({
               )}
             </Styled.FilesGroup>
           )}
-        </div>
+        </Styled.HeaderLeft>
         <div>
           <Styled.Code
             onClick={handleShowSourceCode}
@@ -116,7 +118,7 @@ const SourceCode = ({
             height={18}
           />
           <a
-            href={`${GITHUB_CODE_URL}${githubSource}`}
+            href={`${GITHUB_LINKS.REPO}${githubSource}`}
             target={"_blank"}
             rel={"noreferrer"}
             className={"no-hightlight"}

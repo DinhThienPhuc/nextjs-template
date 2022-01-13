@@ -1,8 +1,4 @@
-import {
-  CLASSNAMES_PKG_LINK,
-  ICONS_LINK,
-  STYLED_COMPONENT_PKG_LINK,
-} from "utils/constant";
+import { GITHUB_LINKS, PACKAGE_LINKS } from "utils/constant";
 import { IColumn, ISort } from "components/table/index.utils";
 import {
   IDataProps,
@@ -14,7 +10,9 @@ import { useCallback, useMemo, useState } from "react";
 
 import SourceCode from "components/source-code";
 import Styled from "./index.style";
+import SubTitle from "components/sub-title";
 import Table from "components/table";
+import Title from "components/title";
 
 const SectionTable = () => {
   const [sort, setSort] = useState<ISort>({} as ISort);
@@ -77,33 +75,54 @@ const SectionTable = () => {
 
   return (
     <>
-      <h1>Table</h1>
-      <h2>System Requirements</h2>
-      <ul>
+      <Title>Table</Title>
+      <SubTitle>System Requirements</SubTitle>
+      <Styled.List>
         <li>
           Icons:{" "}
-          <a href={ICONS_LINK} target={"_blank"} rel={"noreferrer"}>
-            Feathericon
+          <a href={PACKAGE_LINKS.ICONS} target={"_blank"} rel={"noreferrer"}>
+            feather icons
           </a>
         </li>
         <li>
           Packages:{" "}
-          <a href={CLASSNAMES_PKG_LINK} target={"_blank"} rel={"noreferrer"}>
+          <a
+            href={PACKAGE_LINKS.CLASSNAMES}
+            target={"_blank"}
+            rel={"noreferrer"}
+          >
             classnames
           </a>
           ,{" "}
           <a
-            href={STYLED_COMPONENT_PKG_LINK}
+            href={PACKAGE_LINKS.STYLED_COMPONENT}
             target={"_blank"}
             rel={"noreferrer"}
           >
             styled-components
           </a>
         </li>
-      </ul>
+      </Styled.List>
       <br />
       <br />
-      <h2>Example</h2>
+      <SubTitle>Local related</SubTitle>
+      <Styled.List>
+        <li>
+          Icons:{" "}
+          <a href={GITHUB_LINKS.ICONS} target={"_blank"} rel={"noreferrer"}>
+            folder
+          </a>
+        </li>
+        <li>
+          Colors:{" "}
+          <a href={GITHUB_LINKS.COLORS} target={"_blank"} rel={"noreferrer"}>
+            folder
+          </a>
+        </li>
+      </Styled.List>
+      <br />
+      <br />
+      <SubTitle>Example</SubTitle>
       <div>
         <Table
           data={exampleData}
@@ -125,7 +144,7 @@ const SectionTable = () => {
       />
       <br />
       <br />
-      <h2>Props</h2>
+      <SubTitle>Props</SubTitle>
       <div>
         <Styled.TableProps data={dataProps} columns={columnProps} />
       </div>

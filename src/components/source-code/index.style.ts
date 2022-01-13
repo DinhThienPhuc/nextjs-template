@@ -13,8 +13,13 @@ const Styled = {
     align-items: center;
     height: 2rem;
   `,
+  HeaderLeft: styled.div`
+    display: flex;
+    align-items: center;
+  `,
   FilesGroup: styled.div`
     display: flex;
+    margin-left: 0.75rem;
   `,
   File: styled.div<{ $isSelected: boolean }>`
     display: flex;

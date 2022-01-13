@@ -45,7 +45,7 @@ const Styled = {
     ${({ $isActive }) =>
       $isActive &&
       css`
-        color: ${colors["98782b"]};
+        color: ${colors["0bc4e2"]};
       `}
   `,
   SortDown: styled(ChevronDownSvg)<{ $isActive: boolean }>`
@@ -55,7 +55,7 @@ const Styled = {
     ${({ $isActive }) =>
       $isActive &&
       css`
-        color: ${colors["98782b"]};
+        color: ${colors["0bc4e2"]};
       `}
   `,
 };

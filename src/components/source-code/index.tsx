@@ -73,7 +73,9 @@ const SourceCode = ({
                   onClick={handleSelectSourceFile(0)}
                   $isSelected={file === 0}
                 >
-                  <Styled.FileInner>.tsx</Styled.FileInner>
+                  <Styled.FileInner $isSelected={file === 0}>
+                    .tsx
+                  </Styled.FileInner>
                 </Styled.File>
               )}
               {paths[1] && (
@@ -81,7 +83,9 @@ const SourceCode = ({
                   onClick={handleSelectSourceFile(1)}
                   $isSelected={file === 1}
                 >
-                  <Styled.FileInner>.style</Styled.FileInner>
+                  <Styled.FileInner $isSelected={file === 1}>
+                    .style
+                  </Styled.FileInner>
                 </Styled.File>
               )}
               {paths[2] && (
@@ -89,7 +93,9 @@ const SourceCode = ({
                   onClick={handleSelectSourceFile(2)}
                   $isSelected={file === 2}
                 >
-                  <Styled.FileInner>.utils</Styled.FileInner>
+                  <Styled.FileInner $isSelected={file === 2}>
+                    .utils
+                  </Styled.FileInner>
                 </Styled.File>
               )}
             </Styled.FilesGroup>

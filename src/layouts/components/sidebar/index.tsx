@@ -9,19 +9,6 @@ const Sidebar = () => {
 
   const JSXContent = useMemo(() => {
     return ROUTES.map((route) => {
-      if (!route.children) {
-        return (
-          <div key={route.label}>
-            <Link href={route.route} passHref>
-              <Styled.Label isActive={router.asPath === route.route}>
-                {route.label}
-              </Styled.Label>
-            </Link>
-            <ul></ul>
-          </div>
-        );
-      }
-
       const childRoutes = route.children.map((childRoute) => {
         return (
           <Link key={`${childRoute.route}`} href={childRoute.route} passHref>
@@ -34,7 +21,7 @@ const Sidebar = () => {
       return (
         <div key={route.label}>
           <label>{route.label}</label>
-          <ul>{childRoutes}</ul>
+          <Styled.SidebarItemGroup>{childRoutes}</Styled.SidebarItemGroup>
         </div>
       );
     });

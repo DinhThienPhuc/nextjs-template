@@ -6,15 +6,19 @@ body {
     Helvetica Neue, Arial, Noto Sans, sans-serif, Apple Color Emoji,
     Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
   font-size: 16px;
+  color: #f0e6d2;
+  background-color: #0a0a0c;
+  font-weight: 300;
 }
 
 a {
-  color: #0074de;
+  color: #0bc4e2;
   text-decoration: none;
 }
 
 * {
   box-sizing: border-box;
+  transition: all 300ms ease-in-out;
 }
 
 li {
@@ -36,6 +40,10 @@ pre {
   border-radius: 5px;
   font-size: 13px;
   padding: 0.75rem !important;
+}
+
+ul {
+  list-style-type: none;
 }
 
 .linenumber {

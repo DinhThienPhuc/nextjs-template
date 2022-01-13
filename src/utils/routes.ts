@@ -30,8 +30,13 @@ export const ROUTES = [
     ],
   },
   {
-    label: "Table",
-    route: "/table",
+    label: "Tables",
+    children: [
+      {
+        name: "Table",
+        route: "/table",
+      },
+    ],
   },
   {
     label: "More",

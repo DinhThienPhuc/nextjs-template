@@ -1,4 +1,9 @@
-import { BORDER_WIDTH, NAVBAR_HEIGHT, SIDEBAR_WIDTH } from "utils/styles";
+import {
+  BORDER_WIDTH,
+  BORDER_WIDTH_NEGATIVE,
+  NAVBAR_HEIGHT,
+  SIDEBAR_WIDTH,
+} from "utils/styles";
 import styled, { css } from "styled-components";
 
 import colors from "utils/colors";
@@ -6,21 +11,27 @@ import colors from "utils/colors";
 const Styled = {
   Sidebar: styled.aside`
     width: ${SIDEBAR_WIDTH};
-    height: calc(100vh - ${NAVBAR_HEIGHT});
-    border-right: ${BORDER_WIDTH} solid ${colors["eaeaea"]};
-    padding: 0.75rem 0 0 0.75rem;
+    min-height: calc(100vh - ${NAVBAR_HEIGHT});
+    border-right: ${BORDER_WIDTH} solid ${colors["927345"]};
+    padding: 1.5rem;
+  `,
+  SidebarItemGroup: styled.ul`
+    padding: 0;
+    border-left: ${BORDER_WIDTH} solid ${colors["31271e"]};
   `,
   SidebarItem: styled.li<{ isActive: boolean }>`
-    transition: all 300ms ease-in-out;
     cursor: pointer;
+
+    padding-left: 2rem;
+    margin-left: ${BORDER_WIDTH_NEGATIVE};
     ${({ isActive }) =>
       isActive &&
       css`
-        color: ${colors["98782b"]};
+        color: ${colors["0bc4e2"]};
+        border-left: ${BORDER_WIDTH} solid ${colors["0bc4e2"]};
       `};
   `,
   Label: styled.label<{ isActive: boolean }>`
-    transition: all 300ms ease-in-out;
     ${({ isActive }) =>
       isActive &&
       css`

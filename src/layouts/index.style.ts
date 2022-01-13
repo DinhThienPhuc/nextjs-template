@@ -8,7 +8,7 @@ const Styled = {
     min-height: calc(100vh - ${NAVBAR_HEIGHT});
   `,
   Content: styled.section`
-    padding: 0.75rem;
+    padding: 0.5rem 1.5rem;
     width: calc(100vw - ${SIDEBAR_WIDTH});
   `,
 };

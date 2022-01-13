@@ -80,10 +80,7 @@ const SectionTable = () => {
   return (
     <>
       <h1>Table</h1>
-      <h2>
-        <Img src={TitleIconPng} alt="title-icon" />
-        System Requirements
-      </h2>
+      <h2>System Requirements</h2>
       <ul>
         <li>
           Icons:{" "}

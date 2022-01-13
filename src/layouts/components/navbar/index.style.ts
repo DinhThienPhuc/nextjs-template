@@ -9,7 +9,8 @@ const Styled = {
     align-items: center;
     padding: 0 10rem;
     height: ${NAVBAR_HEIGHT};
-    border-bottom: ${BORDER_WIDTH} solid ${colors["eaeaea"]};
+    background-color: ${colors["111111"]};
+    border-bottom: ${BORDER_WIDTH} solid ${colors["33333340"]};
   `,
 };
 

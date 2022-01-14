@@ -7,6 +7,7 @@ import colors from "utils/colors";
 
 const Styled = {
   Container: styled.div`
+    width: 100%;
     overflow-x: auto;
   `,
   Table: styled.table`

@@ -4,7 +4,7 @@ import styled from "styled-components";
 
 const Styled = {
   LayoutHomeContainer: styled.div`
-    overflow-x: hidden;
+    /* overflow-x: hidden; */
   `,
   BackgroundLight: styled.div`
     position: fixed;
@@ -12,7 +12,7 @@ const Styled = {
     left: 0;
     right: 0;
     bottom: 0;
-    width: 500%;
+    width: 100%;
     pointer-events: none;
   `,
   Main: styled.main`

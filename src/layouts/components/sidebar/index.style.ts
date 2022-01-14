@@ -1,6 +1,7 @@
 import {
   BORDER_WIDTH,
   BORDER_WIDTH_NEGATIVE,
+  MAIN_MAX_WIDTH,
   NAVBAR_HEIGHT,
   SIDEBAR_WIDTH,
 } from "utils/styles";
@@ -13,7 +14,11 @@ const Styled = {
     position: fixed;
     width: ${SIDEBAR_WIDTH};
     min-height: calc(100vh - ${NAVBAR_HEIGHT});
-    padding: 1.5rem;
+    padding: 1rem;
+
+    @media only screen and (min-width: 1440px) {
+      left: calc((100% - ${MAIN_MAX_WIDTH}) / 2 - ${SIDEBAR_WIDTH});
+    }
   `,
   SidebarItemGroup: styled.ul`
     padding: 0;

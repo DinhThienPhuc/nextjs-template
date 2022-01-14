@@ -4,13 +4,17 @@ import Navbar from "./components/navbar";
 import { ReactNode } from "react";
 import Sidebar from "./components/sidebar";
 import Styled from "./default.style";
-import TableOfContent from "layouts/components/table-of-content";
+import TableOfContent from "./components/table-of-content";
+import useMediaQuery from "hooks/useMediaQuery";
 
 interface IProps {
   children: ReactNode | string;
 }
 
 const LayoutDefault = ({ children }: IProps) => {
+  const isDesktop = useMediaQuery("(min-width: 1024px)");
+  const isMediumDesktop = useMediaQuery("(min-width: 1280px)");
+
   return (
     <Styled.LayoutDefaultContainer>
       <Styled.BackgroundLight>
@@ -18,9 +22,9 @@ const LayoutDefault = ({ children }: IProps) => {
       </Styled.BackgroundLight>
       <Navbar />
       <Styled.Main>
-        <Sidebar />
+        {isDesktop && <Sidebar />}
         <Styled.Content id={"default-content"}>{children}</Styled.Content>
-        <TableOfContent />
+        {isMediumDesktop && <TableOfContent />}
       </Styled.Main>
     </Styled.LayoutDefaultContainer>
   );

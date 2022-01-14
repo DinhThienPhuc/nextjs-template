@@ -1,12 +1,11 @@
 import { useEffect, useMemo, useState } from "react";
 
+import Styled from "./index.style";
 import { useRouter } from "next/router";
 
 const TableOfContent = () => {
   const router = useRouter();
   const [subTitles, setSubTitles] = useState<string[]>([]);
-
-  // TODO: try some other way
 
   useEffect(() => {
     const defaultContent = document.querySelector("#default-content");
@@ -26,7 +25,11 @@ const TableOfContent = () => {
     });
   }, [subTitles]);
 
-  return <ul>{JSXTableOfContent}</ul>;
+  return (
+    <Styled.TableOfContent>
+      <ul>{JSXTableOfContent}</ul>
+    </Styled.TableOfContent>
+  );
 };
 
 export default TableOfContent;

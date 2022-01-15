@@ -3,7 +3,13 @@ import { MAIN_MAX_WIDTH, NAVBAR_HEIGHT, SIDEBAR_WIDTH } from "utils/styles";
 import styled from "styled-components";
 
 const Styled = {
-  LayoutComponent: styled.div``,
+  LayoutComponent: styled.div`
+    background: url(/background.png) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+  `,
   Main: styled.main`
     display: flex;
     min-height: calc(100vh - ${NAVBAR_HEIGHT});

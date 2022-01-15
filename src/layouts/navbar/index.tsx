@@ -1,4 +1,4 @@
-import { useCallback, useMemo, useRef, useState } from "react";
+import { forwardRef, useCallback, useMemo, useRef, useState } from "react";
 
 import GlobeSvg from "assets/icons/globe.svg";
 import Img from "components/img";
@@ -7,6 +7,12 @@ import LogoPng from "assets/logo.png";
 import { NAVBAR_ROUTES } from "utils/routes";
 import Styled from "./index.style";
 import useEventListener from "hooks/useEventListener";
+
+const Logo = forwardRef(() => {
+  return <Img src={LogoPng} alt="logo" width={75} height={52} />;
+});
+
+Logo.displayName = "Logo";
 
 const Navbar = () => {
   const [isScrollBelow, setScrollBelow] = useState<boolean>(false);
@@ -38,7 +44,7 @@ const Navbar = () => {
   return (
     <Styled.Navbar isScrollBelow={isScrollBelow}>
       <Link href={"/"} passHref>
-        <Img src={LogoPng} alt="logo" width={75} height={52} />
+        <Logo />
       </Link>
       <Styled.Right>
         {JSXNavbarRoutes}

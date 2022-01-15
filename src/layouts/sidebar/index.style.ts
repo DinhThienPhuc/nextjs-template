@@ -41,13 +41,6 @@ const Styled = {
       border-left: ${BORDER_WIDTH} solid ${colors["0bc4e2"]};
     }
   `,
-  Label: styled.label<{ isActive: boolean }>`
-    ${({ isActive }) =>
-      isActive &&
-      css`
-        color: ${colors["98782b"]};
-      `};
-  `,
 };
 
 export default Styled;

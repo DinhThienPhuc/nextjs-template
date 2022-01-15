@@ -1,4 +1,4 @@
-import { ForwardedRef, HTMLAttributes, ReactNode, forwardRef } from "react";
+import { HTMLAttributes, ReactNode } from "react";
 
 import Styled from "./index.style";
 
@@ -7,20 +7,13 @@ interface IProps extends HTMLAttributes<HTMLHeadingElement> {
   noPrefix?: boolean;
 }
 
-const SubTitle = forwardRef(
-  (
-    { children, noPrefix, ...props }: IProps,
-    ref: ForwardedRef<HTMLHeadingElement | null>,
-  ) => {
-    return (
-      <h2 ref={ref} {...props}>
-        {!noPrefix && <Styled.CustomDot />}
-        {children}
-      </h2>
-    );
-  },
-);
-
-SubTitle.displayName = "SubTitle";
+const SubTitle = ({ children, noPrefix = false, ...props }: IProps) => {
+  return (
+    <h2 {...props}>
+      {!noPrefix && <Styled.CustomDot />}
+      {children}
+    </h2>
+  );
+};
 
 export default SubTitle;

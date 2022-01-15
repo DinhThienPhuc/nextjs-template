@@ -76,12 +76,10 @@ const SourceCode = forwardRef(
     }, []);
 
     return (
-      <>
+      <div ref={ref}>
         <Styled.Actions>
           <Styled.HeaderLeft>
-            <SubTitle id={"source-code"} ref={ref}>
-              Source code
-            </SubTitle>
+            <SubTitle id={"source-code"}>Source code</SubTitle>
             {isShow && (
               <Styled.FilesGroup>
                 {paths[0] && (
@@ -148,7 +146,7 @@ const SourceCode = forwardRef(
             {sources[file]}
           </SyntaxHighlighter>
         )}
-      </>
+      </div>
     );
   },
 );

@@ -99,66 +99,66 @@ const SectionTable = () => {
   return (
     <>
       <Title>Table</Title>
-      <SubTitle id={"system-requirements"} ref={systemRequireRef}>
-        System Requirements
-      </SubTitle>
-      <Styled.List>
-        <li>
-          Icons:{" "}
-          <a href={PACKAGE_LINKS.ICONS} target={"_blank"} rel={"noreferrer"}>
-            feather icons
-          </a>
-        </li>
-        <li>
-          Packages:{" "}
-          <a
-            href={PACKAGE_LINKS.CLASSNAMES}
-            target={"_blank"}
-            rel={"noreferrer"}
-          >
-            classnames
-          </a>
-          ,{" "}
-          <a
-            href={PACKAGE_LINKS.STYLED_COMPONENT}
-            target={"_blank"}
-            rel={"noreferrer"}
-          >
-            styled-components
-          </a>
-        </li>
-      </Styled.List>
+      <div ref={systemRequireRef}>
+        <SubTitle id={"system-requirements"}>System Requirements</SubTitle>
+        <Styled.List>
+          <li>
+            Icons:{" "}
+            <a href={PACKAGE_LINKS.ICONS} target={"_blank"} rel={"noreferrer"}>
+              feather icons
+            </a>
+          </li>
+          <li>
+            Packages:{" "}
+            <a
+              href={PACKAGE_LINKS.CLASSNAMES}
+              target={"_blank"}
+              rel={"noreferrer"}
+            >
+              classnames
+            </a>
+            ,{" "}
+            <a
+              href={PACKAGE_LINKS.STYLED_COMPONENT}
+              target={"_blank"}
+              rel={"noreferrer"}
+            >
+              styled-components
+            </a>
+          </li>
+        </Styled.List>
+      </div>
       <br />
       <br />
-      <SubTitle id={"local-related"} ref={localRelatedRef}>
-        Local related
-      </SubTitle>
-      <Styled.List>
-        <li>
-          Icons:{" "}
-          <a href={GITHUB_LINKS.ICONS} target={"_blank"} rel={"noreferrer"}>
-            folder
-          </a>
-        </li>
-        <li>
-          Colors:{" "}
-          <a href={GITHUB_LINKS.COLORS} target={"_blank"} rel={"noreferrer"}>
-            folder
-          </a>
-        </li>
-      </Styled.List>
+      <div ref={localRelatedRef}>
+        <SubTitle id={"local-related"}>Local related</SubTitle>
+        <Styled.List>
+          <li>
+            Icons:{" "}
+            <a href={GITHUB_LINKS.ICONS} target={"_blank"} rel={"noreferrer"}>
+              folder
+            </a>
+          </li>
+          <li>
+            Colors:{" "}
+            <a href={GITHUB_LINKS.COLORS} target={"_blank"} rel={"noreferrer"}>
+              folder
+            </a>
+          </li>
+        </Styled.List>
+      </div>
       <br />
       <br />
-      <SubTitle id={"example"} ref={exampleRef}>
-        Example
-      </SubTitle>
-      <div>
-        <Table
-          data={exampleData}
-          columns={exampleColumns}
-          onSort={handleSort}
-          sort={sort}
-        />
+      <div ref={exampleRef}>
+        <SubTitle id={"example"}>Example</SubTitle>
+        <div>
+          <Table
+            data={exampleData}
+            columns={exampleColumns}
+            onSort={handleSort}
+            sort={sort}
+          />
+        </div>
       </div>
       <br />
       <br />
@@ -174,13 +174,12 @@ const SectionTable = () => {
       />
       <br />
       <br />
-      <SubTitle id={"props"} ref={propsRef}>
-        Props
-      </SubTitle>
-      <div>
-        <Styled.TableProps data={dataProps} columns={columnProps} />
+      <div ref={propsRef}>
+        <SubTitle id={"props"}>Props</SubTitle>
+        <div>
+          <Styled.TableProps data={dataProps} columns={columnProps} />
+        </div>
       </div>
-
       {isMediumDesktop && (
         <TableOfContent
           items={[

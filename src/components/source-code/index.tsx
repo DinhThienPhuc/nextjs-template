@@ -51,6 +51,7 @@ const SourceCode = forwardRef(
           }
         });
         setSources(result);
+        setShow(true);
       };
 
       fetchSourceCode();
@@ -87,9 +88,7 @@ const SourceCode = forwardRef(
                     onClick={handleSelectSourceFile(0)}
                     $isSelected={file === 0}
                   >
-                    <Styled.FileInner $isSelected={file === 0}>
-                      .tsx
-                    </Styled.FileInner>
+                    .tsx
                   </Styled.File>
                 )}
                 {paths[1] && (
@@ -97,9 +96,7 @@ const SourceCode = forwardRef(
                     onClick={handleSelectSourceFile(1)}
                     $isSelected={file === 1}
                   >
-                    <Styled.FileInner $isSelected={file === 1}>
-                      .style
-                    </Styled.FileInner>
+                    .style
                   </Styled.File>
                 )}
                 {paths[2] && (
@@ -107,9 +104,7 @@ const SourceCode = forwardRef(
                     onClick={handleSelectSourceFile(2)}
                     $isSelected={file === 2}
                   >
-                    <Styled.FileInner $isSelected={file === 2}>
-                      .utils
-                    </Styled.FileInner>
+                    .utils
                   </Styled.File>
                 )}
               </Styled.FilesGroup>

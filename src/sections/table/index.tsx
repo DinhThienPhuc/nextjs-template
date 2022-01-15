@@ -8,6 +8,7 @@ import {
 } from "./index.utils";
 import { useCallback, useMemo, useRef, useState } from "react";
 
+import CheckSvg from "assets/icons/check.svg";
 import SourceCode from "components/source-code";
 import Styled from "./index.style";
 import SubTitle from "components/sub-title";
@@ -82,12 +83,14 @@ const SectionTable = () => {
       {
         field: "default",
         headerName: "Default",
-        renderCell: ({ value }) => <>{value}</>,
+        renderCell: ({ value }) => <>{value || "--"}</>,
       },
       {
         field: "require",
         headerName: "Require",
-        renderCell: ({ value }) => <>{value}</>,
+        renderCell: ({ value }) => (
+          <>{value ? <CheckSvg width={18} height={18} /> : null}</>
+        ),
       },
     ];
   }, []);

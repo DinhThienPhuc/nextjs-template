@@ -25,35 +25,18 @@ const Styled = {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 2.5rem;
+    width: 2rem;
     height: 2rem;
     border: ${BORDER_WIDTH} solid
       ${({ $isSelected }) =>
         $isSelected ? colors["0bc4e2"] : colors["f0e6d2"]};
     font-size: 0.6rem;
-    color: ${colors["000000"]};
+    color: ${({ $isSelected }) =>
+      $isSelected ? colors["0bc4e2"] : colors["f0e6d2"]};
     font-weight: 500;
     cursor: pointer;
-
-    &:first-of-type {
-      border-top-left-radius: 0.25rem;
-      border-bottom-left-radius: 0.25rem;
-    }
-
-    &:last-of-type {
-      border-top-right-radius: 0.25rem;
-      border-bottom-right-radius: 0.25rem;
-    }
-  `,
-  FileInner: styled.div<{ $isSelected: boolean }>`
-    width: 1.6rem;
-    height: 1.4rem;
-    background: ${({ $isSelected }) =>
-      $isSelected ? colors["0bc4e2"] : colors["f0e6d2"]};
-    border-radius: 0.1rem;
-    display: flex;
-    align-items: end;
-    justify-content: end;
+    margin-right: 0.5rem;
+    border-radius: 50%;
   `,
   Copy: styled(CopySvg)`
     width: 1rem;

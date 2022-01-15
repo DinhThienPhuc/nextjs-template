@@ -12,10 +12,13 @@ import SourceCode from "components/source-code";
 import Styled from "./index.style";
 import SubTitle from "components/sub-title";
 import Table from "components/table";
+import TableOfContent from "components/table-of-content";
 import Title from "components/title";
+import useMediaQuery from "hooks/useMediaQuery";
 
 const SectionTable = () => {
   const [sort, setSort] = useState<ISort>({} as ISort);
+  const isMediumDesktop = useMediaQuery("(min-width: 1280px)");
 
   const exampleColumns = useMemo<IColumn<IExampleData>[]>(() => {
     return [
@@ -76,7 +79,7 @@ const SectionTable = () => {
   return (
     <>
       <Title>Table</Title>
-      <SubTitle>System Requirements</SubTitle>
+      <SubTitle id={"system-requirements"}>System Requirements</SubTitle>
       <Styled.List>
         <li>
           Icons:{" "}
@@ -105,7 +108,7 @@ const SectionTable = () => {
       </Styled.List>
       <br />
       <br />
-      <SubTitle>Local related</SubTitle>
+      <SubTitle id={"local-related"}>Local related</SubTitle>
       <Styled.List>
         <li>
           Icons:{" "}
@@ -122,7 +125,7 @@ const SectionTable = () => {
       </Styled.List>
       <br />
       <br />
-      <SubTitle>Example</SubTitle>
+      <SubTitle id={"example"}>Example</SubTitle>
       <div>
         <Table
           data={exampleData}
@@ -144,10 +147,22 @@ const SectionTable = () => {
       />
       <br />
       <br />
-      <SubTitle>Props</SubTitle>
+      <SubTitle id={"props"}>Props</SubTitle>
       <div>
         <Styled.TableProps data={dataProps} columns={columnProps} />
       </div>
+
+      {isMediumDesktop && (
+        <TableOfContent
+          items={[
+            { label: "System Requirements", id: "system-requirements" },
+            { label: "Local related", id: "local-related" },
+            { label: "Example", id: "example" },
+            { label: "Source code", id: "source-code" },
+            { label: "Props", id: "props" },
+          ]}
+        />
+      )}
     </>
   );
 };

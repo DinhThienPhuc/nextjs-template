@@ -69,7 +69,7 @@ const SourceCode = ({
     <>
       <Styled.Actions>
         <Styled.HeaderLeft>
-          <SubTitle>Source code</SubTitle>
+          <SubTitle id={"source-code"}>Source code</SubTitle>
           {isShow && (
             <Styled.FilesGroup>
               {paths[0] && (

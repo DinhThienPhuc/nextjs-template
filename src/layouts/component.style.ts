@@ -12,6 +12,7 @@ const Styled = {
   Content: styled.section`
     padding: 0.5rem 1.5rem 3rem;
     margin: 0 auto;
+    border: 1px solid white;
 
     @media only screen and (min-width: 1024px) {
       width: calc(100% - ${SIDEBAR_WIDTH});

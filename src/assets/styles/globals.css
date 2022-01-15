@@ -44,6 +44,16 @@ li {
 h2 {
   font-size: 1.3rem;
   font-weight: 500;
+  scroll-margin-top: 5rem;
+}
+
+/* Safari-only */
+@supports (-webkit-hyphens: none) {
+  h2,
+  h3 {
+    padding-top: 16px;
+    margin-top: -16px;
+  }
 }
 
 pre {

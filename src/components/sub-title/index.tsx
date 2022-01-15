@@ -4,11 +4,12 @@ import Styled from "./index.style";
 interface IProps {
   children: ReactNode | string;
   noPrefix?: boolean;
+  id?: string;
 }
 
-const SubTitle = ({ children, noPrefix }: IProps) => {
+const SubTitle = ({ children, noPrefix, id = "" }: IProps) => {
   return (
-    <h2>
+    <h2 id={id}>
       {!noPrefix && <Styled.CustomDot />}
       {children}
     </h2>

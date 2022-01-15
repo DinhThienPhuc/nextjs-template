@@ -40,7 +40,6 @@ const Navbar = () => {
       <Link href={"/"} passHref>
         <Img src={LogoPng} alt="logo" width={75} height={52} />
       </Link>
-
       <Styled.Right>
         {JSXNavbarRoutes}
         <Styled.Globe>

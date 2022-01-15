@@ -1,7 +1,7 @@
-import { NextPageCustomized } from "utils/interfaces";
+import { INextPageCustomized } from "utils/interfaces";
 import SectionHome from "sections/home";
 
-const PageHome: NextPageCustomized = () => {
+const PageHome: INextPageCustomized = () => {
   return (
     <>
       <SectionHome />

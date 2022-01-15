@@ -1,10 +1,10 @@
 import Head from "next/head";
+import { INextPageCustomized } from "utils/interfaces";
 import LayoutComponent from "layouts/component";
-import { NextPageCustomized } from "utils/interfaces";
 import { ReactElement } from "react";
 import SectionTable from "sections/table";
 
-const PageComponentTable: NextPageCustomized = () => {
+const PageComponentTable: INextPageCustomized = () => {
   return <SectionTable />;
 };
 

@@ -12,3 +12,7 @@ export const PACKAGE_LINKS = {
   CLASSNAMES: "https://www.npmjs.com/package/classnames",
   STYLED_COMPONENT: "https://styled-components.com/",
 };
+
+export const visibileHeading = {
+  rootMargin: "-80px 0px 0px 0px",
+};

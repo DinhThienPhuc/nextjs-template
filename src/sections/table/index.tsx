@@ -1,4 +1,4 @@
-import { GITHUB_LINKS, PACKAGE_LINKS } from "utils/constant";
+import { GITHUB_LINKS, PACKAGE_LINKS, visibileHeading } from "utils/constant";
 import { IColumn, ISort } from "components/table/index.utils";
 import {
   IDataProps,
@@ -6,7 +6,7 @@ import {
   dataProps,
   exampleData,
 } from "./index.utils";
-import { useCallback, useMemo, useState } from "react";
+import { useCallback, useMemo, useRef, useState } from "react";
 
 import SourceCode from "components/source-code";
 import Styled from "./index.style";
@@ -14,11 +14,31 @@ import SubTitle from "components/sub-title";
 import Table from "components/table";
 import TableOfContent from "components/table-of-content";
 import Title from "components/title";
+import useIntersectionObserver from "hooks/useIntersectionObserver";
 import useMediaQuery from "hooks/useMediaQuery";
 
 const SectionTable = () => {
   const [sort, setSort] = useState<ISort>({} as ISort);
   const isMediumDesktop = useMediaQuery("(min-width: 1280px)");
+  const systemRequireRef = useRef<HTMLHeadingElement | null>(null);
+  const localRelatedRef = useRef<HTMLHeadingElement | null>(null);
+  const exampleRef = useRef<HTMLHeadingElement | null>(null);
+  const sourceCodeRef = useRef<HTMLHeadingElement | null>(null);
+  const propsRef = useRef<HTMLHeadingElement | null>(null);
+  const systemRequireEntry = useIntersectionObserver(
+    systemRequireRef,
+    visibileHeading,
+  );
+  const localRelatedEntry = useIntersectionObserver(
+    localRelatedRef,
+    visibileHeading,
+  );
+  const exampleEntry = useIntersectionObserver(exampleRef, visibileHeading);
+  const sourceCodeEntry = useIntersectionObserver(
+    sourceCodeRef,
+    visibileHeading,
+  );
+  const propsEntry = useIntersectionObserver(propsRef, visibileHeading);
 
   const exampleColumns = useMemo<IColumn<IExampleData>[]>(() => {
     return [
@@ -79,7 +99,9 @@ const SectionTable = () => {
   return (
     <>
       <Title>Table</Title>
-      <SubTitle id={"system-requirements"}>System Requirements</SubTitle>
+      <SubTitle id={"system-requirements"} ref={systemRequireRef}>
+        System Requirements
+      </SubTitle>
       <Styled.List>
         <li>
           Icons:{" "}
@@ -108,7 +130,9 @@ const SectionTable = () => {
       </Styled.List>
       <br />
       <br />
-      <SubTitle id={"local-related"}>Local related</SubTitle>
+      <SubTitle id={"local-related"} ref={localRelatedRef}>
+        Local related
+      </SubTitle>
       <Styled.List>
         <li>
           Icons:{" "}
@@ -125,7 +149,9 @@ const SectionTable = () => {
       </Styled.List>
       <br />
       <br />
-      <SubTitle id={"example"}>Example</SubTitle>
+      <SubTitle id={"example"} ref={exampleRef}>
+        Example
+      </SubTitle>
       <div>
         <Table
           data={exampleData}
@@ -144,10 +170,13 @@ const SectionTable = () => {
           "src/components/table/index.utils.ts",
         ]}
         githubSource={"src/components/table"}
+        ref={sourceCodeRef}
       />
       <br />
       <br />
-      <SubTitle id={"props"}>Props</SubTitle>
+      <SubTitle id={"props"} ref={propsRef}>
+        Props
+      </SubTitle>
       <div>
         <Styled.TableProps data={dataProps} columns={columnProps} />
       </div>
@@ -155,11 +184,31 @@ const SectionTable = () => {
       {isMediumDesktop && (
         <TableOfContent
           items={[
-            { label: "System Requirements", id: "system-requirements" },
-            { label: "Local related", id: "local-related" },
-            { label: "Example", id: "example" },
-            { label: "Source code", id: "source-code" },
-            { label: "Props", id: "props" },
+            {
+              label: "System Requirements",
+              id: "system-requirements",
+              isVisible: !!systemRequireEntry?.isIntersecting,
+            },
+            {
+              label: "Local related",
+              id: "local-related",
+              isVisible: !!localRelatedEntry?.isIntersecting,
+            },
+            {
+              label: "Example",
+              id: "example",
+              isVisible: !!exampleEntry?.isIntersecting,
+            },
+            {
+              label: "Source code",
+              id: "source-code",
+              isVisible: !!sourceCodeEntry?.isIntersecting,
+            },
+            {
+              label: "Props",
+              id: "props",
+              isVisible: !!propsEntry?.isIntersecting,
+            },
           ]}
         />
       )}

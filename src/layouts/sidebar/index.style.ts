@@ -14,8 +14,7 @@ const Styled = {
     position: fixed;
     width: ${SIDEBAR_WIDTH};
     min-height: calc(100vh - ${NAVBAR_HEIGHT});
-    padding: 1rem;
-    border: 1px solid green;
+    padding: 1rem 1.5rem;
 
     @media only screen and (min-width: 1440px) {
       left: calc((100% - ${MAIN_MAX_WIDTH}) / 2 - ${SIDEBAR_WIDTH});

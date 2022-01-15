@@ -5,17 +5,21 @@ import Styled from "./index.style";
 import { useMemo } from "react";
 
 interface IProps {
-  items?: ITableContentItems[] | undefined;
+  items?: ITableContentItems[];
 }
 
 const TableOfContent = ({ items }: IProps) => {
   const JSXTableOfContent = useMemo(() => {
-    return items?.map((item) => {
+    return items?.map((item, index) => {
       return (
         <Link href={`#${item.id}`} key={item.id} passHref>
-          <Styled.Item>
+          <Styled.Item
+            isActive={
+              item.isVisible && (index === 0 || !items[index - 1].isVisible)
+            }
+          >
             <ChevronRightSvg width={14} height={14} />
-            <span>{item.label}</span>
+            <Styled.ItemLabel>{item.label}</Styled.ItemLabel>
           </Styled.Item>
         </Link>
       );

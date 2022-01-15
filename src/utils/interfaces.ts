@@ -15,4 +15,5 @@ export type IAppPropsCustomized = AppProps & {
 export interface ITableContentItems {
   label: string | ReactNode;
   id: string;
+  isVisible: boolean;
 }

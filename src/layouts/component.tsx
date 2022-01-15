@@ -1,4 +1,3 @@
-import { ITableContentItems } from "utils/interfaces";
 import Navbar from "./navbar";
 import { ReactNode } from "react";
 import Sidebar from "./sidebar";
@@ -7,10 +6,9 @@ import useMediaQuery from "hooks/useMediaQuery";
 
 interface IProps {
   children: ReactNode | string;
-  tableOfContent?: ITableContentItems[];
 }
 
-const LayoutComponent = ({ children, tableOfContent }: IProps) => {
+const LayoutComponent = ({ children }: IProps) => {
   const isDesktop = useMediaQuery("(min-width: 1024px)");
 
   return (

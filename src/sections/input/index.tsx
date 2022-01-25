@@ -1,21 +1,22 @@
 import { GITHUB_LINKS, PACKAGE_LINKS, visibileHeading } from "utils/constant";
-import { IColumn, ISort } from "components/table/index.utils";
-import { IExampleData, dataProps, exampleData } from "./index.utils";
 import { useCallback, useMemo, useRef, useState } from "react";
 
 import CheckSvg from "assets/icons/check.svg";
+import EditSvg from "assets/icons/edit.svg";
+import { IColumn } from "components/table/index.utils";
 import { IDataProps } from "utils/interfaces";
+import Input from "components/input";
+import SearchSvg from "assets/icons/search.svg";
 import SourceCode from "components/source-code";
 import Styled from "./index.style";
 import SubTitle from "components/sub-title";
-import Table from "components/table";
 import TableOfContent from "components/table-of-content";
 import Title from "components/title";
+import { dataProps } from "./index.utils";
 import useIntersectionObserver from "hooks/useIntersectionObserver";
 import useMediaQuery from "hooks/useMediaQuery";
 
-const SectionTable = () => {
-  const [sort, setSort] = useState<ISort>({} as ISort);
+const SectionInput = () => {
   const isMediumDesktop = useMediaQuery("(min-width: 1280px)");
   const systemRequireRef = useRef<HTMLHeadingElement | null>(null);
   const localRelatedRef = useRef<HTMLHeadingElement | null>(null);
@@ -36,27 +37,10 @@ const SectionTable = () => {
     visibileHeading,
   );
   const propsEntry = useIntersectionObserver(propsRef, visibileHeading);
+  const [exampleInputValue, setExampleInputValue] = useState<string>("");
 
-  const exampleColumns = useMemo<IColumn<IExampleData>[]>(() => {
-    return [
-      {
-        field: "name",
-        headerName: "Name",
-        isSort: true,
-        renderCell: ({ value }) => <>{value}</>,
-      },
-      {
-        field: "age",
-        headerName: "Age",
-        isSort: true,
-        renderCell: ({ value }) => <>{value}</>,
-      },
-      {
-        field: "school",
-        headerName: "School",
-        renderCell: ({ value }) => <>{value}</>,
-      },
-    ];
+  const handleChange = useCallback((e: any) => {
+    setExampleInputValue(e.target.value.toString());
   }, []);
 
   const columnProps = useMemo<IColumn<IDataProps>[]>(() => {
@@ -91,13 +75,9 @@ const SectionTable = () => {
     ];
   }, []);
 
-  const handleSort = useCallback((params: ISort) => {
-    setSort(params);
-  }, []);
-
   return (
     <>
-      <Title>Table</Title>
+      <Title>Input</Title>
       <div ref={systemRequireRef}>
         <SubTitle id={"system-requirements"}>System Requirements</SubTitle>
         <Styled.List>
@@ -151,24 +131,33 @@ const SectionTable = () => {
       <div ref={exampleRef}>
         <SubTitle id={"example"}>Example</SubTitle>
         <div>
-          <Table
-            data={exampleData}
-            columns={exampleColumns}
-            onSort={handleSort}
-            sort={sort}
+          <h3>No props component </h3>
+          <Input />
+          <br />
+          <h3>With icons: </h3>
+          <Input preIcon={<SearchSvg width={24} height={24} />} />
+          <br />
+          <Input postIcon={<EditSvg width={24} height={24} />} />
+          <br />
+          <h3>With state change: </h3>
+          <Input
+            onChange={handleChange}
+            value={exampleInputValue}
+            preIcon={<SearchSvg width={24} height={24} />}
           />
+          <h4>Input value: {exampleInputValue}</h4>
+          <br />
         </div>
       </div>
       <br />
       <br />
       <SourceCode
-        languages={["tsx", "typescript", "typescript"]}
+        languages={["tsx", "typescript"]}
         paths={[
-          "src/components/table/index.tsx",
-          "src/components/table/index.style.ts",
-          "src/components/table/index.utils.ts",
+          "src/components/input/index.tsx",
+          "src/components/input/index.style.ts",
         ]}
-        githubSource={"src/components/table"}
+        githubSource={"src/components/input"}
         ref={sourceCodeRef}
       />
       <br />
@@ -214,4 +203,4 @@ const SectionTable = () => {
   );
 };
 
-export default SectionTable;
+export default SectionInput;

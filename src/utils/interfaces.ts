@@ -17,3 +17,11 @@ export interface ITableContentItems {
   id: string;
   isVisible: boolean;
 }
+
+export interface IDataProps {
+  property: string;
+  description: string;
+  type: string;
+  default: string;
+  require: boolean;
+}

@@ -11,9 +11,12 @@ const Styled = {
     background-size: cover;
   `,
   Main: styled.main`
-    display: flex;
     min-height: calc(100vh - ${NAVBAR_HEIGHT});
     padding-top: ${NAVBAR_HEIGHT};
+
+    @media only screen and (min-width: 1024px) {
+      display: flex;
+    }
   `,
   Content: styled.section`
     padding: 0.5rem 1.5rem 6rem;

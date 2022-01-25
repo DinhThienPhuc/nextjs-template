@@ -1,10 +1,4 @@
-import {
-  ForwardedRef,
-  forwardRef,
-  useCallback,
-  useEffect,
-  useState,
-} from "react";
+import { ForwardedRef, forwardRef, useCallback, useState } from "react";
 
 import { GITHUB_LINKS } from "utils/constant";
 import Styled from "./index.style";
@@ -12,6 +6,7 @@ import SubTitle from "components/sub-title";
 import { PrismAsyncLight as SyntaxHighlighter } from "react-syntax-highlighter";
 import axios from "axios";
 import useCopyToClipboard from "hooks/useCopyToClipboard";
+import useEffectOnce from "hooks/useEffectOnce";
 import { vscDarkPlus } from "react-syntax-highlighter/dist/cjs/styles/prism";
 
 interface IProps {
@@ -34,7 +29,7 @@ const SourceCode = forwardRef(
     const [isShow, setShow] = useState<boolean>(false);
     const [, copyToClipboard] = useCopyToClipboard();
 
-    useEffect(() => {
+    useEffectOnce(() => {
       const fetchSourceCode = async () => {
         const arr: Promise<any>[] = [];
         paths.forEach((path) => {

@@ -56,11 +56,3 @@ export const dataProps = [
     require: false,
   },
 ];
-
-export interface IDataProps {
-  property: string;
-  description: string;
-  type: string;
-  default: string;
-  require: boolean;
-}

@@ -29,6 +29,7 @@
     "@types/styled-components": "^5.1.19",
     "eslint": "8.6.0",
     "eslint-config-next": "12.0.7",
+    "husky": "^7.0.4",
     "next-compose-plugins": "^2.2.1",
     "typescript": "4.5.4"
   }

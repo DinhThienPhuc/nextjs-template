@@ -4,6 +4,7 @@ import "assets/styles/globals.css";
 import Head from "next/head";
 import { IAppPropsCustomized } from "utils/interfaces";
 import LayoutComponent from "layouts/component";
+import { ThemesProvider } from "services/styled-themes";
 
 function MyApp({ Component, pageProps }: IAppPropsCustomized) {
   // Use the layout defined at the page level, or else use component layout (temporary)
@@ -25,7 +26,7 @@ function MyApp({ Component, pageProps }: IAppPropsCustomized) {
   return (
     <>
       {getHead()}
-      {getLayout(<Component {...pageProps} />)}
+      <ThemesProvider>{getLayout(<Component {...pageProps} />)}</ThemesProvider>
     </>
   );
 }

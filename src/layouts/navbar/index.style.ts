@@ -19,6 +19,9 @@ const Styled = {
     backdrop-filter: blur(0.5rem);
     z-index: 100;
   `,
+  Logo: styled.div`
+    cursor: pointer;
+  `,
   Right: styled.div`
     display: flex;
     align-items: center;
@@ -28,6 +31,11 @@ const Styled = {
     align-items: center;
     border-left: ${BORDER_WIDTH} solid ${colors["f0e6d2"]};
     padding-left: 1rem;
+    margin-left: 1rem;
+  `,
+  ThemeSwitcher: styled.span`
+    display: flex;
+    align-items: center;
     margin-left: 1rem;
   `,
   Item: styled.span`

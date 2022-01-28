@@ -23,6 +23,12 @@ const Styled = {
   Item: styled.li<{ isActive: boolean }>`
     display: flex;
     align-items: center;
+    cursor: pointer;
+
+    &:hover {
+      color: ${colors["0bc4e2"]};
+    }
+
     ${({ isActive }) =>
       isActive &&
       css`

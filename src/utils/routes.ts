@@ -55,6 +55,10 @@ export const SIDEBAR_ROUTES = [
 
 export const NAVBAR_ROUTES = [
   {
+    label: "Hooks",
+    route: "/hook",
+  },
+  {
     label: "Components",
     route: "/component",
   },

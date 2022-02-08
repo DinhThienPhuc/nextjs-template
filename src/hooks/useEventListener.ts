@@ -1,9 +1,54 @@
+/* HOOK: USE_EVENT_LISTENER
+   ========================================================================== */
+
+/**
+ * It takes as parameters a eventName, a call-back functions (handler)
+ * and optionally a reference element. You can see above two examples
+ * using useRef and window based event.
+ *
+ * @param eventName name of event (native or custom)
+ * @param handler callback function will be called when the event is fired
+ * @param element which the event will be referenced. Default is window
+ *
+ * @example
+ * ```
+ * import React, { useRef } from 'react'
+ * import useEventListener from 'hooks/useEventListener'
+ *
+ * export default function Component() {
+ *    // Define button ref
+ *    const buttonRef = useRef<HTMLButtonElement>(null)
+ *
+ *    const onScroll = (event: Event) => {
+ *        console.log('window scrolled!', event)
+ *    }
+ *
+ *    const onClick = (event: Event) => {
+ *        console.log('button clicked!', event)
+ *    }
+ *
+ *    // example with window based event
+ *    useEventListener('scroll', onScroll)
+ *
+ *    // example with element based event
+ *    useEventListener('click', onClick, buttonRef)
+ *
+ *    return (
+ *        <div style={{ minHeight: '200vh' }}>
+ *            <button ref={buttonRef}>Click me</button>
+ *        </div>
+ *    )
+ * }
+ * ```
+ */
+
 import { RefObject, useEffect, useRef } from "react";
 
 function useEventListener<K extends keyof WindowEventMap>(
   eventName: K,
   handler: (event: WindowEventMap[K]) => void,
 ): void;
+
 function useEventListener<
   K extends keyof HTMLElementEventMap,
   T extends HTMLElement = HTMLDivElement,

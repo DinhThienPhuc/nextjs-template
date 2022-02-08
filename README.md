@@ -6,3 +6,4 @@
 - SWR: https://nextjs.org/docs/basic-features/data-fetching/client-side#client-side-data-fetching-with-swr
 - API Routes: https://nextjs.org/docs/api-routes/introduction
 - envs: https://nextjs.org/docs/basic-features/environment-variables
+- Error boundary

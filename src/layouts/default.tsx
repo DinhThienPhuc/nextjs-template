@@ -1,7 +1,7 @@
 /* LAYOUT COMPONENT: DEFAULT
    ========================================================================== */
 
-import Navbar from "./navbar";
+import Navbar from "./navbar/navbar";
 import { ReactNode } from "react";
 import Styled from "./default.style";
 

@@ -1,6 +1,9 @@
+/* COMPONENT: TEXT_FIELD
+   ========================================================================== */
+
 import { InputHTMLAttributes, ReactNode } from "react";
 
-import Styled from "./index.style";
+import Styled from "./text-field.style";
 import cx from "classnames";
 
 interface IProps extends InputHTMLAttributes<HTMLInputElement> {
@@ -9,13 +12,13 @@ interface IProps extends InputHTMLAttributes<HTMLInputElement> {
   postIcon?: ReactNode | string | null;
 }
 
-const Input = ({ className, preIcon, postIcon, ...props }: IProps) => {
+const TextField = ({ className, preIcon, postIcon, ...props }: IProps) => {
   return (
-    <Styled.Input className={cx(className)}>
+    <Styled.TextField className={cx(className)}>
       {preIcon ? (
         <Styled.PreIcon className={"input-pre-icon"}>{preIcon}</Styled.PreIcon>
       ) : null}
-      <Styled.InputBox
+      <Styled.Input
         {...props}
         className={"input-box"}
         hasPreIcon={!!preIcon}
@@ -26,8 +29,8 @@ const Input = ({ className, preIcon, postIcon, ...props }: IProps) => {
           {postIcon}
         </Styled.PostIcon>
       ) : null}
-    </Styled.Input>
+    </Styled.TextField>
   );
 };
 
-export default Input;
+export default TextField;

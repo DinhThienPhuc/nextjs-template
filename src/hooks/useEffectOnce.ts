@@ -17,9 +17,7 @@
  *    })
  *
  *    return (
- *        <div>
- *            {isMobile ? "Mobile screen" : "Tablet or Desktop screen"}
- *        </div>
+ *        <div>Test</div>
  *    )
  * }
  * ```

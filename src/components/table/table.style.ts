@@ -1,9 +1,8 @@
-import styled, { css } from "styled-components";
+/* COMPONENT STYLES: TABLE
+   ========================================================================== */
 
-import { BORDER_WIDTH } from "utils/styles";
-import ChevronDownSvg from "assets/icons/chevron-down.svg";
-import ChevronUpSvg from "assets/icons/chevron-up.svg";
-import colors from "utils/colors";
+import { ChevronDownSvg, ChevronUpSvg } from "assets/icons";
+import styled, { css } from "styled-components";
 
 const Styled = {
   Container: styled.div`
@@ -14,19 +13,19 @@ const Styled = {
     display: table;
     border-collapse: collapse;
     width: 100%;
-    border: ${BORDER_WIDTH} solid ${colors["31271e"]};
+    border: 1px solid #31271e;
   `,
   Caption: styled.caption``,
   THead: styled.thead``,
   TBody: styled.tbody``,
   Tr: styled.tr``,
   Th: styled.th`
-    border: ${BORDER_WIDTH} solid ${colors["31271e"]};
+    border: 1px solid #31271e;
     padding: 0.75rem;
     text-align: left;
   `,
   Td: styled.td`
-    border: ${BORDER_WIDTH} solid ${colors["31271e"]};
+    border: 1px solid #31271e;
     padding: 0.75rem;
     text-align: left;
   `,
@@ -46,7 +45,7 @@ const Styled = {
     ${({ $isActive }) =>
       $isActive &&
       css`
-        color: ${colors["0bc4e2"]};
+        #0bc4e2;
       `}
   `,
   SortDown: styled(ChevronDownSvg)<{ $isActive: boolean }>`
@@ -56,7 +55,7 @@ const Styled = {
     ${({ $isActive }) =>
       $isActive &&
       css`
-        color: ${colors["0bc4e2"]};
+        color: #0bc4e2;
       `}
   `,
 };

@@ -1,10 +1,10 @@
+/* COMPONENT STYLES: TEXT_FIELD
+   ========================================================================== */
+
 import styled, { css } from "styled-components";
 
-import { BORDER_WIDTH } from "utils/styles";
-import colors from "utils/colors";
-
 const Styled = {
-  Input: styled.div`
+  TextField: styled.div`
     position: relative;
   `,
   PreIcon: styled.div`
@@ -19,11 +19,11 @@ const Styled = {
     transform: translateY(-50%);
     right: 0.75rem;
   `,
-  InputBox: styled.input<{ hasPreIcon: boolean; hasPostIcon: boolean }>`
-    border: ${BORDER_WIDTH} solid ${colors["937341"]};
+  Input: styled.input<{ hasPreIcon: boolean; hasPostIcon: boolean }>`
+    border: 1px solid #937341;
     outline: none !important;
-    color: ${colors["c4b998"]};
-    background-color: ${colors["121212"]};
+    color: #c4b998;
+    background-color: #121212;
     border-radius: 0.5rem;
     width: 100%;
     padding: 0.75rem 1.5rem;

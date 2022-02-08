@@ -1,16 +1,14 @@
 /* LAYOUT SUBCOMPONENT: NAVBAR
    ========================================================================== */
 
+import { GlobeSvg, MoonSvg, SunSvg } from "assets/icons";
 import { useCallback, useMemo } from "react";
 
-import GlobeSvg from "assets/icons/globe.svg";
-import Img from "components/img";
+import { Img } from "components";
 import Link from "next/link";
-import LogoPng from "assets/logo.png";
-import MoonSvg from "assets/icons/moon.svg";
+import { LogoPng } from "assets/images";
 import { NAVBAR_ITEMS } from "utils/constants";
-import Styled from "./index.style";
-import SunSvg from "assets/icons/sun.svg";
+import Styled from "./navbar.style";
 import { useTheme } from "services/styled-themes";
 
 const Navbar = () => {

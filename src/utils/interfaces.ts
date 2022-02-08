@@ -1,4 +1,4 @@
-/* GLOBAL INTERFACES &TYPES
+/* GLOBAL INTERFACES & TYPES
    ========================================================================== */
 
 import type { ReactElement, ReactNode } from "react";

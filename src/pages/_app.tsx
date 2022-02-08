@@ -33,10 +33,10 @@ function MyApp({ Component, pageProps }: TAppPropsCustomized) {
     <>
       {getHead()}
       {/* Use ThemeProvider when themes switching is needed */}
-      <ThemesProvider>{getLayout(<Component {...pageProps} />)}</ThemesProvider>
+      {/* <ThemesProvider>{getLayout(<Component {...pageProps} />)}</ThemesProvider> */}
 
       {/* Or else use plain component as below */}
-      {/* {getLayout(<Component {...pageProps} />)} */}
+      {getLayout(<Component {...pageProps} />)}
     </>
   );
 }

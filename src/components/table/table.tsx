@@ -1,7 +1,10 @@
-import { IColumn, IProps, sortOrder } from "./index.utils";
+/* COMPONENT: TABLE
+   ========================================================================== */
+
+import { IColumn, IProps, sortOrder } from "./table.utils";
 import { useCallback, useMemo } from "react";
 
-import Styled from "./index.style";
+import Styled from "./table.style";
 import cx from "classnames";
 
 const Table = <Data extends unknown>({

@@ -1,3 +1,6 @@
+/* GLOBAL STYLES
+   ========================================================================== */
+
 :root {
   --gold: #f0e6d2;
   --mud: #31271e;
@@ -25,26 +28,11 @@ html {
 }
 
 a {
-  color: var(--ocean);
   text-decoration: none;
-}
-
-a.no-hightlight {
-  color: var(--gold);
 }
 
 * {
   box-sizing: border-box;
-}
-
-li {
-  margin: 0.5rem 0;
-}
-
-h2 {
-  font-size: 1.3rem;
-  font-weight: 500;
-  scroll-margin-top: 5rem;
 }
 
 /* Safari-only */
@@ -54,40 +42,4 @@ h2 {
     padding-top: 16px;
     margin-top: -16px;
   }
-}
-
-pre {
-  box-shadow: inset 0 0 0 0.0625rem rgb(255 255 255 / 10%);
-  border-radius: 0.75rem;
-  padding: 1.25rem !important;
-}
-
-ul {
-  list-style-type: none;
-}
-
-.linenumber {
-  color: var(--old-gold) !important;
-}
-
-::-webkit-scrollbar {
-  width: 8px;
-  height: 8px;
-}
-
-::-webkit-scrollbar-track {
-  background: var(--dark);
-}
-
-::-webkit-scrollbar-thumb {
-  background: var(--mud);
-  border-radius: 64px;
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background: var(--mud);
-}
-
-::-webkit-scrollbar-corner {
-  background: var(--dark);
 }

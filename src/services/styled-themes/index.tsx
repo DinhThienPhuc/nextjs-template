@@ -46,7 +46,7 @@ const ThemesProvider = ({ children }: IProps) => {
 
   return (
     <ThemeContext.Provider value={{ theme, setTheme }}>
-      <ThemeProvider theme={selectedSchema}>{children}</ThemeProvider>;
+      <ThemeProvider theme={selectedSchema}>{children}</ThemeProvider>
     </ThemeContext.Provider>
   );
 };

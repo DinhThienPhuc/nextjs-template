@@ -1,8 +1,6 @@
 /* LAYOUT SUBCOMPONENT STYLES: NAVBAR
    ========================================================================== */
 
-import { BORDER_WIDTH, NAVBAR_HEIGHT } from "utils/styles";
-
 import styled from "styled-components";
 
 const Styled = {
@@ -14,10 +12,9 @@ const Styled = {
     align-items: center;
     justify-content: space-between;
     padding: 0 10rem;
-    height: ${NAVBAR_HEIGHT};
-    background-color: ${({ isScrollBelow }) =>
-      isScrollBelow ? colors["131415bf"] : "transparent"};
-    border-bottom: ${BORDER_WIDTH} solid ${colors["33333340"]};
+    height: 50px;
+    background-color: transparent;
+    border-bottom: 1px solid #33333340;
     backdrop-filter: blur(0.5rem);
     z-index: 100;
   `,
@@ -31,7 +28,7 @@ const Styled = {
   Globe: styled.span`
     display: flex;
     align-items: center;
-    border-left: ${BORDER_WIDTH} solid ${colors["f0e6d2"]};
+    border-left: 1px solid #f0e6d2;
     padding-left: 1rem;
     margin-left: 1rem;
   `,
@@ -56,7 +53,7 @@ const Styled = {
         border-radius: 0.25rem;
         width: 80%;
         height: 0.1875rem;
-        background-color: ${colors["0bc4e2"]};
+        background-color: #0bc4e2;
       }
     }
   `,

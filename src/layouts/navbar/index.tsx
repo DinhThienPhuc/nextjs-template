@@ -1,7 +1,7 @@
 /* LAYOUT SUBCOMPONENT: NAVBAR
    ========================================================================== */
 
-import { useCallback, useMemo, useRef, useState } from "react";
+import { useCallback, useMemo } from "react";
 
 import GlobeSvg from "assets/icons/globe.svg";
 import Img from "components/img";
@@ -11,7 +11,6 @@ import MoonSvg from "assets/icons/moon.svg";
 import { NAVBAR_ITEMS } from "utils/constants";
 import Styled from "./index.style";
 import SunSvg from "assets/icons/sun.svg";
-import useEventListener from "hooks/useEventListener";
 import { useTheme } from "services/styled-themes";
 
 const Navbar = () => {

@@ -5,20 +5,21 @@ import "assets/styles/reset.css";
 import "assets/styles/globals.css";
 
 import Head from "next/head";
-import LayoutComponent from "layouts/component";
+import LayoutDefault from "layouts/default";
 import { TAppPropsCustomized } from "utils/interfaces";
 import { ThemesProvider } from "services/styled-themes";
 
 function MyApp({ Component, pageProps }: TAppPropsCustomized) {
   /**
-   * Use the layout defined at the page level, or else use component layout (temporary)
-   * TODO: Need to change to use default layout instead of component layout
+   * Use the layout defined at the page level, or else use default layout
    */
   const getLayout =
     Component.getLayout ??
-    ((page: JSX.Element) => <LayoutComponent>{page}</LayoutComponent>);
+    ((page: JSX.Element) => <LayoutDefault>{page}</LayoutDefault>);
 
-  // Use the head defined at the page level, or else use default head
+  /**
+   * Use the head defined at the page level, or else use default head
+   */
   const getHead =
     Component.getHead ??
     (() => (

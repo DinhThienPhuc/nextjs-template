@@ -1,15 +1,15 @@
-/* PAGE COMPONENT: HOME
+/* PAGE COMPONENT: ABOUT
    ========================================================================== */
 
 import { TNextPageCustomized } from "utils/interfaces";
-import ViewHome from "views/home";
+import ViewAbout from "views/about";
 
-const PageHome: TNextPageCustomized = () => {
+const PageAbout: TNextPageCustomized = () => {
   return (
     <>
-      <ViewHome />
+      <ViewAbout />
     </>
   );
 };
 
-export default PageHome;
+export default PageAbout;

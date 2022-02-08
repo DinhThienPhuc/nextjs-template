@@ -1,15 +1,15 @@
-/* PAGE COMPONENT: HOME
+/* PAGE COMPONENT: 404
    ========================================================================== */
 
 import { TNextPageCustomized } from "utils/interfaces";
-import ViewHome from "views/home";
+import View404 from "views/custom-404";
 
-const PageHome: TNextPageCustomized = () => {
+const Page404: TNextPageCustomized = () => {
   return (
     <>
-      <ViewHome />
+      <View404 />
     </>
   );
 };
 
-export default PageHome;
+export default Page404;

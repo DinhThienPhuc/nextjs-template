@@ -1,3 +1,6 @@
+/* ROOT COMPONENT: _DOCUMENT
+   ========================================================================== */
+
 import Document, {
   DocumentInitialProps,
   Head,
@@ -9,6 +12,9 @@ import Document, {
 import { ServerStyleSheet } from "styled-components";
 
 export default class MyDocument extends Document {
+  /**
+   * Styled-component setup for SSR
+   */
   static async getInitialProps(ctx: any) {
     const sheet: ServerStyleSheet = new ServerStyleSheet();
     const originalRenderPage = ctx.renderPage;
@@ -36,6 +42,9 @@ export default class MyDocument extends Document {
     }
   }
 
+  /**
+   * Import default some fonts to Head. Feel free to add/update/remove the fonts below
+   */
   render() {
     return (
       <Html>

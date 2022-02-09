@@ -2,7 +2,7 @@
    ========================================================================== */
 
 import "assets/styles/reset.css";
-import "assets/styles/globals.css";
+import "assets/styles/global.css";
 
 import { ErrorBoundary } from "modules";
 import Head from "next/head";

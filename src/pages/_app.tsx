@@ -4,10 +4,13 @@
 import "assets/styles/reset.css";
 import "assets/styles/globals.css";
 
+import { ErrorBoundary } from "modules";
 import Head from "next/head";
 import LayoutDefault from "layouts/default";
 import { TAppPropsCustomized } from "utils/interfaces";
-import { ThemesProvider } from "services/styled-themes";
+import { reload } from "utils/functions";
+
+// import { ThemesProvider } from "services/styled-themes";
 
 function MyApp({ Component, pageProps }: TAppPropsCustomized) {
   /**
@@ -30,14 +33,16 @@ function MyApp({ Component, pageProps }: TAppPropsCustomized) {
     ));
 
   return (
-    <>
-      {getHead()}
-      {/* Use ThemeProvider when themes switching is needed */}
-      {/* <ThemesProvider>{getLayout(<Component {...pageProps} />)}</ThemesProvider> */}
+    <ErrorBoundary onReset={reload}>
+      <>
+        {getHead()}
+        {/* Use ThemeProvider when themes switching is needed */}
+        {/* <ThemesProvider>{getLayout(<Component {...pageProps} />)}</ThemesProvider> */}
 
-      {/* Or else use plain component as below */}
-      {getLayout(<Component {...pageProps} />)}
-    </>
+        {/* Or else use plain component as below */}
+        {getLayout(<Component {...pageProps} />)}
+      </>
+    </ErrorBoundary>
   );
 }
 

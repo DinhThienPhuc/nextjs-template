@@ -8,9 +8,8 @@ import { ErrorBoundary } from "modules";
 import Head from "next/head";
 import LayoutDefault from "layouts/default";
 import { TAppPropsCustomized } from "utils/interfaces";
+import { ThemesProvider } from "services/styled-themes";
 import { reload } from "utils/functions";
-
-// import { ThemesProvider } from "services/styled-themes";
 
 function MyApp({ Component, pageProps }: TAppPropsCustomized) {
   /**
@@ -37,10 +36,12 @@ function MyApp({ Component, pageProps }: TAppPropsCustomized) {
       <>
         {getHead()}
         {/* Use ThemeProvider when themes switching is needed */}
-        {/* <ThemesProvider>{getLayout(<Component {...pageProps} />)}</ThemesProvider> */}
+        <ThemesProvider>
+          {getLayout(<Component {...pageProps} />)}
+        </ThemesProvider>
 
         {/* Or else use plain component as below */}
-        {getLayout(<Component {...pageProps} />)}
+        {/* {getLayout(<Component {...pageProps} />)} */}
       </>
     </ErrorBoundary>
   );

@@ -1,7 +1,3 @@
-- SWR: https://nextjs.org/docs/basic-features/data-fetching/client-side#client-side-data-fetching-with-swr
-- API Routes: https://nextjs.org/docs/api-routes/introduction
-- envs: https://nextjs.org/docs/basic-features/environment-variables
-
 # Nextjs Template
 
 A Next Template to easily build and develop product.
@@ -33,16 +29,6 @@ Change `nextjs-template` folder name to your project name. Then feel free to dev
 
 ```shell
 src
-├── api
-│   ├── <post>
-│   │   ├── <post>.api.ts
-│   │   └── <post>.interface.ts
-│   │
-│   ├── ...
-│   ├── interfaces.ts
-│   ├── request.ts
-│   └── README.md
-│
 ├── assets
 │   ├── fonts
 │   │   ├── ...
@@ -232,3 +218,13 @@ import { A, B, C } from 'components'
 #### [`views`](src/views) - the main view of a page
 
 - `<view>` - Contains all elements of a viewing of a page. It is isolated and independent from other views.
+
+## API
+
+Next.js has a lot of way to fetch data:
+
+- SWR: https://swr.vercel.app/docs/with-nextjs
+- API Routes: https://nextjs.org/docs/basic-features/data-fetching/overview
+  ...
+
+so feel free to pick up the best fetching stradegy for you project! ✨✨✨

@@ -1,6 +1,6 @@
 # Nextjs Template
 
-A Next Template to easily build and develop product.
+✨✨✨ A Next Template to easily build and develop product. ✨✨✨
 
 ## Requirements
 

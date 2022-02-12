@@ -58,6 +58,15 @@ src
 │   ├── ...
 │   └── index.ts
 │
+├── gallery
+│   ├── <com>
+│   │   ├── <com>.style.tsx
+│   │   ├── <com>.tsx
+│   │   └── <com>.utils.tsx
+│   │
+│   ├── ...
+│   └── index.ts
+│
 ├── hooks
 │   ├── <hook>.ts
 │   ├── ...
@@ -167,6 +176,14 @@ import { A, B, C } from 'components'
   - [`global.css`](src/assets/styles/global.css): contains all global styles of the project.
 
 #### [`components`](src/components) - basic, pure components
+
+- `<component>` - Contains all elements of a component
+
+  - `<component>.tsx`: component main content
+  - `<component>.style.tsx`: component styles
+  - `<component>.utils.tsx`: component utils such as interfaces, constants, functions used for component only
+
+#### [`gallery`](src/gallery) - series HOW-TO in [W3School](https://www.w3schools.com/howto/default.asp)
 
 - `<component>` - Contains all elements of a component
 

@@ -14,10 +14,6 @@ const Styled = {
   Main: styled.main`
     min-height: 100vh;
     padding-top: 50px;
-
-    @media only screen and (min-width: 1024px) {
-      display: flex;
-    }
   `,
 };
 

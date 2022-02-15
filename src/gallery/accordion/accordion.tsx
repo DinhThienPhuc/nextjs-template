@@ -54,6 +54,7 @@ const Accordion = ({ panels, className, canMultiOpen = false }: IProps) => {
       return (
         <div key={index}>
           <Styled.Label
+            className="accordion-label"
             onClick={
               canMultiOpen
                 ? handleToggleMutliPanels(index)
@@ -62,7 +63,10 @@ const Accordion = ({ panels, className, canMultiOpen = false }: IProps) => {
           >
             {panel.label}
           </Styled.Label>
-          <Styled.Value isOpen={isActivated.includes(index)}>
+          <Styled.Value
+            className="accordion-content"
+            isOpen={isActivated.includes(index)}
+          >
             {panel.value}
           </Styled.Value>
         </div>

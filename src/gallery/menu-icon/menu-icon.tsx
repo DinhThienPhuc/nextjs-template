@@ -9,16 +9,18 @@ import cx from "classnames";
 interface IProps {
   withAnimation?: boolean;
   className?: string;
+  onClick?: () => void;
 }
 
-const MenuIcon = ({ withAnimation, className }: IProps) => {
+const MenuIcon = ({ withAnimation, className, onClick }: IProps) => {
   const [isActivated, setActive] = useState<boolean>(false);
 
   const handleToggleMenu = useCallback(() => {
     if (withAnimation) {
       setActive(!isActivated);
     }
-  }, [isActivated, withAnimation]);
+    onClick?.();
+  }, [isActivated, onClick, withAnimation]);
 
   return (
     <Styled.MenuIcon

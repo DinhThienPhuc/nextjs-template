@@ -9,7 +9,7 @@ import cx from "classnames";
 interface IProps {
   withAnimation?: boolean;
   className?: string;
-  onClick?: () => void;
+  onClick?: (isActivated: boolean) => void;
 }
 
 const MenuIcon = ({ withAnimation, className, onClick }: IProps) => {
@@ -19,7 +19,7 @@ const MenuIcon = ({ withAnimation, className, onClick }: IProps) => {
     if (withAnimation) {
       setActive(!isActivated);
     }
-    onClick?.();
+    onClick?.(!isActivated);
   }, [isActivated, onClick, withAnimation]);
 
   return (

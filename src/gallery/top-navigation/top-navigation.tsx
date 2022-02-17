@@ -3,38 +3,38 @@
       https://www.w3schools.com/howto/howto_js_topnav_responsive.asp
    ========================================================================== */
 
-import { ReactNode, useCallback, useMemo, useState } from "react";
+import { useCallback, useState } from "react";
 
 import Link from "next/link";
 import Styled from "./top-navigation.style";
 import cx from "classnames";
-
-interface IPanel {
-  label: ReactNode | string;
-  content: ReactNode | string;
-  id: string;
-}
 
 interface IProps {
   className?: string;
 }
 
 const TopNavigation = ({ className }: IProps) => {
+  const [isMobileMenuOpen, setMobileMenuOpen] = useState<boolean>(false);
+
+  const handleToggleMobileMenu = useCallback((isActivated: boolean) => {
+    setMobileMenuOpen(isActivated);
+  }, []);
+
   return (
-    <Styled.TopNav className={cx("top-nav", className)} id="myTopnav">
+    <Styled.TopNav className={cx("top-nav", className)}>
       <Link href="#home" passHref>
-        <Styled.Item>Home</Styled.Item>
+        <Styled.Item isMobileMenuOpen={isMobileMenuOpen}>Home</Styled.Item>
       </Link>
       <Link href="#news" passHref>
-        <Styled.Item>News</Styled.Item>
+        <Styled.Item isMobileMenuOpen={isMobileMenuOpen}>News</Styled.Item>
       </Link>
       <Link href="#contact" passHref>
-        <Styled.Item>Contact</Styled.Item>
+        <Styled.Item isMobileMenuOpen={isMobileMenuOpen}>Contact</Styled.Item>
       </Link>
       <Link href="#about" passHref>
-        <Styled.Item>About</Styled.Item>
+        <Styled.Item isMobileMenuOpen={isMobileMenuOpen}>About</Styled.Item>
       </Link>
-      <Styled.MenuIcon withAnimation />
+      <Styled.MenuIcon withAnimation onClick={handleToggleMobileMenu} />
     </Styled.TopNav>
   );
 };

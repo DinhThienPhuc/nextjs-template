@@ -3,7 +3,7 @@ on: [push]
 jobs:
   job_1:
     name: Add 4 and 6
-    runs-on: ubuntu-18.04
+    runs-on: ubuntu-20.04
     steps:
       - name: Calculate 4 plus 6
         shell: bash
@@ -18,7 +18,7 @@ jobs:
   job_2:
     name: Multiply by 3
     needs: job_1
-    runs-on: windows-lastest
+    runs-on: windows-2022
     steps:
       - name: Download math result for job 1
         uses: actions/download-artifact@v2
@@ -38,7 +38,7 @@ jobs:
   job_3:
     name: Display result
     needs: job_2
-    runs-on: macOS-lastest
+    runs-on: macos-11
     steps:
       - name: Download math result for job 2
         uses: actions/download-artifact@v2

@@ -4,7 +4,7 @@ jobs:
   job_1:
     name: Add 4 and 6
     runs-on: ubuntu-18.04
-    stesp:
+    steps:
       - name: Calculate 4 plus 6
         shell: bash
         run: |

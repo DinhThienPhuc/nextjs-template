@@ -33,7 +33,7 @@ const Accordion = ({ panels, className, canMultiOpen = false }: IProps) => {
     [isActivated],
   );
 
-  const handleToggleMutliPanels = useCallback(
+  const handleToggleMultiPanels = useCallback(
     (panelIndex: number) => {
       return () => {
         if (isActivated.includes(panelIndex)) {
@@ -57,7 +57,7 @@ const Accordion = ({ panels, className, canMultiOpen = false }: IProps) => {
             className="accordion-label"
             onClick={
               canMultiOpen
-                ? handleToggleMutliPanels(index)
+                ? handleToggleMultiPanels(index)
                 : handleTogglePanel(index)
             }
           >
@@ -74,7 +74,7 @@ const Accordion = ({ panels, className, canMultiOpen = false }: IProps) => {
     });
   }, [
     canMultiOpen,
-    handleToggleMutliPanels,
+    handleToggleMultiPanels,
     handleTogglePanel,
     isActivated,
     panels,

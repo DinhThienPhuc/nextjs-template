@@ -2,14 +2,25 @@
    ========================================================================== */
 
 import { TNextPageCustomized } from "utils/interfaces";
-import TopNavigation from "gallery/top-navigation/top-navigation";
+import { TopNavigation } from "gallery";
 import ViewHome from "views/home";
 
 const PageHome: TNextPageCustomized = () => {
   return (
     <>
       <ViewHome />
-      <TopNavigation />
+      <TopNavigation
+        items={[
+          {
+            label: "Tab 1",
+            href: "#ahie",
+          },
+          {
+            label: "Tab 2",
+            href: "#ahihi",
+          },
+        ]}
+      />
     </>
   );
 };

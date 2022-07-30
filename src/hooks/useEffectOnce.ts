@@ -23,17 +23,13 @@
  * ```
  */
 
-import { DependencyList, EffectCallback, useEffect, useRef } from "react";
+import { EffectCallback, useEffect } from "react";
 
-const useEffectOnce = (callback: EffectCallback, deps?: DependencyList) => {
-  const hasRunOnce = useRef(false);
-
+const useEffectOnce = (callback: EffectCallback) => {
   useEffect(() => {
-    if (deps && !hasRunOnce.current) {
-      callback();
-      hasRunOnce.current = true;
-    }
-  }, [callback, deps]);
+    callback();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 };
 
 export default useEffectOnce;

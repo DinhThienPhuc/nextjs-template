@@ -5,4 +5,7 @@ const withPlugins = require("next-compose-plugins");
 
 module.exports = withPlugins([withSvgr], {
   reactStrictMode: true,
+  images: {
+    domains: ["images.dog.ceo"],
+  },
 });

@@ -1,13 +1,13 @@
 /* COMPONENT: TABLE
    ========================================================================== */
 
-import { IColumn, IProps, sortOrder } from "./table.utils";
+import { ESortOrder, IColumn, IProps, SORT_ORDER } from "./table.utils";
 import { useCallback, useMemo } from "react";
 
 import Styled from "./table.style";
 import cx from "classnames";
 
-const Table = <Data extends unknown>({
+const Table = <Data,>({
   caption,
   className,
   data,
@@ -21,17 +21,17 @@ const Table = <Data extends unknown>({
         if (field !== sort?.field) {
           onSort?.({
             field,
-            value: "asc",
+            value: ESortOrder.ASC,
           });
           return;
         }
 
-        const currentSortIndex = sortOrder.indexOf(sort?.value);
-        let nextSortIndex =
-          currentSortIndex === sortOrder.length - 1 ? 0 : currentSortIndex + 1;
+        const currentSortIndex = SORT_ORDER.indexOf(sort?.value);
+        const nextSortIndex =
+          currentSortIndex === SORT_ORDER.length - 1 ? 0 : currentSortIndex + 1;
         onSort?.({
           field,
-          value: sortOrder[nextSortIndex],
+          value: SORT_ORDER[nextSortIndex],
         });
       };
     },
@@ -47,12 +47,12 @@ const Table = <Data extends unknown>({
             <Styled.Sort className="sort" onClick={handleSort(col.field)}>
               <Styled.SortUp
                 $isActive={
-                  sort?.field === col.field && sort?.value === sortOrder[0]
+                  sort?.field === col.field && sort?.value === ESortOrder.ASC
                 }
               />
               <Styled.SortDown
                 $isActive={
-                  sort?.field === col.field && sort?.value === sortOrder[1]
+                  sort?.field === col.field && sort?.value === ESortOrder.DESC
                 }
               />
             </Styled.Sort>

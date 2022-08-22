@@ -3,7 +3,7 @@
 
 import { ReactNode } from "react";
 
-/* Interfaces & Types
+/* Interfaces & Types & Enums
    ========================================================================== */
 
 interface ICell<T> {
@@ -11,11 +11,15 @@ interface ICell<T> {
   cellData: T;
 }
 
-type TSortOrder = "asc" | "desc" | "";
+export enum ESortOrder {
+  ASC = "asc",
+  DESC = "desc",
+  NONE = "none",
+}
 
 export interface ISort {
   field: string;
-  value: TSortOrder;
+  value: ESortOrder;
 }
 
 export interface IColumn<T> {
@@ -37,7 +41,11 @@ export interface IProps<T> {
 /* Constants
    ========================================================================== */
 
-export const sortOrder: TSortOrder[] = ["asc", "desc", ""];
+export const SORT_ORDER: ESortOrder[] = [
+  ESortOrder.ASC,
+  ESortOrder.DESC,
+  ESortOrder.NONE,
+];
 
 /* Functions
    ========================================================================== */

@@ -1,8 +1,9 @@
 /* COMPONENT STYLES: TABLE
    ========================================================================== */
 
-import { ChevronDownSvg, ChevronUpSvg } from "assets/icons";
 import styled, { css } from "styled-components";
+
+import Icons from "assets/icons";
 
 const Styled = {
   Container: styled.div`
@@ -38,7 +39,7 @@ const Styled = {
     flex-direction: column;
     margin-left: 0.5rem;
   `,
-  SortUp: styled(ChevronUpSvg)<{ $isActive: boolean }>`
+  SortUp: styled(Icons.ChevronUp)<{ $isActive: boolean }>`
     width: 1rem;
     height: 1rem;
     margin-bottom: -0.25rem;
@@ -48,7 +49,7 @@ const Styled = {
         #0bc4e2;
       `}
   `,
-  SortDown: styled(ChevronDownSvg)<{ $isActive: boolean }>`
+  SortDown: styled(Icons.ChevronDown)<{ $isActive: boolean }>`
     width: 1rem;
     height: 1rem;
     margin-top: -0.25rem;

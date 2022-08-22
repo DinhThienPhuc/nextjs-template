@@ -1,6 +1,14 @@
 /* IMAGES ENTRY
    ========================================================================== */
 
-import LogoPng from "./logo.png";
+import Logo from "./logo.png";
 
-export { LogoPng };
+const Png = {
+  Logo,
+};
+
+const Images = {
+  Png,
+};
+
+export default Images;

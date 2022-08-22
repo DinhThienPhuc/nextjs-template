@@ -1,6 +1,8 @@
 /* GLOBAL FUNCTIONS
    ========================================================================== */
 
+import { SPECIAL_STRING } from "./constants";
+
 /**
  * Reload current browser link
  * It only works in Client Side Render, because window always existed
@@ -17,7 +19,9 @@ export const reload = () => {
  */
 export const parseJSON = <T>(jsonString: string | null): T | null => {
   try {
-    return jsonString === "undefined" ? null : JSON.parse(jsonString ?? "");
+    return jsonString === SPECIAL_STRING.UNDEFINED
+      ? null
+      : JSON.parse(jsonString ?? SPECIAL_STRING.EMPTY);
   } catch (error) {
     console.log("Parsing error on ", { jsonString });
     return null;

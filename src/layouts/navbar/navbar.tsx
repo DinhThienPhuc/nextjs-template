@@ -1,15 +1,15 @@
 /* LAYOUT SUBCOMPONENT: NAVBAR
    ========================================================================== */
 
-import { GlobeSvg, MoonSvg, SunSvg } from "assets/icons";
+import { ETheme, useTheme } from "services/styled-themes";
+import { NAVBAR_ITEMS, ROUTES } from "utils/constants";
 import { useCallback, useMemo } from "react";
 
+import Icons from "assets/icons";
+import Images from "assets/images";
 import { Img } from "components";
 import Link from "next/link";
-import { LogoPng } from "assets/images";
-import { NAVBAR_ITEMS } from "utils/constants";
 import Styled from "./navbar.style";
-import { useTheme } from "services/styled-themes";
 
 const Navbar = () => {
   const { theme, setTheme } = useTheme();
@@ -25,28 +25,28 @@ const Navbar = () => {
   }, []);
 
   const renderThemeSwitcher = useMemo(() => {
-    if (theme === "dark") {
-      return <SunSvg width={18} height={18} />;
+    if (theme === ETheme.DARK) {
+      return <Icons.Sun width={18} height={18} />;
     }
-    return <MoonSvg width={18} height={18} />;
+    return <Icons.Moon width={18} height={18} />;
   }, [theme]);
 
   const handleSwitchTheme = useCallback(() => {
-    const newTheme = theme === "dark" ? "light" : "dark";
+    const newTheme = theme === ETheme.DARK ? ETheme.LIGHT : ETheme.DARK;
     setTheme(newTheme);
   }, [setTheme, theme]);
 
   return (
     <Styled.Navbar>
-      <Link href={"/"} passHref>
+      <Link href={ROUTES.HOME} passHref>
         <Styled.Logo>
-          <Img src={LogoPng} alt="logo" width={57} height={39} />
+          <Img src={Images.Png.Logo} alt="logo" width={57} height={39} />
         </Styled.Logo>
       </Link>
       <Styled.Right>
         {JSXNavbarItems}
         <Styled.Globe>
-          <GlobeSvg width={18} height={18} />
+          <Icons.Globe width={18} height={18} />
         </Styled.Globe>
         <Styled.ThemeSwitcher onClick={handleSwitchTheme}>
           {renderThemeSwitcher}

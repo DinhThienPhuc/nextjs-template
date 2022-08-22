@@ -5,9 +5,9 @@
  * Routes dictionary
  */
 export const ROUTES = {
-  home: "/",
-  about: "/about",
-  notFound: "/not-found",
+  HOME: "/",
+  ABOUT: "/about",
+  NOT_FOUND: "/not-found",
 };
 
 /**
@@ -27,3 +27,12 @@ export const NAVBAR_ITEMS = [
     path: "/login",
   },
 ];
+
+/**
+ * Special strings: undefined, null, empty string, etc
+ */
+export const SPECIAL_STRING = {
+  UNDEFINED: "undefined",
+  NULL: "null",
+  EMPTY: "",
+};

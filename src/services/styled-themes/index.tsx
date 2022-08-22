@@ -7,16 +7,19 @@ import { ThemeProvider } from "styled-components";
 import schemas from "./schema.json";
 
 /**
- * Theme type infered from schema data
+ * Theme values
  */
-type TTheme = keyof typeof schemas.data;
+export enum ETheme {
+  LIGHT = "light",
+  DARK = "dark",
+}
 
 /**
  * Context interface
  */
 interface IContext {
-  theme: TTheme;
-  setTheme: (theme: TTheme) => void;
+  theme: ETheme;
+  setTheme: (theme: ETheme) => void;
 }
 
 interface IProps {
@@ -27,7 +30,7 @@ interface IProps {
  * Theme Context
  */
 const ThemeContext = createContext<IContext>({
-  theme: "dark",
+  theme: ETheme.DARK,
   setTheme: () => "",
 });
 
@@ -36,8 +39,8 @@ const ThemeContext = createContext<IContext>({
  * @param props: with children
  * @returns Provider for theme switcher
  */
-const ThemesProvider = ({ children }: IProps) => {
-  const [theme, setTheme] = useState<TTheme>("dark");
+export const ThemesProvider = ({ children }: IProps) => {
+  const [theme, setTheme] = useState<ETheme>(ETheme.LIGHT);
 
   const selectedSchema = useMemo(
     () => (theme ? schemas.data[theme] : schemas.data.dark),
@@ -55,9 +58,7 @@ const ThemesProvider = ({ children }: IProps) => {
  * Theme hook
  * @returns theme value and theme switcher callback
  */
-const useTheme = () => {
+export const useTheme = () => {
   const { setTheme, theme } = useContext(ThemeContext);
   return { setTheme, theme };
 };
-
-export { useTheme, ThemesProvider };

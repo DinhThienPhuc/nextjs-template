@@ -1,12 +1,13 @@
 {
-  "name": "zoom",
+  "name": "nextjs-template",
   "private": true,
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "format": "npx pretty-quick --staged && npx lint-staged"
   },
   "dependencies": {
     "axios": "^0.27.2",
@@ -37,6 +38,7 @@
     "typescript": "4.5.4"
   },
   "lint-staged": {
-    "*.{ts,js,css,md}": "eslint --fix --max-warnings 0"
+    "*.ts*": "eslint --fix --max-warnings 0",
+    "*.js*": "eslint --fix"
   }
 }

@@ -41,9 +41,7 @@ const Pagination = ({ className, totalPages, page }: IProps) => {
       <Styled.PrevIcon>
         <Icons.ChevronLeft width={20} height={20} />
       </Styled.PrevIcon>
-
       {content}
-
       <Styled.NextIcon>
         <Icons.ChevronRight width={20} height={20} />
       </Styled.NextIcon>

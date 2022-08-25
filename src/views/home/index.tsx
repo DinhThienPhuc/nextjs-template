@@ -8,7 +8,7 @@ const ViewHome = () => {
     <>
       {"Home"}
 
-      <Pagination totalPages={10} />
+      <Pagination totalPages={10} showFirstButton showLastButton />
     </>
   );
 };

@@ -20,11 +20,9 @@ const Pagination = ({
   showLastButton = false,
   variant = VARIANT.NORMAL,
   size = 32,
-  boundaryCount = 2,
-  isLong = false,
   onChange,
 }: IProps) => {
-  const [page, setPage] = useState<number>(1);
+  const [page, setPage] = useState<number>(5);
 
   const numbers = useMemo(() => {
     return Array.from(Array(totalPages).keys()).map((n) => n + 1);
@@ -59,25 +57,11 @@ const Pagination = ({
     [disabled, handleChangePage, page, size, variant],
   );
 
-  const customNumbers = useMemo(() => {
-    if (!isLong) {
-      return numbers;
-    }
-    const result: number[] = [];
-    for (let i = 0; i < numbers.length; i++) {
-      if (numbers[i] <= boundaryCount + 1) {
-        result.push(numbers[i]);
-        continue;
-      }
-    }
-    return result;
-  }, [boundaryCount, isLong, numbers]);
-
   const content = useMemo(() => {
-    return customNumbers.map((n) => {
+    return numbers.map((n) => {
       return renderItem(n);
     });
-  }, [customNumbers, renderItem]);
+  }, [numbers, renderItem]);
 
   const handleGoPrev = useCallback(() => {
     if (page > 1) {
@@ -147,7 +131,7 @@ const Pagination = ({
     return (
       <Styled.Item
         className="first-button"
-        disabled={disabled}
+        disabled={disabled || page === 1}
         variant={variant}
         size={size}
         onClick={handleGoFirst}
@@ -155,7 +139,7 @@ const Pagination = ({
         <Icons.ChevronsLeft width={20} height={20} />
       </Styled.Item>
     );
-  }, [disabled, handleGoFirst, showFirstButton, size, variant]);
+  }, [disabled, handleGoFirst, page, showFirstButton, size, variant]);
 
   const handleGoLast = useCallback(() => {
     if (page < totalPages) {
@@ -170,7 +154,7 @@ const Pagination = ({
     return (
       <Styled.Item
         className="last-button"
-        disabled={disabled}
+        disabled={disabled || page === totalPages}
         variant={variant}
         size={size}
         onClick={handleGoLast}
@@ -178,7 +162,7 @@ const Pagination = ({
         <Icons.ChevronsRight width={20} height={20} />
       </Styled.Item>
     );
-  }, [disabled, handleGoLast, showLastButton, size, variant]);
+  }, [disabled, handleGoLast, page, showLastButton, size, totalPages, variant]);
 
   return (
     <Styled.Container className={cx("pagination", className)}>

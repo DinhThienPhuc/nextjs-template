@@ -3,6 +3,7 @@
 
 import { ReactNode, useCallback, useMemo, useState } from "react";
 
+import Icons from "assets/icons";
 import Styled from "./accordion.style";
 import cx from "classnames";
 import useWhyDidYouUpdate from "hooks/useWhyDidYouUpdate";
@@ -57,8 +58,12 @@ const Accordion = (props: IProps) => {
   const renderItem = useCallback(
     (panel: IPanel, index: number) => {
       return (
-        <Styled.Panel key={index} disabled={!!panel?.disabled}>
-          <Styled.Label
+        <Styled.Panel
+          key={index}
+          disabled={!!panel?.disabled}
+          isOpen={isActivated.includes(index)}
+        >
+          <div
             className="accordion-label"
             onClick={
               canMultiOpen
@@ -69,20 +74,13 @@ const Accordion = (props: IProps) => {
             <div>{panel.label}</div>
             <div>
               {panel?.expandItem ?? expandItem ?? (
-                <Styled.ExpandIcon
-                  width={18}
-                  height={18}
-                  isOpen={isActivated.includes(index)}
-                />
+                <div className="accordion-expand-icon">
+                  <Icons.ChevronDown width={18} height={18} />
+                </div>
               )}
             </div>
-          </Styled.Label>
-          <Styled.Value
-            className="accordion-content"
-            isOpen={isActivated.includes(index)}
-          >
-            {panel.value}
-          </Styled.Value>
+          </div>
+          <div className="accordion-value">{panel.value}</div>
         </Styled.Panel>
       );
     },

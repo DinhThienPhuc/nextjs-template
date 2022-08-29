@@ -1,7 +1,7 @@
 /* VIEW COMPONENT: HOME
    ========================================================================== */
 
-import { MenuIcon } from "gallery";
+import { Accordion } from "gallery";
 
 const ViewHome = () => {
   return (
@@ -11,7 +11,18 @@ const ViewHome = () => {
       <br />
       <br />
       <br />
-      <MenuIcon withAnimation />
+      <Accordion
+        panels={[
+          {
+            label: "label 1",
+            value: "Value 1",
+          },
+          {
+            label: "label 1",
+            value: "Value 1",
+          },
+        ]}
+      />
     </>
   );
 };

@@ -7,6 +7,7 @@ import { ReactNode, useCallback, useMemo, useState } from "react";
 
 import Styled from "./tabs.style";
 import cx from "classnames";
+import useWhyDidYouUpdate from "hooks/useWhyDidYouUpdate";
 
 interface IPanel {
   label: ReactNode | string;
@@ -20,7 +21,8 @@ interface IProps {
   isVertical?: boolean;
 }
 
-const Tabs = ({ className, panels, isVertical = false }: IProps) => {
+const Tabs = (props: IProps) => {
+  const { className, panels, isVertical = false } = props;
   const [isActivated, setActive] = useState(0);
 
   const handleSelectTab = useCallback((index: number) => {
@@ -29,7 +31,7 @@ const Tabs = ({ className, panels, isVertical = false }: IProps) => {
     };
   }, []);
 
-  const renderTabLabels = useMemo(() => {
+  const tabLabels = useMemo(() => {
     return panels.map((panel, index) => {
       return (
         <Styled.TabLabel
@@ -45,17 +47,19 @@ const Tabs = ({ className, panels, isVertical = false }: IProps) => {
     });
   }, [handleSelectTab, isActivated, isVertical, panels]);
 
-  const renderTabContents = useMemo(() => {
+  const tabContents = useMemo(() => {
     return panels[isActivated]?.content;
   }, [isActivated, panels]);
 
+  useWhyDidYouUpdate("Tabs", props);
+
   return (
     <Styled.Tabs className={cx("tabs", className)}>
-      <Styled.TabLabels isVertical={isVertical} className="labels">
-        {renderTabLabels}
+      <Styled.TabLabels className="labels" isVertical={isVertical}>
+        {tabLabels}
       </Styled.TabLabels>
       <Styled.TabContent className="content" isVertical={isVertical}>
-        {renderTabContents}
+        {tabContents}
       </Styled.TabContent>
     </Styled.Tabs>
   );

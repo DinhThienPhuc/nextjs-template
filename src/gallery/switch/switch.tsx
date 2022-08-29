@@ -56,22 +56,11 @@ const Switch = (props: IProps) => {
         width={width}
         height={height}
         disabled={disabled}
+        checked={checked}
+        size={size}
       >
-        <Styled.Track
-          className="track"
-          checked={checked}
-          width={width}
-          height={height}
-          disabled={disabled}
-        />
-        <Styled.Circle
-          className="circle"
-          checked={checked}
-          width={width}
-          height={height}
-          size={size}
-          disabled={disabled}
-        />
+        <div className="track" />
+        <div className="circle" />
       </Styled.Slider>
     );
   }, [checked, disabled, height, size, width]);

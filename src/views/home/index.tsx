@@ -1,7 +1,7 @@
 /* VIEW COMPONENT: HOME
    ========================================================================== */
 
-import { Accordion } from "gallery";
+import { Tabs } from "gallery";
 
 const ViewHome = () => {
   return (
@@ -11,15 +11,22 @@ const ViewHome = () => {
       <br />
       <br />
       <br />
-      <Accordion
+      <Tabs
         panels={[
           {
-            label: "label 1",
-            value: "Value 1",
+            label: "tab1",
+            content: "ahihi",
+            id: "tab1",
           },
           {
-            label: "label 1",
-            value: "Value 1",
+            label: "tab2",
+            content: "tab2",
+            id: "tab2",
+          },
+          {
+            label: "tab3",
+            content: "tab3",
+            id: "tab3",
           },
         ]}
       />

@@ -1,10 +1,11 @@
-import { MouseEventHandler, ReactNode, useMemo } from "react";
+/* GALLERY COMPONENT: SWITCH - https://www.w3schools.com/howto/howto_css_switch.asp
+   ========================================================================== */
+
+import { MouseEventHandler, ReactNode, useCallback, useMemo } from "react";
 
 import Styled from "./switch.style";
 import cx from "classnames";
-
-/* GALLERY COMPONENT: SWITCH - https://www.w3schools.com/howto/howto_css_switch.asp
-   ========================================================================== */
+import { doNothing } from "utils/functions";
 
 interface IProps {
   className?: string;
@@ -29,6 +30,7 @@ const Switch = ({
   postText,
   checked,
   onChange,
+  disabled = false,
 }: IProps) => {
   const customPreText = useMemo(() => {
     if (!preText) {
@@ -46,12 +48,18 @@ const Switch = ({
 
   const slider = useMemo(() => {
     return (
-      <Styled.Slider className="slider" width={width} height={height}>
+      <Styled.Slider
+        className="slider"
+        width={width}
+        height={height}
+        disabled={disabled}
+      >
         <Styled.Track
           className="track"
           checked={checked}
           width={width}
           height={height}
+          disabled={disabled}
         />
         <Styled.Circle
           className="circle"
@@ -59,13 +67,27 @@ const Switch = ({
           width={width}
           height={height}
           size={size}
+          disabled={disabled}
         />
       </Styled.Slider>
     );
-  }, [checked, height, size, width]);
+  }, [checked, disabled, height, size, width]);
+
+  const handleToggle = useCallback(
+    (e) => {
+      if (disabled) {
+        return doNothing();
+      }
+      return onChange?.(e);
+    },
+    [disabled, onChange],
+  );
 
   return (
-    <Styled.Container className={cx("switch", className)} onClick={onChange}>
+    <Styled.Container
+      className={cx("switch", className)}
+      onClick={handleToggle}
+    >
       {customPreText}
       {slider}
       {customPostText}

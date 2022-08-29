@@ -23,7 +23,6 @@ export const parseJSON = <T>(jsonString: string | null): T | null => {
       ? null
       : JSON.parse(jsonString ?? SPECIAL_STRING.EMPTY);
   } catch (error) {
-    console.log("Parsing error on ", { jsonString });
     return null;
   }
 };
@@ -54,4 +53,11 @@ export const getFromLocalStorage = <T>(key: string): T | null => {
     return parseJSON(value);
   }
   return null;
+};
+
+/**
+ * A function that DO NOTHING
+ */
+export const doNothing = () => {
+  return undefined;
 };

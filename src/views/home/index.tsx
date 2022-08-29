@@ -23,6 +23,7 @@ const ViewHome = () => {
         onChange={handleChange}
         preText={"Off"}
         postText={"On"}
+        // disabled
       />
     </>
   );

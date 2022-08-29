@@ -6,6 +6,7 @@ import { MouseEventHandler, ReactNode, useCallback, useMemo } from "react";
 import Styled from "./switch.style";
 import cx from "classnames";
 import { doNothing } from "utils/functions";
+import useWhyDidYouUpdate from "hooks/useWhyDidYouUpdate";
 
 interface IProps {
   className?: string;
@@ -21,17 +22,19 @@ interface IProps {
   onChange?: MouseEventHandler<HTMLDivElement>;
 }
 
-const Switch = ({
-  className,
-  width = 34,
-  height = 14,
-  size = 18,
-  preText,
-  postText,
-  checked,
-  onChange,
-  disabled = false,
-}: IProps) => {
+const Switch = (props: IProps) => {
+  const {
+    className,
+    width = 34,
+    height = 14,
+    size = 18,
+    preText,
+    postText,
+    checked,
+    onChange,
+    disabled = false,
+  } = props;
+
   const customPreText = useMemo(() => {
     if (!preText) {
       return null;
@@ -82,6 +85,8 @@ const Switch = ({
     },
     [disabled, onChange],
   );
+
+  useWhyDidYouUpdate("Switch", props);
 
   return (
     <Styled.Container

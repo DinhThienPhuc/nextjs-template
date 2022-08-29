@@ -1,16 +1,9 @@
 /* VIEW COMPONENT: HOME
    ========================================================================== */
 
-import { Switch } from "gallery";
-import { useState } from "react";
+import { Accordion } from "gallery";
 
 const ViewHome = () => {
-  const [checked, setChecked] = useState(false);
-
-  const handleChange = () => {
-    setChecked((prev) => !prev);
-  };
-
   return (
     <>
       {"Home"}
@@ -18,12 +11,21 @@ const ViewHome = () => {
       <br />
       <br />
       <br />
-      <Switch
-        checked={checked}
-        onChange={handleChange}
-        preText={"Off"}
-        postText={"On"}
-        // disabled
+      <Accordion
+        panels={[
+          {
+            label: "item1",
+            value: "item1",
+          },
+          {
+            label: "item2",
+            value: "item2",
+          },
+          {
+            label: "item3",
+            value: "item3",
+          },
+        ]}
       />
     </>
   );

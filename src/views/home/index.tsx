@@ -1,7 +1,7 @@
 /* VIEW COMPONENT: HOME
    ========================================================================== */
 
-import { Accordion } from "gallery";
+import { Breadcrumb } from "gallery";
 
 const ViewHome = () => {
   return (
@@ -11,19 +11,20 @@ const ViewHome = () => {
       <br />
       <br />
       <br />
-      <Accordion
-        panels={[
+      <Breadcrumb
+        activePath="/item3"
+        items={[
           {
             label: "item1",
-            value: "item1",
+            path: "/item1",
           },
           {
             label: "item2",
-            value: "item2",
+            path: "/item2",
           },
           {
             label: "item3",
-            value: "item3",
+            path: "/item3",
           },
         ]}
       />

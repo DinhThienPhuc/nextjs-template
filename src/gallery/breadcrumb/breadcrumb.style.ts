@@ -4,30 +4,29 @@
 import styled from "styled-components";
 
 const Styled = {
-  Container: styled.ul`
+  Breadcrumb: styled.ul`
     display: flex;
     align-items: center;
     padding: 10px 16px;
     list-style: none;
-    background-color: #eee;
   `,
   Item: styled.li`
     display: inline;
     font-size: 18px;
-    color: #222222;
+    color: rgb(255, 255, 255);
 
     & > a {
-      color: #0275d8;
+      color: rgba(255, 255, 255, 0.7);
       text-decoration: none;
     }
 
     &:hover > a {
-      color: #01447e;
+      text-decoration: underline;
     }
   `,
   Slash: styled.div`
-    color: #222222;
-    margin: 0 5px;
+    color: rgba(255, 255, 255, 0.7);
+    margin: 0 8px;
   `,
 };
 

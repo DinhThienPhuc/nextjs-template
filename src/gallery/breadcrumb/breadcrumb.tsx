@@ -6,10 +6,11 @@ import { ReactNode, useMemo } from "react";
 import Link from "next/link";
 import Styled from "./breadcrumb.style";
 import cx from "classnames";
+import useWhyDidYouUpdate from "hooks/useWhyDidYouUpdate";
 
 interface IItem {
   path: string;
-  label: ReactNode;
+  label: ReactNode | string;
 }
 
 interface IProps {
@@ -19,7 +20,9 @@ interface IProps {
   activePath?: string;
 }
 
-const Breadcrumb = ({ className, separator, items, activePath }: IProps) => {
+const Breadcrumb = (props: IProps) => {
+  const { className, separator, items, activePath } = props;
+
   const customSlash = useMemo(() => {
     if (separator) {
       return <Styled.Slash>{separator}</Styled.Slash>;
@@ -47,10 +50,12 @@ const Breadcrumb = ({ className, separator, items, activePath }: IProps) => {
     });
   }, [activePath, customSlash, items]);
 
+  useWhyDidYouUpdate("Breadcrumb", props);
+
   return (
-    <Styled.Container className={cx("breadcrumb", className)}>
+    <Styled.Breadcrumb className={cx("breadcrumb", className)}>
       {content}
-    </Styled.Container>
+    </Styled.Breadcrumb>
   );
 };
 

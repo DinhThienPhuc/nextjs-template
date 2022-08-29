@@ -5,12 +5,17 @@ import styled, { css } from "styled-components";
 
 const Styled = {
   MenuIcon: styled.div<{ isActivated: boolean }>`
+    &:hover {
+      cursor: pointer;
+    }
+
     .line {
       width: 35px;
       height: 5px;
-      background-color: #333;
+      background-color: white;
       margin: 6px 0;
-      transition: 0.4s;
+      transition: all 400ms ease-in-out;
+      border-radius: 4px;
     }
 
     .line.first {

@@ -1,7 +1,7 @@
 /* VIEW COMPONENT: HOME
    ========================================================================== */
 
-import { Breadcrumb } from "gallery";
+import { MenuIcon } from "gallery";
 
 const ViewHome = () => {
   return (
@@ -11,23 +11,7 @@ const ViewHome = () => {
       <br />
       <br />
       <br />
-      <Breadcrumb
-        activePath="/item3"
-        items={[
-          {
-            label: "item1",
-            path: "/item1",
-          },
-          {
-            label: "item2",
-            path: "/item2",
-          },
-          {
-            label: "item3",
-            path: "/item3",
-          },
-        ]}
-      />
+      <MenuIcon withAnimation />
     </>
   );
 };

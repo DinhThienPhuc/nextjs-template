@@ -5,6 +5,7 @@ import { useCallback, useState } from "react";
 
 import Styled from "./menu-icon.style";
 import cx from "classnames";
+import useWhyDidYouUpdate from "hooks/useWhyDidYouUpdate";
 
 interface IProps {
   withAnimation?: boolean;
@@ -12,7 +13,8 @@ interface IProps {
   onClick?: (isActivated: boolean) => void;
 }
 
-const MenuIcon = ({ withAnimation, className, onClick }: IProps) => {
+const MenuIcon = (props: IProps) => {
+  const { withAnimation, className, onClick } = props;
   const [isActivated, setActive] = useState<boolean>(false);
 
   const handleToggleMenu = useCallback(() => {
@@ -21,6 +23,8 @@ const MenuIcon = ({ withAnimation, className, onClick }: IProps) => {
     }
     onClick?.(!isActivated);
   }, [isActivated, onClick, withAnimation]);
+
+  useWhyDidYouUpdate("MenuIcon", props);
 
   return (
     <Styled.MenuIcon

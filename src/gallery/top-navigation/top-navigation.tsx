@@ -3,23 +3,16 @@
       https://www.w3schools.com/howto/howto_js_topnav_responsive.asp
    ========================================================================== */
 
-import { ReactNode, useCallback, useMemo, useState } from "react";
+import { useCallback, useMemo, useState } from "react";
 
+import { IProps } from "./top-navigation.utils";
 import Link from "next/link";
 import Styled from "./top-navigation.style";
 import cx from "classnames";
+import useWhyDidYouUpdate from "hooks/useWhyDidYouUpdate";
 
-interface IItem {
-  label: string | ReactNode;
-  href: string;
-}
-
-interface IProps {
-  className?: string;
-  items: IItem[];
-}
-
-const TopNavigation = ({ className, items }: IProps) => {
+const TopNavigation = (props: IProps) => {
+  const { className, items } = props;
   const [isMobileMenuOpen, setMobileMenuOpen] = useState<boolean>(false);
 
   const handleToggleMobileMenu = useCallback((isActivated: boolean) => {
@@ -37,6 +30,8 @@ const TopNavigation = ({ className, items }: IProps) => {
       );
     });
   }, [isMobileMenuOpen, items]);
+
+  useWhyDidYouUpdate("TopNav", props);
 
   return (
     <Styled.TopNav className={cx("top-nav", className)}>

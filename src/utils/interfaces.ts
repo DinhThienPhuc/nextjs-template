@@ -23,6 +23,9 @@ export type TAppPropsCustomized = AppProps & {
   Component: TNextPageCustomized;
 };
 
+/**
+ * Define object interface
+ */
 export interface IObject<T> {
   [key: string]: T;
 }

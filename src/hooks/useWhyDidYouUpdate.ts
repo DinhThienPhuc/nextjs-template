@@ -1,11 +1,14 @@
+/* HOOK: USE_ƯHY_ĐI_YOU_UPDATE
+   ========================================================================== */
+
 import { useEffect, useRef } from "react";
 
 import { IObject } from "utils/interfaces";
 
-const useWhyDidYouUpdate = (name: string, props: any) => {
+const useWhyDidYouUpdate = (name: string, props: IObject<any>) => {
   // Get a mutable ref object where we can store props ...
   // ... for comparison next time this hook runs.
-  const previousProps = useRef<IObject>({});
+  const previousProps = useRef<IObject<any>>({});
 
   useEffect(() => {
     if (previousProps.current) {
@@ -13,7 +16,7 @@ const useWhyDidYouUpdate = (name: string, props: any) => {
       const allKeys = Object.keys({ ...previousProps.current, ...props });
 
       // Use this object to keep track of changed props
-      const changesObj: IObject = {};
+      const changesObj: IObject<any> = {};
 
       // Iterate through keys
       allKeys.forEach((key: string) => {

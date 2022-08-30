@@ -1,11 +1,11 @@
-import { IObject } from "utils/interfaces";
-import { ReactNode } from "react";
-
 /* GALLERY COMPONENT UTILS: PAGINATION
    ========================================================================== */
 
+import { IObject } from "utils/interfaces";
+import { ReactNode } from "react";
+
 /* Interfaces & Types & Enums
-      ========================================================================== */
+   ========================================================================== */
 
 export type TVariant = "normal" | "outlined" | "rounded";
 
@@ -28,8 +28,9 @@ export interface IProps {
 }
 
 /* Constants
-         ========================================================================== */
-const VARIANT: IObject<TVariant> = {
+   ========================================================================== */
+
+export const VARIANT: IObject<TVariant> = {
   NORMAL: "normal",
   OUTLINED: "outlined",
   ROUNDED: "rounded",
@@ -46,4 +47,4 @@ export const DEFAULT_PROPS = {
 };
 
 /* Functions
-           ========================================================================== */
+   ========================================================================== */

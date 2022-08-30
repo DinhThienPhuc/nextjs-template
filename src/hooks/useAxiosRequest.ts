@@ -1,3 +1,6 @@
+/* HOOK: USE_AXIOS_REQUEST
+   ========================================================================== */
+
 import { useCallback, useState } from "react";
 
 import { ErrorResponse } from "services/axios-requests/requests";
@@ -14,8 +17,6 @@ const INIT_STATE: IState = {
   error: null,
   data: null,
 };
-
-// requestPromise: Promise<AxiosResponse>
 
 const useAxiosRequest = (url: string, apiCall: any, params?: any) => {
   const [state, setState] = useState<IState>(INIT_STATE);

@@ -13,6 +13,7 @@ interface IPanel {
   label: ReactNode | string;
   content: ReactNode | string;
   id: string;
+  disabled?: boolean;
 }
 
 interface IProps {
@@ -39,6 +40,7 @@ const Tabs = (props: IProps) => {
           isVertical={isVertical}
           isActivated={isActivated === index}
           onClick={handleSelectTab(index)}
+          disabled={!!panel?.disabled}
           className="label"
         >
           {panel.label}

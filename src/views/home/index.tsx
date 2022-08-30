@@ -22,6 +22,7 @@ const ViewHome = () => {
             label: "tab2",
             content: "tab2",
             id: "tab2",
+            disabled: true,
           },
           {
             label: "tab3",

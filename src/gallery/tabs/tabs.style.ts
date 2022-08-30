@@ -19,7 +19,11 @@ const Styled = {
       `;
     }};
   `,
-  TabLabel: styled.div<{ isActivated: boolean; isVertical: boolean }>`
+  TabLabel: styled.div<{
+    isActivated: boolean;
+    isVertical: boolean;
+    disabled: boolean;
+  }>`
     transition: all 300ms ease-in-out;
     cursor: pointer;
     transition: 0.3s;
@@ -42,14 +46,24 @@ const Styled = {
       `;
     }};
 
+    ${({ disabled }) => {
+      if (disabled) {
+        return css`
+          pointer-events: none;
+          cursor: default;
+          color: rgba(255, 255, 255, 0.5);
+        `;
+      }
+    }};
+
     &::after {
       position: absolute;
       content: "";
       width: 100%;
-      height: 3px;
+      height: 2px;
       bottom: 0;
       left: 0;
-      border-radius: 3px;
+      border-radius: 1px;
       background-color: transparent;
     }
 

@@ -3,27 +3,15 @@
       https://www.w3schools.com/howto/howto_js_vertical_tabs.asp
    ========================================================================== */
 
-import { ReactNode, useCallback, useMemo, useState } from "react";
+import { DEFAULT_PROPS, IProps } from "./tabs.utils";
+import { useCallback, useMemo, useState } from "react";
 
 import Styled from "./tabs.style";
 import cx from "classnames";
 import useWhyDidYouUpdate from "hooks/useWhyDidYouUpdate";
 
-interface IPanel {
-  label: ReactNode | string;
-  content: ReactNode | string;
-  id: string;
-  disabled?: boolean;
-}
-
-interface IProps {
-  panels: IPanel[];
-  className?: string;
-  isVertical?: boolean;
-}
-
 const Tabs = (props: IProps) => {
-  const { className, panels, isVertical = false } = props;
+  const { className, panels, isVertical = DEFAULT_PROPS.isVertical } = props;
   const [isActivated, setActive] = useState(0);
 
   const handleSelectTab = useCallback((index: number) => {

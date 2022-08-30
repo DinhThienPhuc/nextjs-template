@@ -1,27 +1,29 @@
 /* GALLERY COMPONENT: PAGINATION - https://www.w3schools.com/howto/howto_css_pagination.asp
    ========================================================================== */
 
-import { IProps, VARIANT } from "./pagination.utils";
+import { DEFAULT_PROPS, IProps } from "./pagination.utils";
 import { useCallback, useMemo, useState } from "react";
 
 import Icons from "assets/icons";
 import Styled from "./pagination.style";
 import cx from "classnames";
 
-const Pagination = ({
-  className,
-  totalPages,
-  prevIcon,
-  nextIcon,
-  hidePrevButton = false,
-  hideNextButton = false,
-  disabled = false,
-  showFirstButton = false,
-  showLastButton = false,
-  variant = VARIANT.NORMAL,
-  size = 32,
-  onChange,
-}: IProps) => {
+const Pagination = (props: IProps) => {
+  const {
+    className,
+    totalPages,
+    prevIcon,
+    nextIcon,
+    hidePrevButton = DEFAULT_PROPS.hideNextButton,
+    hideNextButton = DEFAULT_PROPS.hideNextButton,
+    disabled = DEFAULT_PROPS.disabled,
+    showFirstButton = DEFAULT_PROPS.showFirstButton,
+    showLastButton = DEFAULT_PROPS.showLastButton,
+    variant = DEFAULT_PROPS.variant,
+    size = DEFAULT_PROPS.size,
+    onChange,
+  } = props;
+
   const [page, setPage] = useState<number>(5);
 
   const numbers = useMemo(() => {

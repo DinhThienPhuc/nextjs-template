@@ -3,15 +3,10 @@
 
 import { useCallback, useState } from "react";
 
+import { IProps } from "./menu-icon.utils";
 import Styled from "./menu-icon.style";
 import cx from "classnames";
 import useWhyDidYouUpdate from "hooks/useWhyDidYouUpdate";
-
-interface IProps {
-  withAnimation?: boolean;
-  className?: string;
-  onClick?: (isActivated: boolean) => void;
-}
 
 const MenuIcon = (props: IProps) => {
   const { withAnimation, className, onClick } = props;

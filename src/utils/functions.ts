@@ -1,7 +1,7 @@
 /* GLOBAL FUNCTIONS
    ========================================================================== */
 
-import { SPECIAL_STRING } from "./constants";
+import { SPECIAL_VALUE } from "./constants";
 
 /**
  * Reload current browser link
@@ -19,9 +19,9 @@ export const reload = () => {
  */
 export const parseJSON = <T>(jsonString: string | null): T | null => {
   try {
-    return jsonString === SPECIAL_STRING.UNDEFINED
+    return jsonString === SPECIAL_VALUE.UNDEFINED_STRING
       ? null
-      : JSON.parse(jsonString ?? SPECIAL_STRING.EMPTY);
+      : JSON.parse(jsonString ?? SPECIAL_VALUE.EMPTY_STRING);
   } catch (error) {
     return null;
   }

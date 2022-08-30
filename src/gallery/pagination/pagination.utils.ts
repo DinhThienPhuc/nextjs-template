@@ -1,14 +1,13 @@
+import { IObject } from "utils/interfaces";
 import { ReactNode } from "react";
 
-export type TVariant = "normal" | "outlined" | "rounded";
+/* GALLERY COMPONENT UTILS: PAGINATION
+   ========================================================================== */
 
-export const VARIANT: {
-  [key: string]: TVariant;
-} = {
-  NORMAL: "normal",
-  OUTLINED: "outlined",
-  ROUNDED: "rounded",
-};
+/* Interfaces & Types & Enums
+      ========================================================================== */
+
+export type TVariant = "normal" | "outlined" | "rounded";
 
 export interface IProps {
   className?: string;
@@ -27,3 +26,24 @@ export interface IProps {
   siblingCount?: number;
   isLong?: boolean;
 }
+
+/* Constants
+         ========================================================================== */
+const VARIANT: IObject<TVariant> = {
+  NORMAL: "normal",
+  OUTLINED: "outlined",
+  ROUNDED: "rounded",
+};
+
+export const DEFAULT_PROPS = {
+  hidePrevButton: false,
+  hideNextButton: false,
+  disabled: false,
+  showFirstButton: false,
+  showLastButton: false,
+  variant: VARIANT.NORMAL,
+  size: 32,
+};
+
+/* Functions
+           ========================================================================== */

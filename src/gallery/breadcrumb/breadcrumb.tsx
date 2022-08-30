@@ -1,24 +1,12 @@
 /* GALLERY COMPONENT: BREADCRUMB - https://www.w3schools.com/howto/howto_css_breadcrumbs.asp
    ========================================================================== */
 
-import { ReactNode, useMemo } from "react";
-
+import { IProps } from "./breadcrumb.utils";
 import Link from "next/link";
 import Styled from "./breadcrumb.style";
 import cx from "classnames";
+import { useMemo } from "react";
 import useWhyDidYouUpdate from "hooks/useWhyDidYouUpdate";
-
-interface IItem {
-  path: string;
-  label: ReactNode | string;
-}
-
-interface IProps {
-  className?: string;
-  separator?: ReactNode | string;
-  items?: IItem[];
-  activePath?: string;
-}
 
 const Breadcrumb = (props: IProps) => {
   const { className, separator, items, activePath } = props;

@@ -1,38 +1,31 @@
 /* GALLERY COMPONENT: BADGE - https://www.w3schools.com/howto/howto_css_badge.asp
    ========================================================================== */
 
-import { ReactNode, useMemo } from "react";
+import { DEFAULT_PROPS, IProps } from "./badge.utils";
 
+import { SPECIAL_VALUE } from "utils/constants";
 import Styled from "./badge.style";
 import cx from "classnames";
+import { useMemo } from "react";
 import useWhyDidYouUpdate from "hooks/useWhyDidYouUpdate";
-
-interface IProps {
-  className?: string;
-  children: ReactNode | string;
-  counter?: number;
-  customCounter?: ReactNode;
-  showZero?: boolean;
-  max?: number;
-}
 
 const Breadcrumb = (props: IProps) => {
   const {
     className,
     children,
-    counter = 0,
+    counter = DEFAULT_PROPS.counter,
     customCounter,
-    showZero = false,
-    max = 99,
+    showZero = DEFAULT_PROPS.showZero,
+    max = DEFAULT_PROPS.max,
   } = props;
 
   const circleCounter = useMemo(() => {
     if (customCounter) {
       return customCounter;
     }
-    let counterNum: string = "";
+    let counterNum: string = SPECIAL_VALUE.EMPTY_STRING;
     if (counter === 0) {
-      counterNum = showZero ? "0" : "";
+      counterNum = showZero ? "0" : SPECIAL_VALUE.EMPTY_STRING;
     } else if (counter >= max) {
       counterNum = `${max}+`;
     } else {

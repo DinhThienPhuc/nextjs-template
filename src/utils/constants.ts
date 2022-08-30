@@ -29,10 +29,10 @@ export const NAVBAR_ITEMS = [
 ];
 
 /**
- * Special strings: undefined, null, empty string, etc
+ * Special values: undefined, null, empty string, etc
  */
-export const SPECIAL_STRING = {
-  UNDEFINED: "undefined",
-  NULL: "null",
-  EMPTY: "",
+export const SPECIAL_VALUE = {
+  UNDEFINED_STRING: "undefined",
+  NULL_STRING: "null",
+  EMPTY_STRING: "",
 };

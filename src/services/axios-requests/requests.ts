@@ -1,5 +1,7 @@
 import axios, { AxiosError } from "axios";
 
+import { SPECIAL_VALUE } from "utils/constants";
+
 /**
  * Feel free to modify this ErrorResponse
  */
@@ -27,7 +29,7 @@ requestWithJwt.interceptors.request.use(async (config) => {
   return {
     ...config,
     headers: {
-      Authorization: `Bearer ${token || ""}`,
+      Authorization: `Bearer ${token || SPECIAL_VALUE.EMPTY_STRING}`,
       ...config.headers,
     },
   };

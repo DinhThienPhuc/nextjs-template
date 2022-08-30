@@ -1,29 +1,6 @@
 /* HOOK: USE_MEDIA_QUERY
    ========================================================================== */
 
-/**
- * Checks if the current environment matches a given media query and returns the appropriate value.
- *
- * @param query css media query
- *
- * @example
- * ```
- * import React, { useRef } from 'react'
- * import useMediaQuery from 'hooks/useMediaQuery'
- *
- * export default function Component() {
- *    // Check if is mobile
- *    const isMobile = useMediaQuery("(max-width: 400px)")
- *
- *    return (
- *        <div>
- *            {isMobile ? "Mobile screen" : "Tablet or Desktop screen"}
- *        </div>
- *    )
- * }
- * ```
- */
-
 import { useEffect, useState } from "react";
 
 const useMediaQuery = (query: string): boolean => {

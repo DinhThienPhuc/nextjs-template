@@ -3,6 +3,7 @@
 
 import { ReactNode, createContext, useContext, useMemo, useState } from "react";
 
+import { SPECIAL_VALUE } from "utils/constants";
 import { ThemeProvider } from "styled-components";
 import schemas from "./schema.json";
 
@@ -31,7 +32,7 @@ interface IProps {
  */
 const ThemeContext = createContext<IContext>({
   theme: ETheme.DARK,
-  setTheme: () => "",
+  setTheme: () => SPECIAL_VALUE.EMPTY_STRING,
 });
 
 /**

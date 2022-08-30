@@ -435,7 +435,7 @@ Source:
 - Flip Card: https://www.w3schools.com/howto/howto_css_flip_card.asp
 - Profile Card: https://www.w3schools.com/howto/howto_css_profile_card.asp
 - Product Card: https://www.w3schools.com/howto/howto_css_product_card.asp
-- Alerts: https://www.w3schools.com/howto/howto_js_alert.asp
+- ✅ ✅ ✅ ✅ Alerts: https://www.w3schools.com/howto/howto_js_alert.asp
 - Callout: https://www.w3schools.com/howto/howto_js_callout.asp
 - Notes: https://www.w3schools.com/howto/howto_css_notes.asp
 - Labels: https://www.w3schools.com/howto/howto_css_labels.asp

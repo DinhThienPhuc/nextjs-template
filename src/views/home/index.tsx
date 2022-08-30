@@ -1,8 +1,7 @@
 /* VIEW COMPONENT: HOME
    ========================================================================== */
 
-import { Badge } from "gallery";
-import Icons from "assets/icons";
+import { Alert } from "gallery";
 
 const ViewHome = () => {
   return (
@@ -12,9 +11,9 @@ const ViewHome = () => {
       <br />
       <br />
       <br />
-      <Badge counter={120000} max={9999}>
-        <Icons.Bell width={24} height={24} />
-      </Badge>
+      <Alert severity="info" title="Info" onClose={() => {}}>
+        This is an error alert — check it out!
+      </Alert>
     </>
   );
 };

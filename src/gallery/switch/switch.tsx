@@ -1,38 +1,25 @@
 /* GALLERY COMPONENT: SWITCH - https://www.w3schools.com/howto/howto_css_switch.asp
-   ========================================================================== */
+============================================================================ */
 
-import { MouseEventHandler, ReactNode, useCallback, useMemo } from "react";
+import { DEFAULT_PROPS, IProps } from "./switch.utils";
+import { useCallback, useMemo } from "react";
 
 import Styled from "./switch.style";
 import cx from "classnames";
 import { doNothing } from "utils/functions";
 import useWhyDidYouUpdate from "hooks/useWhyDidYouUpdate";
 
-interface IProps {
-  className?: string;
-  disabled?: boolean;
-  width?: number;
-  height?: number;
-  size?: number;
-  preText?: ReactNode | string;
-  postText?: ReactNode | string;
-  customSlider?: ReactNode;
-  isCircle?: boolean;
-  checked: boolean;
-  onChange?: MouseEventHandler<HTMLDivElement>;
-}
-
 const Switch = (props: IProps) => {
   const {
     className,
-    width = 34,
-    height = 14,
-    size = 18,
+    width = DEFAULT_PROPS.width,
+    height = DEFAULT_PROPS.height,
+    size = DEFAULT_PROPS.size,
+    disabled = DEFAULT_PROPS.disabled,
     preText,
     postText,
     checked,
     onChange,
-    disabled = false,
   } = props;
 
   const customPreText = useMemo(() => {

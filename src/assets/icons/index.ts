@@ -2,6 +2,7 @@
    ========================================================================== */
 
 import Activity from "./activity.svg";
+import Bell from "./bell.svg";
 import ChevronDown from "./chevron-down.svg";
 import ChevronLeft from "./chevron-left.svg";
 import ChevronRight from "./chevron-right.svg";
@@ -14,6 +15,7 @@ import Sun from "./sun.svg";
 
 const Icons = {
   Activity,
+  Bell,
   ChevronDown,
   ChevronLeft,
   ChevronRight,

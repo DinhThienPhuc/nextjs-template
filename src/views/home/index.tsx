@@ -1,7 +1,8 @@
 /* VIEW COMPONENT: HOME
    ========================================================================== */
 
-import { Tabs } from "gallery";
+import { Badge } from "gallery";
+import Icons from "assets/icons";
 
 const ViewHome = () => {
   return (
@@ -11,26 +12,9 @@ const ViewHome = () => {
       <br />
       <br />
       <br />
-      <Tabs
-        panels={[
-          {
-            label: "tab1",
-            content: "ahihi",
-            id: "tab1",
-          },
-          {
-            label: "tab2",
-            content: "tab2",
-            id: "tab2",
-            disabled: true,
-          },
-          {
-            label: "tab3",
-            content: "tab3",
-            id: "tab3",
-          },
-        ]}
-      />
+      <Badge counter={120000} max={9999}>
+        <Icons.Bell width={24} height={24} />
+      </Badge>
     </>
   );
 };

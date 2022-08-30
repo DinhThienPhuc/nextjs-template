@@ -2,6 +2,7 @@
    ========================================================================== */
 
 import Accordion from "./accordion/accordion";
+import Badge from "./badge/badge";
 import Breadcrumb from "./breadcrumb/breadcrumb";
 import MenuIcon from "./menu-icon/menu-icon";
 import Pagination from "./pagination/pagination";
@@ -11,6 +12,7 @@ import TopNavigation from "./top-navigation/top-navigation";
 
 export {
   Accordion,
+  Badge,
   Breadcrumb,
   MenuIcon,
   Pagination,

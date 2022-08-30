@@ -1,29 +1,21 @@
 /* GALLERY COMPONENT: ACCORDION - https://www.w3schools.com/howto/howto_js_accordion.asp
    ========================================================================== */
 
-import { ReactNode, useCallback, useMemo, useState } from "react";
+import { DEFAULT_PROPS, IPanel, IProps } from "./accordion.utils";
+import { useCallback, useMemo, useState } from "react";
 
 import Icons from "assets/icons";
 import Styled from "./accordion.style";
 import cx from "classnames";
 import useWhyDidYouUpdate from "hooks/useWhyDidYouUpdate";
 
-interface IPanel {
-  label: ReactNode | string;
-  value: ReactNode | string;
-  expandItem?: ReactNode;
-  disabled?: boolean;
-}
-
-interface IProps {
-  panels: IPanel[];
-  className?: string;
-  canMultiOpen?: boolean;
-  expandItem?: ReactNode;
-}
-
 const Accordion = (props: IProps) => {
-  const { panels, className, canMultiOpen = false, expandItem } = props;
+  const {
+    panels,
+    className,
+    canMultiOpen = DEFAULT_PROPS.canMultiOpen,
+    expandItem,
+  } = props;
   const [isActivated, setActive] = useState<number[]>([]);
 
   const handleTogglePanel = useCallback(

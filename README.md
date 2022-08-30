@@ -426,7 +426,7 @@ Source:
 - HTML Includes: https://www.w3schools.com/howto/howto_html_include.asp
 - To Do List: https://www.w3schools.com/howto/howto_js_todolist.asp
 - Loaders: https://www.w3schools.com/howto/howto_css_loader.asp
-- Badges: https://www.w3schools.com/howto/howto_css_badge.asp
+- ✅ Badges: https://www.w3schools.com/howto/howto_css_badge.asp
 - Star Rating: https://www.w3schools.com/howto/howto_css_star_rating.asp
 - User Rating: https://www.w3schools.com/howto/howto_css_user_rating.asp
 - Overlay Effect: https://www.w3schools.com/howto/howto_css_overlay.asp

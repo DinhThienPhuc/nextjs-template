@@ -58,15 +58,6 @@ src
 │   ├── ...
 │   └── index.ts
 │
-├── gallery
-│   ├── <com>
-│   │   ├── <com>.style.tsx
-│   │   ├── <com>.tsx
-│   │   └── <com>.utils.tsx
-│   │
-│   ├── ...
-│   └── index.ts
-│
 ├── hooks
 │   ├── <hook>.ts
 │   ├── ...
@@ -183,14 +174,6 @@ import { A, B, C } from 'components'
   - `<component>.style.tsx`: component styles
   - `<component>.utils.tsx`: component utils such as interfaces, constants, functions used for component only
 
-#### [`gallery`](src/gallery) - series HOW-TO in [W3School](https://www.w3schools.com/howto/default.asp)
-
-- `<component>` - Contains all elements of a component
-
-  - `<component>.tsx`: component main content
-  - `<component>.style.tsx`: component styles
-  - `<component>.utils.tsx`: component utils such as interfaces, constants, functions used for component only
-
 - [`index.ts`](src/components/index.ts): the entry point for all components
 
 #### [`hooks`](src/hooks) - useful hooks
@@ -246,7 +229,7 @@ Next.js has a lot of way to fetch data:
 
 so feel free to pick up the best fetching stradegy for you project! ✨✨✨
 
-## Gallery
+## Components
 
 ✅
 
@@ -435,9 +418,9 @@ Source:
 - Flip Card: https://www.w3schools.com/howto/howto_css_flip_card.asp
 - Profile Card: https://www.w3schools.com/howto/howto_css_profile_card.asp
 - Product Card: https://www.w3schools.com/howto/howto_css_product_card.asp
-- ✅ ✅ ✅ ✅ Alerts: https://www.w3schools.com/howto/howto_js_alert.asp
+- ✅ Alerts: https://www.w3schools.com/howto/howto_js_alert.asp
 - Callout: https://www.w3schools.com/howto/howto_js_callout.asp
-- Notes: https://www.w3schools.com/howto/howto_css_notes.asp
+- ~~Notes: https://www.w3schools.com/howto/howto_css_notes.asp~~
 - Labels: https://www.w3schools.com/howto/howto_css_labels.asp
 - Circles: https://www.w3schools.com/howto/howto_css_circles.asp
 - Style HR: https://www.w3schools.com/howto/howto_css_style_hr.asp

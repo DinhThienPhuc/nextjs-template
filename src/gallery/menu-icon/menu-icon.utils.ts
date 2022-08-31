@@ -1,4 +1,4 @@
-/* GALLERY COMPONENT UTILS: MENU_ICON
+/* COMPONENT UTILS: MENU_ICON
    ========================================================================== */
 
 /* Interfaces & Types & Enums

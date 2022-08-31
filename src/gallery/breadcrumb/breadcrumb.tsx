@@ -1,4 +1,4 @@
-/* GALLERY COMPONENT: BREADCRUMB - https://www.w3schools.com/howto/howto_css_breadcrumbs.asp
+/* COMPONENT: BREADCRUMB - https://www.w3schools.com/howto/howto_css_breadcrumbs.asp
    ========================================================================== */
 
 import { IProps } from "./breadcrumb.utils";

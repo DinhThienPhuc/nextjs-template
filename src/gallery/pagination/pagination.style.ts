@@ -1,4 +1,4 @@
-/* GALLERY COMPONENT STYLES: PAGINATION
+/* COMPONENT STYLES: PAGINATION
    ========================================================================== */
 
 import { TVariant, VARIANT } from "./pagination.utils";

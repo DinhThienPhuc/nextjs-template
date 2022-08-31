@@ -1,4 +1,4 @@
-/* GALLERY COMPONENT UTILS: ALERT
+/* COMPONENT UTILS: ALERT
    ========================================================================== */
 
 import { IObject } from "utils/interfaces";

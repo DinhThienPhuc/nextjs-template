@@ -1,4 +1,4 @@
-/* GALLERY COMPONENT: TABS
+/* COMPONENT: TABS
       https://www.w3schools.com/howto/howto_js_tabs.asp, 
       https://www.w3schools.com/howto/howto_js_vertical_tabs.asp
    ========================================================================== */

@@ -1,4 +1,4 @@
-/* GALLERY COMPONENT STYLES: ALERT
+/* COMPONENT STYLES: ALERT
    ========================================================================== */
 
 import { SEVERITY, TSeverity, TVariant, VARIANT } from "./alert.utils";

@@ -1,4 +1,4 @@
-/* GALLERY COMPONENT STYLES: MENU_ICON
+/* COMPONENT STYLES: MENU_ICON
    ========================================================================== */
 
 import styled, { css } from "styled-components";

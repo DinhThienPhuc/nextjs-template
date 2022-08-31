@@ -1,4 +1,4 @@
-/* GALLERY COMPONENT STYLES: TOP_NAVIGATION
+/* COMPONENT STYLES: TOP_NAVIGATION
    ========================================================================== */
 
 import styled, { css } from "styled-components";

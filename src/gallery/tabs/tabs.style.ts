@@ -1,4 +1,4 @@
-/* GALLERY COMPONENT STYLES: TABS
+/* COMPONENT STYLES: TABS
    ========================================================================== */
 
 import styled, { css } from "styled-components";

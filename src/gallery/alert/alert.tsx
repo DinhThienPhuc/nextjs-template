@@ -1,4 +1,4 @@
-/* GALLERY COMPONENT: ALERT - https://www.w3schools.com/howto/howto_js_alert.asp
+/* COMPONENT: ALERT - https://www.w3schools.com/howto/howto_js_alert.asp
    ========================================================================== */
 
 import { DEFAULT_PROPS, IProps, SEVERITY_ICON_DICTIONARY } from "./alert.utils";

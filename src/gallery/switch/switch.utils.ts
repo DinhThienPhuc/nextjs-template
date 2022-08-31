@@ -1,4 +1,4 @@
-/* GALLERY COMPONENT UTILS: SWITCH
+/* COMPONENT UTILS: SWITCH
    ========================================================================== */
 
 import { MouseEventHandler, ReactNode } from "react";

@@ -1,4 +1,4 @@
-/* GALLERY COMPONENT STYLES: ACCORDION
+/* COMPONENT STYLES: ACCORDION
    ========================================================================== */
 
 import styled, { css } from "styled-components";

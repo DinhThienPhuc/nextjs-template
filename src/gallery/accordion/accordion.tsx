@@ -1,4 +1,4 @@
-/* GALLERY COMPONENT: ACCORDION - https://www.w3schools.com/howto/howto_js_accordion.asp
+/* COMPONENT: ACCORDION - https://www.w3schools.com/howto/howto_js_accordion.asp
    ========================================================================== */
 
 import { DEFAULT_PROPS, IPanel, IProps } from "./accordion.utils";

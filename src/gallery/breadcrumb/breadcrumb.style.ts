@@ -1,4 +1,4 @@
-/* GALLERY COMPONENT STYLES: BREADCRUMB
+/* COMPONENT STYLES: BREADCRUMB
    ========================================================================== */
 
 import styled from "styled-components";

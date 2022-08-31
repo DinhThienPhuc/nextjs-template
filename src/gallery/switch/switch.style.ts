@@ -1,4 +1,4 @@
-/* GALLERY COMPONENT STYLES: SWITCH
+/* COMPONENT STYLES: SWITCH
    ========================================================================== */
 
 import styled, { css } from "styled-components";

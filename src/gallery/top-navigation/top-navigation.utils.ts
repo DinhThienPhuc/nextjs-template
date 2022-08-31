@@ -1,4 +1,4 @@
-/* GALLERY COMPONENT UTILS: TOP_NAVIGATION
+/* COMPONENT UTILS: TOP_NAVIGATION
    ========================================================================== */
 
 import { ReactNode } from "react";

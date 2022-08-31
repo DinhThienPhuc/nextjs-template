@@ -1,4 +1,4 @@
-/* GALLERY COMPONENT: BADGE - https://www.w3schools.com/howto/howto_css_badge.asp
+/* COMPONENT: BADGE - https://www.w3schools.com/howto/howto_css_badge.asp
    ========================================================================== */
 
 import { DEFAULT_PROPS, IProps } from "./badge.utils";

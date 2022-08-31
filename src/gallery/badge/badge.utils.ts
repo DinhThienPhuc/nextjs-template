@@ -1,4 +1,4 @@
-/* GALLERY COMPONENT UTILS: BADGE
+/* COMPONENT UTILS: BADGE
    ========================================================================== */
 
 import { ReactNode } from "react";

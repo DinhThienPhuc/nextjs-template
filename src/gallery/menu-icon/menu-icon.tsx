@@ -1,4 +1,4 @@
-/* GALLERY COMPONENT: MENU_ICON - https://www.w3schools.com/howto/howto_css_menu_icon.asp
+/* COMPONENT: MENU_ICON - https://www.w3schools.com/howto/howto_css_menu_icon.asp
    ========================================================================== */
 
 import { useCallback, useState } from "react";

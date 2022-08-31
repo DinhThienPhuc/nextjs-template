@@ -1,4 +1,4 @@
-/* GALLERY COMPONENT UTILS: PAGINATION
+/* COMPONENT UTILS: PAGINATION
    ========================================================================== */
 
 import { IObject } from "utils/interfaces";

@@ -1,4 +1,4 @@
-/* GALLERY COMPONENT: PAGINATION - https://www.w3schools.com/howto/howto_css_pagination.asp
+/* COMPONENT: PAGINATION - https://www.w3schools.com/howto/howto_css_pagination.asp
    ========================================================================== */
 
 import { DEFAULT_PROPS, IProps } from "./pagination.utils";

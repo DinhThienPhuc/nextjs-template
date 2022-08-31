@@ -1,4 +1,4 @@
-/* GALLERY COMPONENT UTILS: BREADCRUMB
+/* COMPONENT UTILS: BREADCRUMB
    ========================================================================== */
 
 import { ReactNode } from "react";

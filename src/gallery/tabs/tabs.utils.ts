@@ -1,4 +1,4 @@
-/* GALLERY COMPONENT UTILS: TABS
+/* COMPONENT UTILS: TABS
    ========================================================================== */
 
 import { ReactNode } from "react";

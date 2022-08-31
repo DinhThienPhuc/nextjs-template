@@ -1,4 +1,4 @@
-/* GALLERY COMPONENT UTILS: ACCORDION
+/* COMPONENT UTILS: ACCORDION
    ========================================================================== */
 
 import { ReactNode } from "react";

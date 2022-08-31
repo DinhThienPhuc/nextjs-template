@@ -1,4 +1,4 @@
-/* GALLERY COMPONENT STYLES: BADGE
+/* COMPONENT STYLES: BADGE
    ========================================================================== */
 
 import styled from "styled-components";

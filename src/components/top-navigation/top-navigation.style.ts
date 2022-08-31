@@ -3,7 +3,7 @@
 
 import styled, { css } from "styled-components";
 
-import { MenuIcon } from "gallery";
+import { MenuIcon } from "components";
 
 const Styled = {
   TopNav: styled.div`

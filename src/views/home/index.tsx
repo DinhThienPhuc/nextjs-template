@@ -1,7 +1,7 @@
 /* VIEW COMPONENT: HOME
    ========================================================================== */
 
-import { Alert } from "gallery";
+import { Alert } from "components";
 
 const ViewHome = () => {
   return (

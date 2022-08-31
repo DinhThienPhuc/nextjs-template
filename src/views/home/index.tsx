@@ -11,7 +11,12 @@ const ViewHome = () => {
       <br />
       <br />
       <br />
-      <Alert severity="info" title="Info" onClose={() => {}}>
+      <Alert
+        severity="info"
+        title="Success"
+        onClose={() => {}}
+        variant={"outlined"}
+      >
         This is an error alert — check it out!
       </Alert>
     </>

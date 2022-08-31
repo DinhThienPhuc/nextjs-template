@@ -38,7 +38,7 @@ export const SEVERITY: IObject<TSeverity> = {
   ERROR: "error",
 };
 
-const VARIANT: IObject<TVariant> = {
+export const VARIANT: IObject<TVariant> = {
   DEFAULT: "default",
   OUTLINED: "outlined",
   FILLED: "filled",

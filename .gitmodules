@@ -1,6 +1,0 @@
-[submodule "gallery"]
-	path = gallery
-	url = git@github.com-kai-mac15:DinhThienPhuc/gallery.git
-[submodule "src/gallery"]
-	path = src/gallery
-	url = git@github.com-kai-mac15:DinhThienPhuc/gallery.git

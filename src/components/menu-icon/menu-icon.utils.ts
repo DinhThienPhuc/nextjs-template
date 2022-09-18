@@ -1,7 +1,7 @@
 /* COMPONENT UTILS: MENU_ICON
    ========================================================================== */
 
-/* Interfaces & Types & Enums
+/* Interfaces & Types & Enums & Enums
    ========================================================================== */
 
 export interface IProps {

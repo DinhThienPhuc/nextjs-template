@@ -3,7 +3,7 @@
 
 import { MouseEventHandler, ReactNode } from "react";
 
-/* Interfaces & Types & Enums
+/* Interfaces & Types & Enums & Enums
    ========================================================================== */
 
 export interface IProps {

@@ -1,31 +1,37 @@
 /* BUTTON COMPONENT UTILS: Interfaces, Types, Constants, Functions, etc
    ========================================================================== */
 
-import { ButtonHTMLAttributes, MouseEventHandler } from "react";
+import { ButtonHTMLAttributes, MouseEventHandler, ReactNode } from "react";
 
-/* Interfaces & Types
+import { IObject } from "utils/interfaces";
+
+/* Interfaces & Types & Enums
    ========================================================================== */
 
-export enum Color {
-  Primary = "primary",
-  Error = "error",
-}
-
-export enum Size {
-  Small = "small",
-  Medium = "medium",
-  Large = "large",
-}
+export type TVariant = "outlined" | "contained" | "text";
 
 export interface IProps extends ButtonHTMLAttributes<HTMLButtonElement> {
-  color?: Color;
-  size?: Size;
+  variant?: TVariant;
   className?: string;
   onClick?: MouseEventHandler<HTMLButtonElement>;
+  startIcon?: ReactNode;
+  endIcon?: ReactNode;
+  loading?: boolean;
 }
 
 /* Constants
    ========================================================================== */
+
+export const VARIANT: IObject<TVariant> = {
+  OUTLINED: "outlined",
+  CONTAINED: "contained",
+  TEXT: "text",
+};
+
+export const DEFAULT_PROPS = {
+  variant: VARIANT.TEXT,
+  loading: false,
+};
 
 /* Functions
       ========================================================================== */

@@ -4,7 +4,7 @@
 import { IObject } from "utils/interfaces";
 import { ReactNode } from "react";
 
-/* Interfaces & Types & Enums
+/* Interfaces & Types & Enums & Enums
    ========================================================================== */
 
 export type TVariant = "normal" | "outlined" | "rounded";

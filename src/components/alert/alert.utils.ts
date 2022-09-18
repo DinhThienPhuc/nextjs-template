@@ -5,7 +5,7 @@ import { IObject } from "utils/interfaces";
 import Icons from "assets/icons";
 import { ReactNode } from "react";
 
-/* Interfaces & Types & Enums
+/* Interfaces & Types & Enums & Enums
    ========================================================================== */
 
 export type TSeverity = "info" | "success" | "warning" | "error";

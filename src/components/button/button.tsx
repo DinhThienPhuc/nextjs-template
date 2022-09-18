@@ -1,18 +1,39 @@
-/* BUTTON COMPONENT
+/* COMPONENT: BUTTON - 
    ========================================================================== */
 
-import { Color, IProps, Size } from "./button.utils";
-import { MouseEvent, useCallback } from "react";
+import { DEFAULT_PROPS, IProps } from "./button.utils";
+import { MouseEvent, useCallback, useMemo } from "react";
 
 import Styled from "./button.style";
+import cx from "classnames";
+import useWhyDidYouUpdate from "hooks/useWhyDidYouUpdate";
 
-const Button = ({
-  color = Color.Primary,
-  size = Size.Medium,
-  className,
-  children,
-  onClick,
-}: IProps) => {
+const Button = (props: IProps) => {
+  const {
+    className,
+    children,
+    variant = DEFAULT_PROPS.variant,
+    onClick,
+    startIcon,
+    endIcon,
+    loading,
+    ...othersProps
+  } = props;
+
+  const customStartIcon = useMemo(() => {
+    if (!startIcon) {
+      return null;
+    }
+    return <Styled.ButtonIcon>{startIcon}</Styled.ButtonIcon>;
+  }, [startIcon]);
+
+  const customEndIcon = useMemo(() => {
+    if (!endIcon) {
+      return null;
+    }
+    return <Styled.ButtonIcon>{endIcon}</Styled.ButtonIcon>;
+  }, [endIcon]);
+
   const handleClick = useCallback(
     (e: MouseEvent<any, globalThis.MouseEvent>) => {
       onClick?.(e);
@@ -20,15 +41,30 @@ const Button = ({
     [onClick],
   );
 
+  const content = useMemo(() => {
+    if (loading) {
+      return <Styled.Loading className={cx("button-loading")} />;
+    }
+    return (
+      <>
+        {customStartIcon}
+        <Styled.Text className={cx("button-text")}>{children}</Styled.Text>
+        {customEndIcon}
+      </>
+    );
+  }, [children, customEndIcon, customStartIcon, loading]);
+
+  useWhyDidYouUpdate("Button", props);
+
   return (
-    <Styled.Container
-      className={className}
-      color={color}
-      size={size}
+    <Styled.Button
+      className={cx("button", className)}
+      variant={variant}
       onClick={handleClick}
+      {...othersProps}
     >
-      <Styled.Text className="text">{children}</Styled.Text>
-    </Styled.Container>
+      {content}
+    </Styled.Button>
   );
 };
 

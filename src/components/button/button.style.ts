@@ -1,53 +1,92 @@
 /* BUTTON COMPONENT STYLES
    ========================================================================== */
 
-import { Color, Size } from "./button.utils";
-import styled, { css } from "styled-components";
+import { TVariant, VARIANT } from "./button.utils";
+import styled, { css, keyframes } from "styled-components";
 
-const sizeModify = (props: any) => {
-  if (props?.size === Size.Small) {
+const scaleOut = keyframes`
+  ${css`
+    0% {
+      -webkit-transform: scale(0);
+      transform: scale(0);
+    }
+    100% {
+      -webkit-transform: scale(1);
+      transform: scale(1);
+      opacity: 0;
+    }
+  `}
+`;
+
+const styleModify = (props: any) => {
+  if (props?.variant === VARIANT.CONTAINED) {
     return css`
-      height: 24px;
-      padding: 0 16px;
-      border-radius: 12px;
+      color: rgba(0, 0, 0, 0.87);
+      background-color: rgb(144, 202, 249);
+
+      &:not(:disabled):hover {
+        background-color: rgb(66, 165, 245);
+      }
+
+      &:disabled {
+        color: rgba(255, 255, 255, 0.3);
+        background-color: rgba(255, 255, 255, 0.12);
+        cursor: default;
+      }
     `;
   }
-  if (props?.size === Size.Medium) {
+  if (props?.variant === VARIANT.OUTLINED) {
     return css`
-      height: 36px;
-      padding: 0 20px;
-      border-radius: 18px;
+      color: rgb(144, 202, 249);
+      background-color: transparent;
+      border: 1px solid rgba(144, 202, 249, 0.5);
+      padding: 5px 15px;
+
+      &:not(:disabled):hover {
+        border: 1px solid rgb(144, 202, 249);
+        background-color: rgba(144, 202, 249, 0.08);
+      }
+
+      &:disabled {
+        color: rgba(255, 255, 255, 0.3);
+        border: 1px solid rgba(255, 255, 255, 0.12);
+        cursor: default;
+      }
     `;
   }
   return css`
-    height: 48px;
-    padding: 0 24px;
-    border-radius: 24px;
-  `;
-};
+    color: rgb(144, 202, 249);
+    background-color: transparent;
 
-const colorModify = (props: any) => {
-  if (props?.color === Color.Error) {
-    return css`
-      color: ${({ theme }) => theme.colors.red};
-      border: 1px solid ${({ theme }) => theme.colors.red};
-    `;
-  }
-  return css`
-    border: 1px solid ${({ theme }) => theme.colors.gray1};
+    &:not(:disabled):hover {
+      background-color: rgba(144, 202, 249, 0.08);
+    }
+
+    &:disabled {
+      color: rgba(255, 255, 255, 0.3);
+      cursor: default;
+    }
   `;
 };
 
 const Styled = {
-  Container: styled.button<{ size: Size; color: Color }>`
+  Button: styled.button<{ variant: TVariant }>`
     transition: all 0.2s ease;
-    background-color: ${({ theme }) => theme.colors.white};
+    display: flex;
+    align-items: center;
+    outline: 0px;
+    border: 0px;
+    margin: 0px;
     box-shadow: none;
-    outline: none;
     overflow: hidden;
     cursor: pointer;
-    ${sizeModify};
-    ${colorModify};
+    user-select: none;
+    vertical-align: middle;
+    text-decoration: none;
+    min-width: 64px;
+    padding: 6px 8px;
+    border-radius: 4px;
+    ${styleModify};
 
     &:hover,
     &:focus {
@@ -56,6 +95,26 @@ const Styled = {
     }
   `,
   Text: styled.span``,
+  ButtonIcon: styled.span`
+    display: flex;
+    align-items: center;
+
+    &:first-of-type {
+      margin-right: 8px;
+    }
+
+    &:last-of-type {
+      margin-left: 8px;
+    }
+  `,
+  Loading: styled.span`
+    width: 14px;
+    height: 14px;
+    margin: 0 auto;
+    background-color: #333;
+    border-radius: 100%;
+    animation: ${scaleOut} 1s infinite ease-in-out;
+  `,
 };
 
 export default Styled;

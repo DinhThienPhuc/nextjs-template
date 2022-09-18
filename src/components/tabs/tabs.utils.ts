@@ -3,7 +3,7 @@
 
 import { ReactNode } from "react";
 
-/* Interfaces & Types & Enums
+/* Interfaces & Types & Enums & Enums
    ========================================================================== */
 
 interface IPanel {

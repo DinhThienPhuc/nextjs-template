@@ -1,3 +1,0 @@
-[submodule "src/gallery"]
-	path = src/gallery
-	url = ../gallery.git

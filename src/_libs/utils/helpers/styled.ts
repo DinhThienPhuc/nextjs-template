@@ -1,5 +1,5 @@
-import { TVariant } from "../definations/types";
-import { VARIANT } from "../constants/base";
+import { TVariant } from "_libs/utils/definations/types";
+import { VARIANT } from "_libs/utils/constants/base";
 import { css } from "styled-components";
 
 export const getVariantStyleModifier = (props: {

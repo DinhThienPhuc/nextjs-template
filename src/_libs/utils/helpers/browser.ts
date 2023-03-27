@@ -1,7 +1,7 @@
-import { IPosition, TFunction } from "../definations/types";
+import { IPosition, TFunction } from "_libs/utils/definations/types";
 
 import { MutableRefObject } from "react";
-import { parseJSON } from "./base";
+import { parseJSON } from "_libs/utils/helpers/base";
 
 export const logger = { ...console };
 
@@ -29,7 +29,7 @@ export const getFromLocalStorage = <T>(key: string): T | null => {
 
 export const getPositionOfNode = (
   ref: MutableRefObject<HTMLElement | null>,
-  withScrollable = false,
+  withScrollable = true,
 ): IPosition => {
   const bounds = ref.current?.getBoundingClientRect();
   return {

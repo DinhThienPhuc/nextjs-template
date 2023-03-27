@@ -3,7 +3,7 @@ import {
   TFunction,
   TFunctionIterator,
   TTryCatchResult,
-} from "../definations/types";
+} from "_libs/utils/definations/types";
 
 export const tryDo = async <T>(
   promise: Promise<T>,
@@ -49,7 +49,7 @@ export const differenceBy = <T>(
 ): T[] => {
   if (typeof iteratee === "string") {
     const prop = iteratee;
-    iteratee = <T>(item: T, index?: number, array?: T[]) => item?.[prop];
+    iteratee = <T>(item: T, _index?: number, _array?: T[]) => item?.[prop];
   }
   return arr1.filter((c) => !arr2.map(iteratee).includes(iteratee(c)));
 };

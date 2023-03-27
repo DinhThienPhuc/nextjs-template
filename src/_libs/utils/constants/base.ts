@@ -1,6 +1,4 @@
-import { IObject, TVariant } from "../definations/types";
-
-export const BASE_NAME = "IRIS";
+import { IObject, TVariant } from "_libs/utils/definations/types";
 
 export const NOT_AVAILABLE = "N/A";
 

@@ -4,7 +4,7 @@ import {
   Sun as IconSun,
 } from "react-feather";
 import { NAVBAR_ITEMS, ROUTES } from "utils";
-import { STYLED_THEMES, useTheme } from "modules";
+import { STYLED_THEMES, useTheme } from "services";
 import { useCallback, useMemo } from "react";
 
 import Link from "next/link";

@@ -8,7 +8,7 @@ interface UseCounterOutput {
   setCount: Dispatch<SetStateAction<number>>;
 }
 
-const useCounter = (initialValue?: number): UseCounterOutput => {
+export const useCounter = (initialValue?: number): UseCounterOutput => {
   const [count, setCount] = useState(initialValue || 0);
 
   const increment = () => setCount((x) => x + 1);
@@ -23,5 +23,3 @@ const useCounter = (initialValue?: number): UseCounterOutput => {
     setCount,
   };
 };
-
-export default useCounter;

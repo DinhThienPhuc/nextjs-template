@@ -1,6 +1,6 @@
 import { TButtonSize, TButtonVariant } from "./types";
 
-import { IObject } from "@iris/utils";
+import { IObject } from "_libs/utils";
 
 export const BUTTON_SIZE: IObject<TButtonSize> = {
   SMALL: "small",

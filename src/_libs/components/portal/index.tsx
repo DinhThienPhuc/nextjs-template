@@ -1,5 +1,3 @@
-/* eslint-disable @typescript-eslint/no-non-null-assertion */
-
 import { useEffect, useRef } from "react";
 
 import { IPortalProps } from "./types";
@@ -7,7 +5,7 @@ import { createPortal } from "react-dom";
 
 const portalRoot = document.getElementById("portal-root") as HTMLDivElement;
 
-const Portal = ({ children, id }: IPortalProps) => {
+export const Portal = ({ children, id }: IPortalProps) => {
   const element = useRef<HTMLDivElement | null>(null);
   const elementContainer = useRef<HTMLDivElement | null>(null);
 
@@ -30,5 +28,3 @@ const Portal = ({ children, id }: IPortalProps) => {
 
   return createPortal(children, elementContainer.current!);
 };
-
-export default Portal;

@@ -1,9 +1,9 @@
 import { ChevronDown as IconChevronLeft } from "react-feather";
 import { TSelectVariant } from "./types";
-import { getVariantStyleModifier } from "@iris/utils";
+import { getVariantStyleModifier } from "_libs/utils";
 import styled from "styled-components";
 
-const Styled = {
+export const Styled = {
   Container: styled.div<{ fullWidth: boolean }>`
     position: relative;
     width: ${({ fullWidth }) => (fullWidth ? "100%" : "fit-content")};
@@ -86,5 +86,3 @@ const Styled = {
     transform: ${({ $isShowed }) => ($isShowed ? "rotate(180deg)" : "none")};
   `,
 };
-
-export default Styled;

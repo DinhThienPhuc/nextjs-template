@@ -1,8 +1,8 @@
 import { MutableRefObject, useState } from "react";
 
-import useEffectOnce from "./useEffectOnce";
+import { useEffectOnce } from "_libs/hooks/useEffectOnce";
 
-const useFocusWithRef = (
+export const useFocusWithRef = (
   ref: MutableRefObject<HTMLElement | null>,
   defaultState = false,
 ) => {
@@ -23,5 +23,3 @@ const useFocusWithRef = (
 
   return state;
 };
-
-export default useFocusWithRef;

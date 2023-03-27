@@ -4,7 +4,7 @@ interface Args extends IntersectionObserverInit {
   freezeOnceVisible?: boolean;
 }
 
-const useIntersectionObserver = (
+export const useIntersectionObserver = (
   elementRef: RefObject<Element>,
   {
     threshold = 0,
@@ -37,5 +37,3 @@ const useIntersectionObserver = (
 
   return entry;
 };
-
-export default useIntersectionObserver;

@@ -1,7 +1,4 @@
-/* PAGE COMPONENT: ABOUT
-   ========================================================================== */
-
-import { TNextPageCustomized } from "utils/interfaces";
+import { TNextPageCustomized } from "utils";
 import ViewAbout from "views/about";
 
 const PageAbout: TNextPageCustomized = () => {

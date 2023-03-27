@@ -1,7 +1,4 @@
-/* PAGE COMPONENT: 404
-   ========================================================================== */
-
-import { TNextPageCustomized } from "utils/interfaces";
+import { TNextPageCustomized } from "utils";
 import View404 from "views/custom-404";
 
 const Page404: TNextPageCustomized = () => {

@@ -1,7 +1,7 @@
 import { Component } from "react";
 import { IErrorBoundaryProps, IErrorBoundaryState } from "./types";
 
-import Styled from "./style";
+import { Styled } from "./style";
 
 class ErrorBoundary extends Component<
   IErrorBoundaryProps,

@@ -2,7 +2,7 @@ import { PRE_ADORMENT_VARIANT } from "./constants";
 import { TPreAdormentVariant } from "./types";
 import styled from "styled-components";
 
-const Styled = {
+export const Styled = {
   Container: styled.div<{
     variant: TPreAdormentVariant;
   }>`
@@ -13,5 +13,3 @@ const Styled = {
       variant === PRE_ADORMENT_VARIANT.STANDARD ? "0px" : "14px"};
   `,
 };
-
-export default Styled;

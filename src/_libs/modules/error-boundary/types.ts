@@ -1,5 +1,5 @@
 import { ReactNode } from "react";
-import { TFunction } from "@iris/utils";
+import { TFunction } from "_libs/utils";
 
 export interface IErrorBoundaryProps {
   onReset: TFunction<void>;

@@ -1,5 +1,5 @@
 import { ReactNode } from "react";
-import { TVariant } from "@iris/utils";
+import { TVariant } from "_libs/utils";
 
 export type TPreAdormentVariant = TVariant;
 

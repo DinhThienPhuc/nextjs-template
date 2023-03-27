@@ -1,8 +1,8 @@
 import { TLabelVariant } from "./types";
-import { getLabelStyleModifier } from "@iris/utils";
+import { getLabelStyleModifier } from "_libs/utils";
 import styled from "styled-components";
 
-const Styled = {
+export const Styled = {
   Container: styled.div<{
     variant: TLabelVariant;
     isLabelCollapsed: boolean;
@@ -18,5 +18,3 @@ const Styled = {
     ${getLabelStyleModifier};
   `,
 };
-
-export default Styled;

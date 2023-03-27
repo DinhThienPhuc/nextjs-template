@@ -1,9 +1,7 @@
-import { IObject } from "@iris/utils";
+import { IObject } from "_libs/utils";
 
-const BASE_ROUTES: IObject<string> = {
+export const BASE_ROUTES: IObject<string> = {
   HOME: "/",
   NOT_FOUND: "*",
   LOGIN: "/login",
 };
-
-export default BASE_ROUTES;

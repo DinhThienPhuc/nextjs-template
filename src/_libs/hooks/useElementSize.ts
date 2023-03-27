@@ -1,17 +1,17 @@
 import { useCallback, useState } from "react";
 
-import useEventListener from "./useEventListener";
-import useIsomorphicLayoutEffect from "./useIsomorphicLayoutEffect";
+import useEventListener from "_libs/hooks/useEventListener";
+import useIsomorphicLayoutEffect from "_libs/hooks/useIsomorphicLayoutEffect";
 
 interface Size {
   width: number;
   height: number;
 }
 
-function useElementSize<T extends HTMLElement = HTMLDivElement>(): [
+export const useElementSize = <T extends HTMLElement = HTMLDivElement>(): [
   (node: T | null) => void,
   Size,
-] {
+] => {
   // Mutable values like 'ref.current' aren't valid dependencies
   // because mutating them doesn't re-render the component.
   // Instead, we use a state as a ref to be reactive.
@@ -36,6 +36,4 @@ function useElementSize<T extends HTMLElement = HTMLDivElement>(): [
   }, [ref?.offsetHeight, ref?.offsetWidth]);
 
   return [setRef, size];
-}
-
-export default useElementSize;
+};

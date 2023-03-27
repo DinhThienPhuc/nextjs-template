@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 
 export type UseScriptStatus = "idle" | "loading" | "ready" | "error";
+
 export interface UseScriptOptions {
   shouldPreventLoad?: boolean;
   removeOnUnmount?: boolean;
@@ -9,7 +10,7 @@ export interface UseScriptOptions {
 // Cached script statuses
 const cachedScriptStatuses: Record<string, UseScriptStatus | undefined> = {};
 
-function getScriptNode(src: string) {
+const getScriptNode = (src: string) => {
   const node: HTMLScriptElement | null = document.querySelector(
     `script[src="${src}"]`,
   );
@@ -21,9 +22,9 @@ function getScriptNode(src: string) {
     node,
     status,
   };
-}
+};
 
-const useScript = (
+export const useScript = (
   src: string | null,
   options?: UseScriptOptions,
 ): UseScriptStatus => {
@@ -109,5 +110,3 @@ const useScript = (
 
   return status;
 };
-
-export default useScript;

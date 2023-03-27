@@ -1,4 +1,4 @@
-const useSsr = () => {
+export const useSsr = () => {
   const isDOM =
     typeof window !== "undefined" &&
     window.document &&
@@ -9,5 +9,3 @@ const useSsr = () => {
     isServer: !isDOM,
   };
 };
-
-export default useSsr;

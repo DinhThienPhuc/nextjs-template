@@ -5,10 +5,10 @@ import {
   useEffect,
   useState,
 } from "react";
-import { logger, parseJSON } from "@iris/utils";
+import { logger, parseJSON } from "_libs/utils";
 
-import useEventCallback from "./useEventCallback";
-import useEventListener from "./useEventListener";
+import { useEventCallback } from "_libs/hooks/useEventCallback";
+import useEventListener from "_libs/hooks/useEventListener";
 
 declare global {
   interface WindowEventMap {
@@ -18,7 +18,7 @@ declare global {
 
 type SetValue<T> = Dispatch<SetStateAction<T>>;
 
-const useSessionStorage = <T>(
+export const useSessionStorage = <T>(
   key: string,
   initialValue: T,
 ): [T, SetValue<T>] => {
@@ -94,5 +94,3 @@ const useSessionStorage = <T>(
 
   return [storedValue, setValue];
 };
-
-export default useSessionStorage;

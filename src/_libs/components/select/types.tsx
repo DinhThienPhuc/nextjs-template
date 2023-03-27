@@ -1,6 +1,6 @@
 import { HTMLAttributes, ReactNode } from "react";
 
-import { TVariant } from "@iris/utils";
+import { TVariant } from "_libs/utils";
 
 export interface ISelectOption {
   value: string;

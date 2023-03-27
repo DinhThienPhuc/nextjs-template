@@ -17,7 +17,7 @@ interface Helpers {
 
 type setStepCallbackType = (step: number | ((step: number) => number)) => void;
 
-const useStep = (maxStep: number): [number, Helpers] => {
+export const useStep = (maxStep: number): [number, Helpers] => {
   const [currentStep, setCurrentStep] = useState(1);
 
   const canGoToNextStep = useMemo(
@@ -70,5 +70,3 @@ const useStep = (maxStep: number): [number, Helpers] => {
     },
   ];
 };
-
-export default useStep;

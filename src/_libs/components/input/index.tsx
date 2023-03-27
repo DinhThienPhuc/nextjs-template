@@ -1,16 +1,16 @@
 import { forwardRef, useMemo } from "react";
 
-import HelperText from "../helper-text";
+import { HelperText } from "_libs/components/helper-text";
 import { IInputProps } from "./types";
 import { INPUT_VARIANT } from "./constants";
-import Label from "../label";
-import PostAdorment from "../post-adorment";
-import PreAdorment from "../pre-adorment";
-import Styled from "./style";
+import { Label } from "_libs/components/label";
+import { PostAdorment } from "_libs/components/post-adorment";
+import { PreAdorment } from "_libs/components/pre-adorment";
+import { Styled } from "./style";
 import cx from "classnames";
-import { useFocusWithCallback } from "@iris/hooks";
+import { useFocusWithCallback } from "_libs/hooks";
 
-const Input = forwardRef<HTMLInputElement, IInputProps>(
+export const Input = forwardRef<HTMLInputElement, IInputProps>(
   (
     {
       className,
@@ -88,5 +88,3 @@ const Input = forwardRef<HTMLInputElement, IInputProps>(
 );
 
 Input.displayName = "Input";
-
-export default Input;

@@ -1,9 +1,9 @@
 import { IPreAdormentProps } from "./types";
 import { PRE_ADORMENT_VARIANT } from "./constants";
-import Styled from "./style";
+import { Styled } from "./style";
 import cx from "classnames";
 
-const PreAdorment = ({
+export const PreAdorment = ({
   className,
   content = null,
   variant = PRE_ADORMENT_VARIANT.STANDARD,
@@ -25,5 +25,3 @@ const PreAdorment = ({
     </Styled.Container>
   );
 };
-
-export default PreAdorment;

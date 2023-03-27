@@ -1,8 +1,8 @@
-import useEventListener from "./useEventListener";
-import useIsomorphicLayoutEffect from "./useIsomorphicLayoutEffect";
+import useEventListener from "_libs/hooks/useEventListener";
+import { useIsomorphicLayoutEffect } from "_libs/hooks/useIsomorphicLayoutEffect";
 import { useState } from "react";
 
-const useScreen = () => {
+export const useScreen = () => {
   const getScreen = () => {
     if (typeof window !== "undefined" && window.screen) {
       return window.screen;
@@ -26,5 +26,3 @@ const useScreen = () => {
 
   return screen;
 };
-
-export default useScreen;

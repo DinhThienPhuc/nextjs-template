@@ -1,7 +1,7 @@
 import { MutableRefObject } from "react";
-import useEventListener from "./useEventListener";
+import useEventListener from "_libs/hooks/useEventListener";
 
-const useNotClickOnElements = (
+export const useNotClickOnElements = (
   refs: MutableRefObject<HTMLDivElement | null>[],
   callback?: () => void,
 ) => {
@@ -15,5 +15,3 @@ const useNotClickOnElements = (
     callback?.();
   });
 };
-
-export default useNotClickOnElements;

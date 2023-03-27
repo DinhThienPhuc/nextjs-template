@@ -9,7 +9,7 @@ import {
   getDocs,
   setDoc,
 } from "@firebase/firestore";
-import { TTryCatchResult, logger, tryDo } from "@iris/utils";
+import { TTryCatchResult, logger, tryDo } from "_libs/utils";
 
 export const getAllDocuments = async <T>(
   firestore: Firestore,

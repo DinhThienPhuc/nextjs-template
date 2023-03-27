@@ -1,10 +1,10 @@
 import { Navigate, useLocation } from "react-router-dom";
 
-import BASE_ROUTES from "./base-routes";
+import { BASE_ROUTES } from "./base-routes";
 import { IAuthenticatorProps } from "./types";
 import { useMemo } from "react";
 
-const Authenticator = ({
+export const Authenticator = ({
   children,
   isAuthenticated = false,
   extendRoutes,
@@ -36,5 +36,3 @@ const Authenticator = ({
 
   return children;
 };
-
-export default Authenticator;

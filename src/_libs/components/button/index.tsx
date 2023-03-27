@@ -1,10 +1,10 @@
 import { BUTTON_SIZE, BUTTON_VARIANT } from "./constants";
 
 import { IButtonProps } from "./types";
-import Styled from "./style";
+import { Styled } from "./style";
 import cx from "classnames";
 
-const Button = ({
+export const Button = ({
   variant = BUTTON_VARIANT["TEXT"],
   size = BUTTON_SIZE["MEDIUM"],
   className,
@@ -29,5 +29,3 @@ const Button = ({
     </Styled.Container>
   );
 };
-
-export default Button;

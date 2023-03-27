@@ -1,8 +1,8 @@
 import { INavbarProps } from "./types";
-import Styled from "./style";
+import { Styled } from "./style";
 import cx from "classnames";
 
-const Navbar = ({
+export const Navbar = ({
   title,
   leftButton,
   rightButton,
@@ -20,5 +20,3 @@ const Navbar = ({
     </Styled.Container>
   );
 };
-
-export default Navbar;

@@ -2,7 +2,7 @@ import styled, { css } from "styled-components";
 
 import { INPUT_VARIANT } from "./constants";
 import { TInputVariant } from "./types";
-import { getVariantStyleModifier } from "@iris/utils";
+import { getVariantStyleModifier } from "_libs/utils";
 
 const inputPaddingModify = (props: {
   hasPreAdorment: boolean;
@@ -28,7 +28,7 @@ const inputPaddingModify = (props: {
   `;
 };
 
-const Styled = {
+export const Styled = {
   Container: styled.div<{
     fullWidth: boolean;
     disabled: boolean;
@@ -66,5 +66,3 @@ const Styled = {
     }
   `,
 };
-
-export default Styled;

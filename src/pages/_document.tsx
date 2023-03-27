@@ -1,6 +1,3 @@
-/* ROOT COMPONENT: _DOCUMENT
-   ========================================================================== */
-
 import Document, {
   DocumentInitialProps,
   Head,
@@ -12,9 +9,6 @@ import Document, {
 import { ServerStyleSheet } from "styled-components";
 
 export default class MyDocument extends Document {
-  /**
-   * Styled-component setup for SSR
-   */
   static async getInitialProps(ctx: any) {
     const sheet: ServerStyleSheet = new ServerStyleSheet();
     const originalRenderPage = ctx.renderPage;

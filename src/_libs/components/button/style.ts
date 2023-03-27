@@ -59,7 +59,7 @@ const variantModify = (props: {
   `;
 };
 
-const Styled = {
+export const Styled = {
   Container: styled.button<{ size: TButtonSize; variant: TButtonVariant }>`
     display: flex;
     align-items: center;
@@ -84,5 +84,3 @@ const Styled = {
     }
   `,
 };
-
-export default Styled;

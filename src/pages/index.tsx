@@ -1,7 +1,4 @@
-/* PAGE COMPONENT: HOME
-   ========================================================================== */
-
-import { TNextPageCustomized } from "utils/interfaces";
+import { TNextPageCustomized } from "utils";
 import ViewHome from "views/home";
 
 const PageHome: TNextPageCustomized = () => {

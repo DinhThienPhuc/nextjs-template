@@ -1,4 +1,4 @@
-import { IObject } from "@iris/utils";
+import { IObject } from "_libs/utils";
 
 export interface IAuthenticatorProps {
   children: JSX.Element;

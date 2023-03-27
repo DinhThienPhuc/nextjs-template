@@ -2,7 +2,7 @@ import { HELPER_TEXT_VARIANT } from "./constants";
 import { THelperTextVariant } from "./types";
 import styled from "styled-components";
 
-const Styled = {
+export const Styled = {
   Container: styled.div<{
     variant: THelperTextVariant;
   }>`
@@ -15,5 +15,3 @@ const Styled = {
       variant === HELPER_TEXT_VARIANT.STANDARD ? "0px" : "14px"};
   `,
 };
-
-export default Styled;

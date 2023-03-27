@@ -1,10 +1,10 @@
 import { useEffect, useState } from "react";
 
-import useIsomorphicLayoutEffect from "./useIsomorphicLayoutEffect";
+import { useIsomorphicLayoutEffect } from "_libs/hooks/useIsomorphicLayoutEffect";
 
 type UseLockedBodyOutput = [boolean, (locked: boolean) => void];
 
-const useLockedBody = (
+export const useLockedBody = (
   initialLocked = false,
   rootId = "___gatsby", // Default to `___gatsby` to not introduce breaking change
 ): UseLockedBodyOutput => {
@@ -51,5 +51,3 @@ const useLockedBody = (
 
   return [locked, setLocked];
 };
-
-export default useLockedBody;

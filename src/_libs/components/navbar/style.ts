@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-const Styled = {
+export const Styled = {
   Container: styled.nav`
     position: fixed;
     top: 0;
@@ -33,5 +33,3 @@ const Styled = {
     width: 33%;
   `,
 };
-
-export default Styled;

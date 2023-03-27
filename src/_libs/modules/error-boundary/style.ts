@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-const Styled = {
+export const Styled = {
   Container: styled.div`
     position: absolute;
     z-index: 3;
@@ -26,5 +26,3 @@ const Styled = {
     color: #222222;
   `,
 };
-
-export default Styled;

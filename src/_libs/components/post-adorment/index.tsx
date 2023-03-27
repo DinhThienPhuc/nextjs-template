@@ -1,10 +1,10 @@
 import { IPostAdormentProps } from "./types";
 import { XCircle as IconXCircle } from "react-feather";
 import { POST_ADORMENT_VARIANT } from "./constants";
-import Styled from "./style";
+import { Styled } from "./style";
 import cx from "classnames";
 
-const PostAdorment = ({
+export const PostAdorment = ({
   className,
   content = null,
   variant = POST_ADORMENT_VARIANT.STANDARD,
@@ -43,5 +43,3 @@ const PostAdorment = ({
     </Styled.Container>
   );
 };
-
-export default PostAdorment;

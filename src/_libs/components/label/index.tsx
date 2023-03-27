@@ -1,9 +1,9 @@
 import { ILabelProps } from "./types";
 import { LABEL_VARIANT } from "./constants";
-import Styled from "./style";
+import { Styled } from "./style";
 import cx from "classnames";
 
-const Label = ({
+export const Label = ({
   className,
   content = "",
   required = false,
@@ -33,5 +33,3 @@ const Label = ({
     </Styled.Container>
   );
 };
-
-export default Label;

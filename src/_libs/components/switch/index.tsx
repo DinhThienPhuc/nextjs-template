@@ -1,10 +1,10 @@
 import { forwardRef, useMemo } from "react";
 
 import { ISwitchProps } from "./types";
-import Styled from "./style";
+import { Styled } from "./style";
 import cx from "classnames";
 
-const Switch = forwardRef<HTMLInputElement, ISwitchProps>(
+export const Switch = forwardRef<HTMLInputElement, ISwitchProps>(
   (
     {
       className,
@@ -61,5 +61,3 @@ const Switch = forwardRef<HTMLInputElement, ISwitchProps>(
 );
 
 Switch.displayName = "Switch";
-
-export default Switch;

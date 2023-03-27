@@ -1,4 +1,4 @@
-import { TFunction, TVariant } from "@iris/utils";
+import { TFunction, TVariant } from "_libs/utils";
 
 import { ReactNode } from "react";
 

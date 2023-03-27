@@ -1,9 +1,9 @@
 import { HELPER_TEXT_VARIANT } from "./constants";
 import { IHelperTextProps } from "./types";
-import Styled from "./style";
+import { Styled } from "./style";
 import cx from "classnames";
 
-const HelperText = ({
+export const HelperText = ({
   className,
   text = "",
   variant = HELPER_TEXT_VARIANT.STANDARD,
@@ -21,5 +21,3 @@ const HelperText = ({
     </Styled.Container>
   );
 };
-
-export default HelperText;

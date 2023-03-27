@@ -1,5 +1,5 @@
 import { InputHTMLAttributes, ReactNode } from "react";
-import { TFunction, TVariant } from "@iris/utils";
+import { TFunction, TVariant } from "_libs/utils";
 
 export type TInputVariant = TVariant;
 

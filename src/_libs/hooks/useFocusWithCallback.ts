@@ -1,6 +1,6 @@
 import { FocusEvent, FocusEventHandler, useCallback, useState } from "react";
 
-const useFocus = (
+export const useFocusWithCallback = (
   onFocus: FocusEventHandler<HTMLElement> | undefined,
   onBlur: FocusEventHandler<HTMLElement> | undefined,
 ) => {
@@ -28,5 +28,3 @@ const useFocus = (
     isFocused,
   };
 };
-
-export default useFocus;

@@ -38,9 +38,13 @@
      */
     "packageManager": "teambit.dependencies/pnpm",
     "policy": {
-      "dependencies": {},
+      "dependencies": {
+        "@types/jest": "^29.5.0",
+        "types": "^0.1.1"
+      },
       "peerDependencies": {}
-    }
+    },
+    "linkCoreAspects": true
   },
   /**
    * workspace variants allow to set different subsets of configuration for components in your

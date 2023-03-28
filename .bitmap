@@ -10,8 +10,8 @@
 
 {
     "utils": {
-        "scope": "",
-        "version": "",
+        "scope": "phantomthief.react-mui",
+        "version": "0.0.1",
         "mainFile": "index.ts",
         "rootDir": "src/_libs/utils"
     },

@@ -1,4 +1,4 @@
-import { IObject, TVariant } from "_libs/utils/definations/types";
+import { IObject, TVariant } from "../definations/types";
 
 export const NOT_AVAILABLE = "N/A";
 

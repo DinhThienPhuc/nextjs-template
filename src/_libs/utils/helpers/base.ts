@@ -3,7 +3,7 @@ import {
   TFunction,
   TFunctionIterator,
   TTryCatchResult,
-} from "_libs/utils/definations/types";
+} from "../definations/types";
 
 export const tryDo = async <T>(
   promise: Promise<T>,

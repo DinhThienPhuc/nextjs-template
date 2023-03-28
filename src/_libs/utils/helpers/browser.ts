@@ -1,7 +1,7 @@
-import { IPosition, TFunction } from "_libs/utils/definations/types";
+import { IPosition, TFunction } from "../definations/types";
 
 import { MutableRefObject } from "react";
-import { parseJSON } from "_libs/utils/helpers/base";
+import { parseJSON } from "./base";
 
 export const logger = { ...console };
 

@@ -9,11 +9,5 @@
  */
 
 {
-    "hooks": {
-        "scope": "",
-        "version": "",
-        "mainFile": "index.ts",
-        "rootDir": "src/_libs/hooks"
-    },
     "$schema-version": "15.0.0"
 }

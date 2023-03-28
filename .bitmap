@@ -9,5 +9,11 @@
  */
 
 {
+    "utils": {
+        "scope": "",
+        "version": "",
+        "mainFile": "index.ts",
+        "rootDir": "src/_libs/utils"
+    },
     "$schema-version": "15.0.0"
 }

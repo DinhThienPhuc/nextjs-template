@@ -1,4 +1,4 @@
-import { IObject } from "_libs/utils";
+import { IObject } from "@phantomthief/react-mui.utils";
 import i18next from "i18next";
 import { initReactI18next } from "react-i18next";
 

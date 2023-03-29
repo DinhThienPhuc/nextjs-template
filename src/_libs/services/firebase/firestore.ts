@@ -9,7 +9,7 @@ import {
   getDocs,
   setDoc,
 } from "@firebase/firestore";
-import { TTryCatchResult, logger, tryDo } from "_libs/utils";
+import { TTryCatchResult, logger, tryDo } from "@phantomthief/react-mui.utils";
 
 export const getAllDocuments = async <T>(
   firestore: Firestore,
@@ -21,7 +21,7 @@ export const getAllDocuments = async <T>(
   const items = result?.docs?.map?.((doc) => ({
     ...doc.data(),
     id: doc.id,
-  })) as T;
+  })) as unknown as T;
 
   if (error) {
     logger.error(error);
@@ -65,7 +65,7 @@ export const addDocument = async <T>(
 
   return {
     error,
-    result: result as T,
+    result: result as unknown as T,
   };
 };
 

@@ -1,5 +1,5 @@
 import { IStyledThemeProps, TStyledTheme, TStyledThemeContext } from "./types";
-import { createContext, useContext, useMemo, useState } from "react";
+import React, { createContext, useContext, useMemo, useState } from "react";
 
 import { STYLED_THEMES } from "./constants";
 import { ThemeProvider } from "styled-components";

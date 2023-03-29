@@ -36,9 +36,13 @@
     /**
      * choose the package manager for Bit to use. you can choose between 'yarn', 'pnpm'
      */
-    "packageManager": "teambit.dependencies/pnpm",
+    "packageManager": "teambit.dependencies/yarn",
     "policy": {
       "dependencies": {
+        "@phantomthief/react-mui.hooks": "^0.0.1",
+        "@phantomthief/react-mui.modules": "^0.0.1",
+        "@phantomthief/react-mui.services": "^0.0.1",
+        "@phantomthief/react-mui.utils": "^0.0.1",
         "@types/jest": "^29.5.0",
         "types": "^0.1.1"
       },

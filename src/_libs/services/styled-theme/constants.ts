@@ -1,4 +1,4 @@
-import { IObject } from "_libs/utils";
+import { IObject } from "@phantomthief/react-mui.utils";
 import { TStyledTheme } from "./types";
 
 export const STYLED_THEMES: IObject<TStyledTheme> = {

@@ -9,6 +9,24 @@
  */
 
 {
+    "hooks": {
+        "scope": "phantomthief.react-mui",
+        "version": "0.0.1",
+        "mainFile": "index.ts",
+        "rootDir": "src/_libs/hooks"
+    },
+    "modules": {
+        "scope": "phantomthief.react-mui",
+        "version": "0.0.1",
+        "mainFile": "index.ts",
+        "rootDir": "src/_libs/modules"
+    },
+    "services": {
+        "scope": "phantomthief.react-mui",
+        "version": "0.0.1",
+        "mainFile": "index.ts",
+        "rootDir": "src/_libs/services"
+    },
     "utils": {
         "scope": "phantomthief.react-mui",
         "version": "0.0.1",

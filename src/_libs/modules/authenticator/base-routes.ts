@@ -1,4 +1,4 @@
-import { IObject } from "_libs/utils";
+import { IObject } from "@phantomthief/react-mui.utils";
 
 export const BASE_ROUTES: IObject<string> = {
   HOME: "/",

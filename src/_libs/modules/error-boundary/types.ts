@@ -1,5 +1,5 @@
 import { ReactNode } from "react";
-import { TFunction } from "_libs/utils";
+import { TFunction } from "@phantomthief/react-mui.utils";
 
 export interface IErrorBoundaryProps {
   onReset: TFunction<void>;

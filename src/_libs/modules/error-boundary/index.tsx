@@ -1,4 +1,4 @@
-import { Component } from "react";
+import React, { Component } from "react";
 import { IErrorBoundaryProps, IErrorBoundaryState } from "./types";
 
 import { Styled } from "./style";

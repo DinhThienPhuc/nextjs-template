@@ -5,12 +5,6 @@ __metadata:
   version: 6
   cacheKey: 8
 
-".next-0aa4e3@workspace:.next":
-  version: 0.0.0-use.local
-  resolution: ".next-0aa4e3@workspace:.next"
-  languageName: unknown
-  linkType: soft
-
 "@ampproject/remapping@npm:^2.2.0":
   version: 2.2.0
   resolution: "@ampproject/remapping@npm:2.2.0::__archiveUrl=https%3A%2F%2Fregistry.npmjs.org%2F%40ampproject%2Fremapping%2F-%2Fremapping-2.2.0.tgz"
@@ -1445,9 +1439,9 @@ __metadata:
   linkType: hard
 
 "@eslint-community/regexpp@npm:^4.4.0":
-  version: 4.4.1
-  resolution: "@eslint-community/regexpp@npm:4.4.1::__archiveUrl=https%3A%2F%2Fregistry.npmjs.org%2F%40eslint-community%2Fregexpp%2F-%2Fregexpp-4.4.1.tgz"
-  checksum: db97d8d08e784147b55ab0dda5892503c1a0eebad94d1c4646d89a94f02ca70b25f05d8e021fc05a075e7eb312e03e21f63d84f0b327719f8cf3bb64e66917cb
+  version: 4.5.0
+  resolution: "@eslint-community/regexpp@npm:4.5.0::__archiveUrl=https%3A%2F%2Fregistry.npmjs.org%2F%40eslint-community%2Fregexpp%2F-%2Fregexpp-4.5.0.tgz"
+  checksum: 99c01335947dbd7f2129e954413067e217ccaa4e219fe0917b7d2bd96135789384b8fedbfb8eb09584d5130b27a7b876a7150ab7376f51b3a0c377d5ce026a10
   languageName: node
   linkType: hard
 
@@ -2776,7 +2770,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/node@npm:*":
+"@types/node@npm:*, @types/node@npm:>=12.12.47, @types/node@npm:>=13.7.0":
   version: 18.15.11
   resolution: "@types/node@npm:18.15.11::__archiveUrl=https%3A%2F%2Fregistry.npmjs.org%2F%40types%2Fnode%2F-%2Fnode-18.15.11.tgz"
   checksum: 977b4ad04708897ff0eb049ecf82246d210939c82461922d20f7d2dcfd81bbc661582ba3af28869210f7e8b1934529dcd46bff7d448551400f9d48b9d3bddec3
@@ -2787,13 +2781,6 @@ __metadata:
   version: 12.20.4
   resolution: "@types/node@npm:12.20.4::__archiveUrl=https%3A%2F%2Fregistry.npmjs.org%2F%40types%2Fnode%2F-%2Fnode-12.20.4.tgz"
   checksum: 30f1f5d8159fcb968206706f0f943167731f3d0763602571af29676b1afdcfe3b41524442cacdee3853a456dcd11d0e3ab2bf28b6821dfa2749a4b393fe7b510
-  languageName: node
-  linkType: hard
-
-"@types/node@npm:>=12.12.47, @types/node@npm:>=13.7.0":
-  version: 18.15.10
-  resolution: "@types/node@npm:18.15.10::__archiveUrl=https%3A%2F%2Fregistry.npmjs.org%2F%40types%2Fnode%2F-%2Fnode-18.15.10.tgz"
-  checksum: 9aeae0b683eda82892def5315812bdee3f1a28c4898b7e70f8e2514564538b16c4dccbe8339c1266f8fc1d707a48f152689264a854f5ebc2eba5011e793612d9
   languageName: node
   linkType: hard
 
@@ -2849,13 +2836,13 @@ __metadata:
   linkType: hard
 
 "@types/react@npm:*, @types/react@npm:^18.0.29":
-  version: 18.0.30
-  resolution: "@types/react@npm:18.0.30::__archiveUrl=https%3A%2F%2Fregistry.npmjs.org%2F%40types%2Freact%2F-%2Freact-18.0.30.tgz"
+  version: 18.0.31
+  resolution: "@types/react@npm:18.0.31::__archiveUrl=https%3A%2F%2Fregistry.npmjs.org%2F%40types%2Freact%2F-%2Freact-18.0.31.tgz"
   dependencies:
     "@types/prop-types": "*"
     "@types/scheduler": "*"
     csstype: ^3.0.2
-  checksum: 3ca13fd10a1ee92826e37cd8c2fe563bff65d4bdb3ff53f632bc46c8fba2e94e24247b4b77ce957677a54e592299782e1235f7a3dfcfea327cb3213ddc98e968
+  checksum: 6befbd5587e266905b50fd6bbd7c1cacd557bddf99e6a9862ca2f1d06df3dca71b9d485a37d010479730f021aab93b852d417c714de5efc2f41be0ff4c09b4db
   languageName: node
   linkType: hard
 
@@ -4026,9 +4013,9 @@ __metadata:
   linkType: hard
 
 "electron-to-chromium@npm:^1.4.284":
-  version: 1.4.341
-  resolution: "electron-to-chromium@npm:1.4.341::__archiveUrl=https%3A%2F%2Fregistry.npmjs.org%2Felectron-to-chromium%2F-%2Felectron-to-chromium-1.4.341.tgz"
-  checksum: b97377e4e622266953da2c92276b9c0a948ab7e8a0a9c9947da340269f8eb959b8678f76158b78b473a56912c697d89e37a93d82b4d2db84f622e9be7850a540
+  version: 1.4.342
+  resolution: "electron-to-chromium@npm:1.4.342::__archiveUrl=https%3A%2F%2Fregistry.npmjs.org%2Felectron-to-chromium%2F-%2Felectron-to-chromium-1.4.342.tgz"
+  checksum: 61ecf9f3ea65a6044cdcea092dd56b42d0961fdb8fb3942ba808c6aa6ab3213d3218e599748d6d6ae8b43ddc9f76f428af0b96eaee2f0b4b2f0195c643f36f3d
   languageName: node
   linkType: hard
 
@@ -4409,7 +4396,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint-visitor-keys@npm:^3.1.0, eslint-visitor-keys@npm:^3.3.0":
+"eslint-visitor-keys@npm:^3.1.0, eslint-visitor-keys@npm:^3.3.0, eslint-visitor-keys@npm:^3.4.0":
   version: 3.4.0
   resolution: "eslint-visitor-keys@npm:3.4.0::__archiveUrl=https%3A%2F%2Fregistry.npmjs.org%2Feslint-visitor-keys%2F-%2Feslint-visitor-keys-3.4.0.tgz"
   checksum: 33159169462d3989321a1ec1e9aaaf6a24cc403d5d347e9886d1b5bfe18ffa1be73bdc6203143a28a606b142b1af49787f33cff0d6d0813eb5f2e8d2e1a6043c
@@ -4465,13 +4452,13 @@ __metadata:
   linkType: hard
 
 "espree@npm:^9.3.0, espree@npm:^9.4.0":
-  version: 9.5.0
-  resolution: "espree@npm:9.5.0::__archiveUrl=https%3A%2F%2Fregistry.npmjs.org%2Fespree%2F-%2Fespree-9.5.0.tgz"
+  version: 9.5.1
+  resolution: "espree@npm:9.5.1::__archiveUrl=https%3A%2F%2Fregistry.npmjs.org%2Fespree%2F-%2Fespree-9.5.1.tgz"
   dependencies:
     acorn: ^8.8.0
     acorn-jsx: ^5.3.2
-    eslint-visitor-keys: ^3.3.0
-  checksum: a7f110aefb6407e0d3237aa635ab3cea87106ae63748dd23c67031afccc640d04c4209fca2daf16e2233c82efb505faead0fb84097478fd9cc6e8f8dd80bf99d
+    eslint-visitor-keys: ^3.4.0
+  checksum: cdf6e43540433d917c4f2ee087c6e987b2063baa85a1d9cdaf51533d78275ebd5910c42154e7baf8e3e89804b386da0a2f7fad2264d8f04420e7506bf87b3b88
   languageName: node
   linkType: hard
 

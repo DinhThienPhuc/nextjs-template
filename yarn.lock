@@ -2226,71 +2226,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@phantomthief/react-mui.components@npm:^0.0.1":
-  version: 0.0.1
-  resolution: "@phantomthief/react-mui.components@npm:0.0.1::__archiveUrl=https%3A%2F%2Fnode.bit.cloud%2F%40phantomthief%2Freact-mui.components%2F-%2F%40phantomthief-react-mui.components-0.0.1.tgz"
-  dependencies:
-    "@phantomthief/react-mui.hooks": 0.0.1
-    "@phantomthief/react-mui.utils": 0.0.1
-    classnames: ^2.3.1
-    next: ^13.2.4
-    react: ^18.2.0
-    react-dom: ^18.2.0
-    react-feather: ^2.0.10
-    styled-components: ^5.3.3
-  checksum: 87e38a7bb6e3d3ac957029a3ab5566045903612d972a7d2e567ec9e7bc37a3196589971a022bdd2f655add95ab5196f0799d8889ec539bd6a76c443dfdd5ddb5
-  languageName: node
-  linkType: hard
-
-"@phantomthief/react-mui.hooks@npm:0.0.1, @phantomthief/react-mui.hooks@npm:^0.0.1":
-  version: 0.0.1
-  resolution: "@phantomthief/react-mui.hooks@npm:0.0.1::__archiveUrl=https%3A%2F%2Fnode.bit.cloud%2F%40phantomthief%2Freact-mui.hooks%2F-%2F%40phantomthief-react-mui.hooks-0.0.1.tgz"
-  dependencies:
-    "@phantomthief/react-mui.utils": 0.0.1
-    react: ^18.2.0
-  checksum: 7a7ad5be9a62aa103fb56cb725b8bb97896a2a5072d5fec44378fb26c301a2fc51d41566de4f9ad1733a13803901db0ce120f804e5d4e0597c84f72bfe5e4b74
-  languageName: node
-  linkType: hard
-
-"@phantomthief/react-mui.modules@npm:^0.0.1":
-  version: 0.0.1
-  resolution: "@phantomthief/react-mui.modules@npm:0.0.1::__archiveUrl=https%3A%2F%2Fnode.bit.cloud%2F%40phantomthief%2Freact-mui.modules%2F-%2F%40phantomthief-react-mui.modules-0.0.1.tgz"
-  dependencies:
-    "@phantomthief/react-mui.utils": 0.0.1
-    react: ^18.2.0
-    react-router-dom: ^6.9.0
-    styled-components: ^5.3.3
-  checksum: d6fcb66c156952251299bb5d0e0d7b437defb79d7ee2074cff907fdff2775921365ae726c6f549c7d3c42909ee3b308dd83ebf1ecfd27c6062c90b4c80d814ba
-  languageName: node
-  linkType: hard
-
-"@phantomthief/react-mui.services@npm:^0.0.1":
-  version: 0.0.1
-  resolution: "@phantomthief/react-mui.services@npm:0.0.1::__archiveUrl=https%3A%2F%2Fnode.bit.cloud%2F%40phantomthief%2Freact-mui.services%2F-%2F%40phantomthief-react-mui.services-0.0.1.tgz"
-  dependencies:
-    "@firebase/firestore": 3.9.0
-    "@firebase/storage": 0.11.2
-    "@phantomthief/react-mui.utils": 0.0.1
-    firebase: ^9.18.0
-    i18next: ^22.4.13
-    react: ^18.2.0
-    react-i18next: ^12.2.0
-    styled-components: ^5.3.3
-  checksum: 6eadf1ff2e2310b7a3cf5f71c3d8f9881db475f2b696a404abe8fe4db9de6f4891e892322e3d36240335ffb67cac2b62f951a926a4e085e20950a86317032b6b
-  languageName: node
-  linkType: hard
-
-"@phantomthief/react-mui.utils@npm:0.0.1, @phantomthief/react-mui.utils@npm:^0.0.1":
-  version: 0.0.1
-  resolution: "@phantomthief/react-mui.utils@npm:0.0.1::__archiveUrl=https%3A%2F%2Fnode.bit.cloud%2F%40phantomthief%2Freact-mui.utils%2F-%2F%40phantomthief-react-mui.utils-0.0.1.tgz"
-  dependencies:
-    next: ^13.2.4
-    react: ^18.2.0
-    styled-components: ^5.3.3
-  checksum: 1c299b4901fe145551c97ae140e041a6bea6bc34c057990e2681277fd2aa3c4302f70f7543dffe78d009b8e27abb616d5c847687dedf5ad235235db60e8be458
-  languageName: node
-  linkType: hard
-
 "@protobufjs/aspromise@npm:^1.1.1, @protobufjs/aspromise@npm:^1.1.2":
   version: 1.1.2
   resolution: "@protobufjs/aspromise@npm:1.1.2::__archiveUrl=https%3A%2F%2Fregistry.npmjs.org%2F%40protobufjs%2Faspromise%2F-%2Faspromise-1.1.2.tgz"
@@ -6026,11 +5961,6 @@ __metadata:
     "@babel/runtime": 7.20.0
     "@firebase/firestore": 3.9.0
     "@firebase/storage": 0.11.2
-    "@phantomthief/react-mui.components": ^0.0.1
-    "@phantomthief/react-mui.hooks": ^0.0.1
-    "@phantomthief/react-mui.modules": ^0.0.1
-    "@phantomthief/react-mui.services": ^0.0.1
-    "@phantomthief/react-mui.utils": ^0.0.1
     "@svgr/webpack": ^6.1.2
     "@types/classnames": ^2.3.1
     "@types/jest": 26.0.20
@@ -6064,7 +5994,6 @@ __metadata:
     react-router-dom: ^6.9.0
     react-toastify: ^9.1.2
     styled-components: ^5.3.3
-    types: ^0.1.1
     typescript: 4.5.4
     zustand: ^4.3.6
   languageName: unknown
@@ -7398,13 +7327,6 @@ __metadata:
     for-each: ^0.3.3
     is-typed-array: ^1.1.9
   checksum: 2228febc93c7feff142b8c96a58d4a0d7623ecde6c7a24b2b98eb3170e99f7c7eff8c114f9b283085cd59dcd2bd43aadf20e25bba4b034a53c5bb292f71f8956
-  languageName: node
-  linkType: hard
-
-"types@npm:^0.1.1":
-  version: 0.1.1
-  resolution: "types@npm:0.1.1::__archiveUrl=https%3A%2F%2Fregistry.npmjs.org%2Ftypes%2F-%2Ftypes-0.1.1.tgz"
-  checksum: 259d052f6a23e8ac2f8b11e83fb6d97d4314d5ec510f68e1d9ed9b9c8c93b6fb1a43467b5b44d450ae1014d1d445021da2562035cd377d2f2e627574dc77737f
   languageName: node
   linkType: hard
 

@@ -1,6 +1,7 @@
 import { IPostAdormentProps } from "./types";
 import { XCircle as IconXCircle } from "react-feather";
 import { POST_ADORMENT_VARIANT } from "./constants";
+import React from "react";
 import { Styled } from "./style";
 import cx from "classnames";
 

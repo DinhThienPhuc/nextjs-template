@@ -1,6 +1,6 @@
-import { IPosition, getPositionOfNode } from "_libs/utils";
+import { IPosition, getPositionOfNode } from "@phantomthief/react-mui.utils";
 import { ISelectEventTarget, ISelectOption, ISelectProps } from "./types";
-import {
+import React, {
   MouseEvent,
   MouseEventHandler,
   forwardRef,
@@ -9,12 +9,15 @@ import {
   useRef,
   useState,
 } from "react";
-import { useFocusWithCallback, useNotClickOnElements } from "_libs/hooks";
+import {
+  useFocusWithCallback,
+  useNotClickOnElements,
+} from "@phantomthief/react-mui.hooks";
 
-import { HelperText } from "_libs/components/helper-text";
-import { Label } from "_libs/components/label";
-import { Portal } from "_libs/components/portal";
-import { PostAdorment } from "_libs/components/post-adorment";
+import { HelperText } from "../helper-text";
+import { Label } from "../label";
+import { Portal } from "../portal";
+import { PostAdorment } from "../post-adorment";
 import { SELECT_VARIANT } from "./constants";
 import { Styled } from "./style";
 import cx from "classnames";

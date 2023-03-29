@@ -1,4 +1,5 @@
 import { INavbarProps } from "./types";
+import React from "react";
 import { Styled } from "./style";
 import cx from "classnames";
 

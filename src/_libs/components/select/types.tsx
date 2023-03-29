@@ -1,6 +1,6 @@
 import { HTMLAttributes, ReactNode } from "react";
 
-import { TVariant } from "_libs/utils";
+import { TVariant } from "@phantomthief/react-mui.utils";
 
 export interface ISelectOption {
   value: string;

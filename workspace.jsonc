@@ -39,6 +39,7 @@
     "packageManager": "teambit.dependencies/yarn",
     "policy": {
       "dependencies": {
+        "@phantomthief/react-mui.components": "^0.0.1",
         "@phantomthief/react-mui.hooks": "^0.0.1",
         "@phantomthief/react-mui.modules": "^0.0.1",
         "@phantomthief/react-mui.services": "^0.0.1",

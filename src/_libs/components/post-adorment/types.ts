@@ -1,4 +1,4 @@
-import { TFunction, TVariant } from "_libs/utils";
+import { TFunction, TVariant } from "@phantomthief/react-mui.utils";
 
 import { ReactNode } from "react";
 

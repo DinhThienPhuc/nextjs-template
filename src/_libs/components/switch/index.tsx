@@ -1,4 +1,4 @@
-import { forwardRef, useMemo } from "react";
+import React, { forwardRef, useMemo } from "react";
 
 import { ISwitchProps } from "./types";
 import { Styled } from "./style";

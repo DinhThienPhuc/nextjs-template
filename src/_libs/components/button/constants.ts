@@ -1,6 +1,6 @@
 import { TButtonSize, TButtonVariant } from "./types";
 
-import { IObject } from "_libs/utils";
+import { IObject } from "@phantomthief/react-mui.utils";
 
 export const BUTTON_SIZE: IObject<TButtonSize> = {
   SMALL: "small",

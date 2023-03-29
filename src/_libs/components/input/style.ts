@@ -2,7 +2,7 @@ import styled, { css } from "styled-components";
 
 import { INPUT_VARIANT } from "./constants";
 import { TInputVariant } from "./types";
-import { getVariantStyleModifier } from "_libs/utils";
+import { getVariantStyleModifier } from "@phantomthief/react-mui.utils";
 
 const inputPaddingModify = (props: {
   hasPreAdorment: boolean;

@@ -1,5 +1,6 @@
 import { ILabelProps } from "./types";
 import { LABEL_VARIANT } from "./constants";
+import React from "react";
 import { Styled } from "./style";
 import cx from "classnames";
 

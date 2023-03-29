@@ -1,5 +1,6 @@
 import { HELPER_TEXT_VARIANT } from "./constants";
 import { IHelperTextProps } from "./types";
+import React from "react";
 import { Styled } from "./style";
 import cx from "classnames";
 

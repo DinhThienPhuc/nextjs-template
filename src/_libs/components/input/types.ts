@@ -1,5 +1,5 @@
 import { InputHTMLAttributes, ReactNode } from "react";
-import { TFunction, TVariant } from "_libs/utils";
+import { TFunction, TVariant } from "@phantomthief/react-mui.utils";
 
 export type TInputVariant = TVariant;
 

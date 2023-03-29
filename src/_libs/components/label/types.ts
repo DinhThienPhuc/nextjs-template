@@ -1,5 +1,5 @@
 import { ReactNode } from "react";
-import { TVariant } from "_libs/utils";
+import { TVariant } from "@phantomthief/react-mui.utils";
 
 export type TLabelVariant = TVariant;
 

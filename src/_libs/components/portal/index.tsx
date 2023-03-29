@@ -1,11 +1,11 @@
 import { IPortalProps } from "./types";
+import React from "react";
 import { createPortal } from "react-dom";
-import { useEffectOnce } from "_libs/hooks";
-import { useRef } from "react";
+import { useEffectOnce } from "@phantomthief/react-mui.hooks";
 
 export const Portal = ({ children, id }: IPortalProps) => {
-  const element = useRef<HTMLDivElement | null>(null);
-  const elementContainer = useRef<HTMLDivElement | null>(null);
+  const element = React.useRef<HTMLDivElement | null>(null);
+  const elementContainer = React.useRef<HTMLDivElement | null>(null);
 
   useEffectOnce(() => {
     const portalRoot = document.getElementById("portal-root") as HTMLDivElement;

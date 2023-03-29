@@ -2232,7 +2232,23 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@phantomthief/react-mui.hooks@npm:^0.0.1":
+"@phantomthief/react-mui.components@npm:^0.0.1":
+  version: 0.0.1
+  resolution: "@phantomthief/react-mui.components@npm:0.0.1::__archiveUrl=https%3A%2F%2Fnode.bit.cloud%2F%40phantomthief%2Freact-mui.components%2F-%2F%40phantomthief-react-mui.components-0.0.1.tgz"
+  dependencies:
+    "@phantomthief/react-mui.hooks": 0.0.1
+    "@phantomthief/react-mui.utils": 0.0.1
+    classnames: ^2.3.1
+    next: ^13.2.4
+    react: ^18.2.0
+    react-dom: ^18.2.0
+    react-feather: ^2.0.10
+    styled-components: ^5.3.3
+  checksum: 87e38a7bb6e3d3ac957029a3ab5566045903612d972a7d2e567ec9e7bc37a3196589971a022bdd2f655add95ab5196f0799d8889ec539bd6a76c443dfdd5ddb5
+  languageName: node
+  linkType: hard
+
+"@phantomthief/react-mui.hooks@npm:0.0.1, @phantomthief/react-mui.hooks@npm:^0.0.1":
   version: 0.0.1
   resolution: "@phantomthief/react-mui.hooks@npm:0.0.1::__archiveUrl=https%3A%2F%2Fnode.bit.cloud%2F%40phantomthief%2Freact-mui.hooks%2F-%2F%40phantomthief-react-mui.hooks-0.0.1.tgz"
   dependencies:
@@ -3653,6 +3669,12 @@ __metadata:
   checksum: 53501cbeee61d5157546c0bef0fedb6cdfc763a882136284bed9a07225f09a14b82d2a84e7637edfd1a679fb35ed9502fd58ef1d091e6287f60d790147f68ddc
   languageName: node
   linkType: hard
+
+"components-7dc54c@workspace:src/_libs/components":
+  version: 0.0.0-use.local
+  resolution: "components-7dc54c@workspace:src/_libs/components"
+  languageName: unknown
+  linkType: soft
 
 "concat-map@npm:0.0.1":
   version: 0.0.1
@@ -6017,6 +6039,7 @@ __metadata:
     "@babel/runtime": 7.20.0
     "@firebase/firestore": 3.9.0
     "@firebase/storage": 0.11.2
+    "@phantomthief/react-mui.components": ^0.0.1
     "@phantomthief/react-mui.hooks": ^0.0.1
     "@phantomthief/react-mui.modules": ^0.0.1
     "@phantomthief/react-mui.services": ^0.0.1

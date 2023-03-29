@@ -1,6 +1,6 @@
 import { ChevronDown as IconChevronLeft } from "react-feather";
 import { TSelectVariant } from "./types";
-import { getVariantStyleModifier } from "_libs/utils";
+import { getVariantStyleModifier } from "@phantomthief/react-mui.utils";
 import styled from "styled-components";
 
 export const Styled = {

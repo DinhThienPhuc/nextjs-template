@@ -1,5 +1,5 @@
 import { TLabelVariant } from "./types";
-import { getLabelStyleModifier } from "_libs/utils";
+import { getLabelStyleModifier } from "@phantomthief/react-mui.utils";
 import styled from "styled-components";
 
 export const Styled = {

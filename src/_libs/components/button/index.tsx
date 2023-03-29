@@ -1,6 +1,7 @@
 import { BUTTON_SIZE, BUTTON_VARIANT } from "./constants";
 
 import { IButtonProps } from "./types";
+import React from "react";
 import { Styled } from "./style";
 import cx from "classnames";
 

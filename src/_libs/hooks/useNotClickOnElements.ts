@@ -1,5 +1,5 @@
 import { MutableRefObject } from "react";
-import useEventListener from "_libs/hooks/useEventListener";
+import useEventListener from "./useEventListener";
 
 export const useNotClickOnElements = (
   refs: MutableRefObject<HTMLDivElement | null>[],

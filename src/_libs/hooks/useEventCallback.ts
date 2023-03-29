@@ -1,6 +1,6 @@
 import { useCallback, useRef } from "react";
 
-import useIsomorphicLayoutEffect from "_libs/hooks/useIsomorphicLayoutEffect";
+import { useIsomorphicLayoutEffect } from "./useIsomorphicLayoutEffect";
 
 export const useEventCallback = <Args extends unknown[], R>(
   fn: (...args: Args) => R,

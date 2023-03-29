@@ -1,6 +1,6 @@
 import { RefObject, useState } from "react";
 
-import useEventListener from "_libs/hooks/useEventListener";
+import useEventListener from "./useEventListener";
 
 export const useHover = <T extends HTMLElement = HTMLElement>(
   elementRef: RefObject<T>,

@@ -5,10 +5,10 @@ import {
   useEffect,
   useState,
 } from "react";
-import { logger, parseJSON } from "_libs/utils";
+import { logger, parseJSON } from "@phantomthief/react-mui.utils";
 
-import { useEventCallback } from "_libs/hooks/useEventCallback";
-import useEventListener from "_libs/hooks/useEventListener";
+import { useEventCallback } from "./useEventCallback";
+import useEventListener from "./useEventListener";
 
 declare global {
   interface WindowEventMap {

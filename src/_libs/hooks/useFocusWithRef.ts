@@ -1,6 +1,6 @@
 import { MutableRefObject, useState } from "react";
 
-import { useEffectOnce } from "_libs/hooks/useEffectOnce";
+import { useEffectOnce } from "./useEffectOnce";
 
 export const useFocusWithRef = (
   ref: MutableRefObject<HTMLElement | null>,

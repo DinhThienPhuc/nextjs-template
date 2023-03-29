@@ -1,5 +1,5 @@
-import useEventListener from "_libs/hooks/useEventListener";
-import { useIsomorphicLayoutEffect } from "_libs/hooks/useIsomorphicLayoutEffect";
+import useEventListener from "./useEventListener";
+import { useIsomorphicLayoutEffect } from "./useIsomorphicLayoutEffect";
 import { useState } from "react";
 
 interface WindowSize {

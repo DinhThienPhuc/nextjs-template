@@ -1,4 +1,4 @@
-import { logger, tryDo } from "_libs/utils";
+import { logger, tryDo } from "@phantomthief/react-mui.utils";
 
 import { useState } from "react";
 

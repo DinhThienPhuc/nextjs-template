@@ -17,3 +17,7 @@ git remote set-url origin <link-to-your-repo>
 ```
 
 Then feel free to develop your new world **_voila_**! ✨✨✨
+
+## Structure
+
+![structure](./public/structure.png)

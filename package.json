@@ -8,7 +8,7 @@
     "lint": "next lint",
     "prepare": "husky install",
     "format": "npx pretty-quick --staged && npx lint-staged",
-    "post-install": "bit import && bit compile && bit link"
+    "postinstall": "bit compile && bit link"
   },
   "dependencies": {
     "axios": "^0.27.2",
